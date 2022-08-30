@@ -1,0 +1,16 @@
+[taxonomies]
+  category = "categories"
+
+[permalinks]
+  blog = "/:title/"
+
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+    [[related.indices]]
+    name = "categories"
+    weight = 100
+    [[related.indices]]
+    name = "date"
+    weight = 10
