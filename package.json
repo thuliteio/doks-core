@@ -1,30 +1,38 @@
 {
-  "name": "@hyas/themes-doks",
-  "description": "Hyas Doks theme",
-  "version": "0.1.3",
-  "browserslist": [
-    "defaults"
-  ],
-  "repository": "https://github.com/h-enk/hyas-themes-doks",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
+  "name": "@hyas/doks-core",
+  "version": "0.1.4",
+  "description": "Doks core for Doks theme",
+  "main": "index.js",
   "scripts": {
     "clean:install": "shx rm -rf package-lock.json node_modules",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
-  "dependencies": {
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.2",
-    "clipboard": "^2.0.11",
-    "flexsearch": "^0.7.31",
-    "highlight.js": "^11.6.0",
-    "instant.page": "^5.1.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gethyas/doks-core.git"
   },
+  "keywords": [
+    "doks",
+    "hyas",
+    "hugo"
+  ],
+  "author": "Henk Verlinde",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/gethyas/doks-core/issues"
+  },
+  "homepage": "https://github.com/gethyas/doks-core#readme",
   "devDependencies": {
     "auto-changelog": "^2.4.0",
     "shx": "^0.3.4"
+  },
+  "dependencies": {
+    "@hyas/bootstrap": "^0.1.1",
+    "clipboard": "^2.0.11",
+    "flexsearch": "^0.7.31"
   }
 }
