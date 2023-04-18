@@ -17,7 +17,7 @@
 </div>
 <div class="page-links d-none d-xl-block">
   <h3>{{ i18n "on-this-page" }}</h3>
-  {{ if eq .Site.Params.options.scrollSpy true -}}
+  {{ if eq site.Data.doks.scrollSpy true -}}
     {{ .TableOfContents | replaceRE "<nav id=\"TableOfContents\">" "<nav id=\"toc\">" | safeHTML }}
   {{ else -}}
     {{ .TableOfContents }}

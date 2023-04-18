@@ -2,6 +2,7 @@
 <div class="row justify-content-center">
   <div class="col-md-12 col-lg-10 col-xl-8">
     <h1 class="text-center">{{ .Title }}</h1>
+    {{ with .Params.summary -}}<p class="lead text-center">{{ . }}</p>{{ end -}}
     <div class="text-center">{{ .Content }}</div>
     <div class="card-list">
       {{ range .Paginator.Pages }}

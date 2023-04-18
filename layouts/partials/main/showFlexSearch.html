@@ -1,0 +1,7 @@
+{{ $showFlexSearch := site.Data.doks.flexSearch -}}
+{{ if $showFlexSearch -}}
+  {{ if isset site.Data.doks "showSearch" -}}
+    {{ $showFlexSearch = or (eq (len site.Data.doks.showSearch) 0) (in site.Data.doks.showSearch .Section) (and .IsHome (in site.Data.doks.showSearch "homepage")) -}}
+  {{ end -}}
+{{ end -}}
+{{ .Scratch.Set "showFlexSearch" $showFlexSearch -}}

@@ -1,6 +1,6 @@
 {
   "name": "@hyas/doks-core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Doks core for Doks theme",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "shx": "^0.3.4"
   },
   "dependencies": {
-    "@hyas/bootstrap": "^0.1.1",
+    "@hyas/bootstrap": "^0.1.2",
     "clipboard": "^2.0.11",
     "flexsearch": "^0.7.31"
   }

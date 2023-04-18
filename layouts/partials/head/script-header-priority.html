@@ -1,0 +1,7 @@
+<!-- Insert scripts NEEDED by stylesheets here -->
+{{ if not site.Data.doks.forceColorMode -}}
+  {{ partial "footer/esbuild" (dict "src" "js/color-mode.js" "transpile" false) -}}
+{{ end -}}
+{{- if and (site.Data.doks.alert) (site.Data.doks.alertDismissable) -}}
+  {{ partial "footer/esbuild" (dict "src" "js/dismissable-alert.js" "transpile" false) -}}
+{{- end -}}

@@ -9,6 +9,7 @@
 
 .anchor {
   visibility: hidden;
+  margin-left: 0.375rem;
 }
 
 h1:hover a,
@@ -61,4 +62,18 @@ p.meta {
 
 .page-link:hover {
   text-decoration: none;
+}
+
+.row-about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.row-about h1 {
+  margin-top: 1rem;
 }

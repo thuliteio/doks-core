@@ -1,0 +1,13 @@
+{{- $pages := slice -}}
+{{- with site.Data.doks.indexPages -}}
+  {{- $pages = (where (where site.RegularPages "Type" "in" .) "Params.exclude_search" nil) -}}
+{{- else -}}
+  {{- $pages = where site.RegularPages "Params.exclude_search" nil -}}
+{{- end -}}
+
+{{/* Source: https://github.com/frjo/hugo-theme-zen/blob/main/layouts/home.searchindex.json */}}
+{{- $.Scratch.Add "searchindex" slice -}}
+{{- range $index, $element := $pages -}}
+  {{- $.Scratch.Add "searchindex" (dict "id" $index "title" $element.Title "permalink" $element.RelPermalink "tags" (delimit ($element.Params.tags | default "") " ") "content" $element.Plain "summary" $element.Summary "date" ($element.Date.Format ($.Param "dateformat" | default "January 2, 2006"))) -}}
+{{- end -}}
+{{- $.Scratch.Get "searchindex" | jsonify -}}
