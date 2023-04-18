@@ -1,6 +1,6 @@
 {
   "name": "@hyas/doks-core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Doks core for Doks theme",
   "main": "index.js",
   "scripts": {
