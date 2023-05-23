@@ -1,92 +1,80 @@
-/** Theme variables */
-
-// Source: https://material.io/design/color/dark-theme.html
-
-$body-bg-dark: $gray-900;
-$body-overlay-dark: darken($body-bg-dark, 2.5%);
-
-/*
-$border-dark: darken($body-bg-dark, 2.5%);
-*/
-$border-dark: $gray-800;
-$body-color-dark: $gray-300;
-$dots-dark: darken($body-color-dark, 50%);
-
-// $link-color-dark: $blue-300;
-$link-color-dark: $doks-bluishCyan-100;
-$button-color-dark: $link-color-dark;
-$focus-color-dark: lighten($link-color-dark, 2.5%);
-
-$navbar-dark-color:                 $body-color-dark;
-$navbar-dark-hover-color:           $link-color-dark;
-$navbar-dark-active-color:          $link-color-dark;
-
 /** Theme styles */
 
 @include color-mode(dark) {
+
+h1,
+h2,
+h3,
+h4 {
+  color: $headings-color-dark;
+}
 
 body {
   background: $body-bg-dark;
   color: $body-color-dark;
 }
 
-body a {
+a {
   color: $link-color-dark;
 }
 
-body a.text-body {
+.callout a {
+  color: inherit;
+}
+
+a.text-{
   color: $body-color-dark !important;
 }
 
-body .btn-primary {
+.btn-primary {
   @include button-variant($button-color-dark, $button-color-dark);
 
-  color: $body-bg-dark !important;
+  color: $body-bg-dark;
 }
 
-body .btn-outline-primary {
+.btn-outline-primary {
   @include button-outline-variant($button-color-dark, $button-color-dark);
 
   color: $link-color-dark;
 }
 
-body .btn-outline-primary:hover {
+.btn-outline-primary:hover {
   color: $body-bg-dark;
 }
 
-body .btn-doks-light {
+.btn-doks-light {
   color: $navbar-dark-color;
 }
 
-body .show > .btn-doks-light,
-body .btn-doks-light:hover,
-body .btn-doks-light:active {
+.show > .btn-doks-light,
+.btn-doks-light:hover,
+.btn-doks-light:active {
   color: $link-color-dark;
 }
 
-body .btn-menu svg {
+.btn-menu svg {
   color: $body-color-dark;
 }
 
-body .doks-sidebar-toggle {
+.doks-sidebar-toggle {
   color: $navbar-dark-color;
 }
 
-body .btn-menu:hover,
-body .btn-doks-light:hover,
-body .doks-sidebar-toggle:hover {
+.btn-menu:hover,
+.btn-doks-light:hover,
+.doks-sidebar-toggle:hover {
   background: transparent;
 }
 
 /*
-body .dropdown-menu {
+.dropdown-menu {
   @extend .dropdown-menu-dark;
 }
 */
 
-body .navbar,
-body .doks-subnavbar {
-  background-color: rgba(33, 37, 41, 0.95);
+.navbar,
+.doks-subnavbar {
+  background-color: $body-bg-dark;
   border-bottom: 1px solid $border-dark;
 }
 
@@ -94,102 +82,102 @@ body.home .navbar {
   border-bottom: 0;
 }
 
-body .offcanvas-header {
+.offcanvas-header {
   border-bottom: 1px solid $gray-800;
 }
 
-body .offcanvas .nav-link {
+.offcanvas .nav-link {
   color: $body-color-dark;
 }
 
-body .offcanvas .nav-link:hover,
-body .offcanvas .nav-link:focus {
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
   color: $link-color-dark;
 }
 
-body .offcanvas .nav-link.active {
+.offcanvas .nav-link.active {
   color: $link-color-dark;
 }
 
 /*
-body .navbar-light .navbar-brand {
+.navbar-light .navbar-brand {
   color: $navbar-dark-color !important;
 }
 */
 
-body .navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
   color: $navbar-dark-color;
 }
 
-body .navbar-light .navbar-nav .nav-link:hover,
-body .navbar-light .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
   color: $navbar-dark-hover-color;
 }
 
-body .navbar-light .navbar-nav .nav-link.disabled {
+.navbar-light .navbar-nav .nav-link.disabled {
   color: $navbar-dark-disabled-color;
 }
 
-body .navbar-light .navbar-nav .show > .nav-link,
-body .navbar-light .navbar-nav .active > .nav-link,
-body .navbar-light .navbar-nav .nav-link.show,
-body .navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
   color: $navbar-dark-active-color;
 }
 
-body .navbar-light .navbar-text {
+.navbar-light .navbar-text {
   color: $navbar-dark-color;
 }
 
-body .alert-primary a {
+.alert-primary a {
   color: $body-bg-dark;
 }
 
-body .alert-doks {
+.alert-doks {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
 
-body .alert-doks a {
+.alert-doks a {
   color: $link-color-dark;
 }
 
-body .page-links a {
+.page-links a {
   color: $body-color-dark;
 }
 
-body .btn-toggle-nav a {
+.btn-toggle-nav a {
   color: $body-color-dark;
 }
 
-body .showcase-meta a {
+.showcase-meta a {
   color: $body-color-dark;
 }
 
-body .showcase-meta a:hover,
-body .showcase-meta a:focus {
+.showcase-meta a:hover,
+.showcase-meta a:focus {
   color: $link-color-dark;
 }
 
-body .docs-link:hover,
-body .docs-link.active,
-body .page-links a:hover {
+.docs-link:hover,
+.docs-link.active,
+.page-links a:hover {
   text-decoration: none;
   color: $link-color-dark;
 }
 
-body .btn-toggle {
+.btn-toggle {
   color: $body-color-dark;
   background-color: transparent;
   border: 0;
 }
 
-body .btn-toggle:hover,
-body .btn-toggle:focus {
+.btn-toggle:hover,
+.btn-toggle:focus {
   color: $body-color-dark;
 }
 
-body .btn-toggle::before {
+.btn-toggle::before {
   width: 1.25em;
   line-height: 0;
   content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
@@ -198,62 +186,62 @@ body .btn-toggle::before {
   margin-bottom: 0.125rem;
 }
 
-body .btn-toggle[aria-expanded="true"] {
+.btn-toggle[aria-expanded="true"] {
   color: $body-color-dark;
 }
 
-body .btn-toggle[aria-expanded="true"]::before {
+.btn-toggle[aria-expanded="true"]::before {
   transform: rotate(90deg);
 }
 
-body .btn-toggle-nav a:hover,
-body .btn-toggle-nav a:focus {
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
   color: $link-color-dark;
 }
 
-body .btn-toggle-nav a.active {
+.btn-toggle-nav a.active {
   color: $link-color-dark;
 }
 
-body .navbar-light .navbar-text a {
+.navbar-light .navbar-text a {
   color: $navbar-dark-active-color;
 }
 
-body .docs-links h3.sidebar-link a,
-body .page-links h3.sidebar-link a {
+.docs-links h3.sidebar-link a,
+.page-links h3.sidebar-link a {
   color: $body-color-dark;
 }
 
-body .navbar-light .navbar-text a:hover,
-body .navbar-light .navbar-text a:focus {
+.navbar-light .navbar-text a:hover,
+.navbar-light .navbar-text a:focus {
   color: $navbar-dark-active-color;
 }
 
-body .navbar .btn-link {
+.navbar .btn-link {
   color: $navbar-dark-color;
 }
 
-body .content .btn-link {
+.content .btn-link {
   color: $link-color-dark;
 }
 
-body .content .btn-link:hover {
+.content .btn-link:hover {
   color: $link-color-dark;
 }
 
-body .content img[src^="https://latex.codecogs.com/svg.latex"] {
+.content img[src^="https://latex.codecogs.com/svg.latex"] {
   filter: invert(1);
 }
 
-body .navbar .btn-link:hover {
+.navbar .btn-link:hover {
   color: $navbar-dark-hover-color;
 }
 
-body .navbar .btn-link:active {
+.navbar .btn-link:active {
   color: $navbar-dark-active-color;
 }
 
-body .form-control.is-search {
+.form-control.is-search {
   background: $body-overlay-dark;
   border: 1px solid transparent;
   color: $gray-300;
@@ -266,219 +254,221 @@ body .form-control.is-search {
   */
 }
 
-body .form-control.is-search:focus {
+.form-control.is-search:focus {
   border: 1px solid $link-color-dark;
 }
 
-body .doks-search::after {
+.doks-search::after {
   color: $gray-300;
   border: 1px solid $gray-700;
 }
 
-body .text-dark {
+.text-dark {
   color: $body-color-dark !important;
 }
 
 /*
-body .navbar-form::after {
+.navbar-form::after {
   color: $gray-600;
   border: 1px solid $gray-800;
 }
 */
 
-body .form-control {
+.form-control {
   color: $gray-300;
 }
 
-body .form-control::placeholder {
+.form-control::placeholder {
   color: $gray-400;
   opacity: 1;
 }
 
-body .border-top {
+.border-top {
   border-top: 1px solid $border-dark !important;
 }
 
 @include media-breakpoint-up(lg) {
-  body .docs-sidebar {
+  .docs-sidebar {
     order: 0;
     border-right: 1px solid $border-dark;
   }
 }
 
-body .docs-navigation {
+.docs-navigation {
   border-top: 1px solid $border-dark;
 }
 
-body pre code::-webkit-scrollbar-thumb {
+pre code::-webkit-scrollbar-thumb {
   background: $gray-400;
 }
 
-body code:not(.hljs) {
+code:not(.hljs) {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
 
-body pre code:hover {
+pre code:hover {
   scrollbar-width: thin;
   scrollbar-color: $border-dark transparent;
 }
 
-body pre code::-webkit-scrollbar-thumb:hover {
+pre code::-webkit-scrollbar-thumb:hover {
   background: $gray-500;
 }
 
-body blockquote {
+blockquote {
   border-left: 3px solid $border-dark;
 }
 
-body .footer {
+.footer {
   border-top: 1px solid $border-dark;
 }
 
-body .docs-links,
-body .docs-toc {
+.docs-links,
+.docs-toc {
   scrollbar-width: thin;
   scrollbar-color: $body-bg-dark $body-bg-dark;
 }
 
-body .docs-links::-webkit-scrollbar,
-body .docs-toc::-webkit-scrollbar {
+.docs-links::-webkit-scrollbar,
+.docs-toc::-webkit-scrollbar {
   width: 5px;
 }
 
-body .docs-links::-webkit-scrollbar-track,
-body .docs-toc::-webkit-scrollbar-track {
+.docs-links::-webkit-scrollbar-track,
+.docs-toc::-webkit-scrollbar-track {
   background: $body-bg-dark;
 }
 
-body .docs-links::-webkit-scrollbar-thumb,
-body .docs-toc::-webkit-scrollbar-thumb {
+.docs-links::-webkit-scrollbar-thumb,
+.docs-toc::-webkit-scrollbar-thumb {
   background: $body-bg-dark;
 }
 
-body .docs-links:hover,
-body .docs-toc:hover {
+.docs-links:hover,
+.docs-toc:hover {
   scrollbar-width: thin;
   scrollbar-color: $border-dark $body-bg-dark;
 }
 
-body .docs-links:hover::-webkit-scrollbar-thumb,
-body .docs-toc:hover::-webkit-scrollbar-thumb {
+.docs-links:hover::-webkit-scrollbar-thumb,
+.docs-toc:hover::-webkit-scrollbar-thumb {
   background: $border-dark;
 }
 
-body .docs-links::-webkit-scrollbar-thumb:hover,
-body .docs-toc::-webkit-scrollbar-thumb:hover {
+.docs-links::-webkit-scrollbar-thumb:hover,
+.docs-toc::-webkit-scrollbar-thumb:hover {
   background: $border-dark;
 }
 
-body .docs-links h3:not(:first-child) {
+.docs-links h3:not(:first-child) {
   border-top: 1px solid $border-dark;
 }
 
-body a.docs-link {
+a.docs-link {
   color: $body-color-dark;
 }
 
-body .page-links li:not(:first-child) {
+.page-links li:not(:first-child) {
   border-top: 1px dashed $border-dark;
 }
 
-body .card {
+.card {
   background: $body-bg-dark;
   border: 1px solid $border-dark;
 }
 
-body .card.bg-light {
+.card.bg-light {
   background: $body-overlay-dark !important;
 }
 
-body .navbar .menu-icon .navicon {
+.navbar .menu-icon .navicon {
   background: $navbar-dark-color;
 }
 
-body .navbar .menu-icon .navicon::before,
-body .navbar .menu-icon .navicon::after {
+.navbar .menu-icon .navicon::before,
+.navbar .menu-icon .navicon::after {
   background: $navbar-dark-color;
 }
 
-body .logo-light {
+.logo-light {
   display: none !important;
 }
 
-body .logo-dark {
+.logo-dark {
   display: inline-block !important;
 }
 
-body .bg-light {
+.bg-light {
   background: darken($body-bg-dark, 1.5%) !important;
 }
 
-body .bg-dots {
+.bg-dots {
   background-image: radial-gradient($dots-dark 15%, transparent 15%);
 }
 
-body .text-muted {
+.text-muted {
   color: darken($body-color-dark, 7.5%) !important;
 }
 
-body .alert-primary {
+.alert-primary {
   background: $link-color-dark;
   color: $body-bg-dark;
 }
 
-body .figure-caption {
+.figure-caption {
   color: $body-color-dark;
 }
 
-body table {
+table {
   @extend .table-dark;
 }
 
-body .copy-status::after {
+.copy-status::after {
   content: "Copy";
   display: block;
   color: $body-color-dark;
 }
 
-body .copy-status:hover::after {
+.copy-status:hover::after {
   content: "Copy";
   display: block;
   color: $link-color-dark;
 }
 
-body .copy-status:focus::after,
-body .copy-status:active::after {
+.copy-status:focus::after,
+.copy-status:active::after {
   content: "Copied";
   display: block;
   color: $link-color-dark;
 }
 
 /*
-body .dropdown-toggle:focus,
-body .doks-sidebar-toggle:focus {
+.dropdown-toggle:focus,
+.doks-sidebar-toggle:focus {
   box-shadow: 0 0 0 0.2rem $focus-color-dark;
 }
 */
 
-body .offcanvas {
+.offcanvas {
   background-color: $body-bg-dark;
 }
 
-body .btn-close {
+.btn-close {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNkZWUyZTYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXgiPjxsaW5lIHgxPSIxOCIgeTE9IjYiIHgyPSI2IiB5Mj0iMTgiPjwvbGluZT48bGluZSB4MT0iNiIgeTE9IjYiIHgyPSIxOCIgeTI9IjE4Ij48L2xpbmU+PC9zdmc+");
   background-size: 1.5rem;
 }
 
+/*
 @include media-breakpoint-up(md) {
-  body .alert-dismissible .btn-close {
+  .alert-dismissible .btn-close {
     background-size: 1.25rem;
   }
 }
+*/
 
 /*
-body .btn-close:focus {
+.btn-close:focus {
   box-shadow: 0 0 0 0.2rem $focus-color-dark;
 }
 */
@@ -487,16 +477,16 @@ body .btn-close:focus {
   color: $body-bg-dark;
 }
 
-body hr.text-black-50 {
+hr.text-black-50 {
   color: $gray-600 !important;
 }
 
-body .email-form .form-control {
+.email-form .form-control {
   background: $body-overlay-dark;
   border: 1px solid transparent;
 }
 
-body .email-form .form-control:focus {
+.email-form .form-control:focus {
   border: 1px solid $link-color-dark;
 }
 
@@ -572,7 +562,7 @@ details[open] > summary {
   border-bottom: 1px solid $border-dark;
 }
 
-details summary::before {
+details summary::after {
   content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
 }
 
@@ -586,4 +576,19 @@ details summary::before {
   border: 1px solid $body-overlay-dark;
 }
 
+table th {
+  color: $headings-color-dark;
 }
+
+.table-dark, [data-bs-theme="dark"] table {
+  --bs-table-color: inherit;
+  --bs-table-bg: $body-bg-dark;
+  
+  background: $body-bg-dark;
+  border-color: $border-dark;
+}
+
+
+
+}
+

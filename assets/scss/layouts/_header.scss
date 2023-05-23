@@ -214,8 +214,17 @@ h5.offcanvas-title {
 
 .header-bar {
   border-top: 4px solid;
-  border-image-source: linear-gradient(90deg, $primary, $doks-bluishCyan-100 50%, $doks-crimson-100);
+  border-image-source: linear-gradient(90deg, $primary, $dg-bluishCyan-100 50%, $dg-crimson-500);
   border-image-slice: 1;
+}
+
+
+@include color-mode(dark) {
+  .header-bar {
+    border-top: 4px solid;
+    border-image-source: linear-gradient(83.21deg, $da-bluishCyan-100 0%, $da-magenta-100 100%);
+    border-image-slice: 1;
+  }
 }
 
 .offcanvas .header-bar {
@@ -396,7 +405,7 @@ h5.offcanvas-title {
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  color: $doks-bluishCyan-200;
+  color: $link-color-dark;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--title {

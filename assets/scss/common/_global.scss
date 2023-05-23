@@ -120,6 +120,19 @@ a:focus {
   text-decoration: underline;
 }
 
+.docs-navigation .card {
+  transition: transform 0.3s;
+}
+
+.docs-navigation .card:hover {
+  transform: scale(1.025);
+}
+
+.docs-navigation a:hover,
+.docs-navigation a:focus {
+  text-decoration: none;
+}
+
 a.btn:hover,
 a.btn:focus {
   text-decoration: none;
@@ -273,10 +286,6 @@ body {
   font-weight: 500;
 }
 
-::selection {
-  background: rgba(212, 53, 159, 0.2);
-}
-
 .section-features {
   padding-top: 2rem;
 }
@@ -304,7 +313,7 @@ body {
 // https://fossheim.io/writing/posts/css-text-gradient/
 .gradient-text {
   background-color: $primary;
-  background-image: linear-gradient(90deg, $primary, $doks-bluishCyan-100 50%, $doks-crimson-100);
+  background-image: linear-gradient(90deg, $primary, $link-color-dark 50%, $dg-crimson-500);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -319,7 +328,7 @@ body {
 
 .card-bar {
   border-top: 4px solid;
-  border-image-source: linear-gradient(90deg, $primary, $doks-bluishCyan-100 50%, $doks-crimson-100);
+  border-image-source: linear-gradient(90deg, $primary, $link-color-dark 50%, $dg-crimson-500);
   border-image-slice: 1;
 }
 
@@ -334,5 +343,86 @@ body {
 @include media-breakpoint-up(md) {
   .modal-backdrop.show {
     opacity: 0;
+  }
+}
+
+sup[id]::after {
+  display: block;
+  height: 6rem;
+  margin-top: -6rem;
+  content: "";
+}
+
+a.footnote-backref {
+  text-decoration: none;
+}
+
+li input[type="checkbox"] {
+
+  @extend .form-check-input;
+
+  margin: 0.25rem;
+  border: 1px solid $gray-400;
+}
+
+li input[type="checkbox"]:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 1;
+}
+
+li input[type="checkbox"]:checked {
+  background-color: $db-purple-300;
+  border-color: $db-purple-300;
+}
+
+@include color-mode(dark) {
+  li input[type="checkbox"] {
+    border: 1px solid $gray-600;
+  }
+
+  li input[type="checkbox"]:checked {
+    background-color: $link-color-dark;
+    border-color: $link-color-dark;
+    --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%231d2d35' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  }
+}
+
+.content .icon {
+  margin-bottom: 1.5rem;
+}
+
+.content .icon:not(.icon-custom) {
+  height: 1.5rem;
+  width: 1.5rem;
+  stroke-width: 1.5;
+}
+
+/*
+.content .alert .icon {
+  stroke-width: 1;
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+}
+*/
+
+.logo-netlify-large-fullcolor-darkmode {
+  display: none;
+}
+
+@include color-mode(dark) {
+  .logo-netlify-large-fullcolor-lightmode {
+    display: none;
+  }
+
+  .logo-netlify-large-fullcolor-darkmode {
+    display: block;
+  }
+}
+
+@include color-mode(dark) {
+  .netlify-logo path,
+  .netlify-monogram path {
+    fill: $white;
   }
 }

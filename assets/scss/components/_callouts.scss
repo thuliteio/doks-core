@@ -1,0 +1,110 @@
+//
+// Callouts
+//
+
+.callout {
+  --#{$prefix}link-color-rgb: var(--callout-link);
+  --#{$prefix}code-color: var(--callout-code-color);
+
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--callout-color, inherit);
+  background-color: var(--callout-bg, var(--bs-gray-100));
+  // border-left: .25rem solid var(--callout-border, var(--bs-gray-300));
+  border: .0625rem solid var(--callout-border, var(--bs-gray-300));
+  border-radius: 0.25rem;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: .25rem;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  + .callout {
+    margin-top: -.25rem;
+  }
+
+  .icon {
+    position: relative;    
+    margin: -0.25rem 0 0;
+  }
+
+  .callout-title {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: $headings-font-weight;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  code {
+    background: transparent;
+    color: inherit;
+  }
+
+  a {
+    @extend .alert-link;
+
+    font-weight: $font-weight-medium;
+  }
+
+  .highlight {
+    background-color: rgba($black, .05);
+  }
+}
+
+// Variations
+@each $variant in $callout-variants {
+  .callout-#{$variant} {
+    --callout-color: var(--bs-#{$variant}-text-emphasis);
+    --callout-bg: var(--bs-#{$variant}-bg-subtle);
+    // --callout-bg: var(--bs-light-bg-subtle);
+    --callout-border: var(--bs-#{$variant}-border-subtle);
+  }
+}
+
+.callout.callout-info code {
+  background: tint-color($info, 80%);
+}
+
+.callout.callout-danger code {
+  background: tint-color($danger, 80%);
+}
+
+.callout.callout-warning code {
+  background: tint-color($warning, 80%);
+}
+
+.callout.callout-light code {
+  background: tint-color($da-gray-200, 60%);
+}
+
+@include color-mode(dark) {
+  .callout.callout-info code {
+    background: shade-color($info, 70%);
+    color: inherit;
+  }
+  
+  .callout.callout-danger code {
+    background: shade-color($danger, 70%);
+    color: inherit;
+  }
+  
+  .callout.callout-warning code {
+    background: shade-color($warning, 70%);
+    color: inherit;
+  }
+  
+  .callout.callout-light code {
+    background: shade-color($da-gray-200, 70%);
+    color: inherit;
+  }
+}

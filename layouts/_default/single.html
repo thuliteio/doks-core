@@ -28,12 +28,13 @@
 				</nav>
 			{{ end }}
 			<h1>{{ .Title }}</h1>
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
+			<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
 			{{ if ne .Params.toc false -}}
-			<nav class="d-xl-none" aria-label="Quaternary navigation">
+			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				{{ partial "sidebar/docs-toc.html" . }}
 			</nav>
 			{{ end -}}
+
 			{{ if site.Data.doks.headlineHash -}}
 				{{ partial "main/headline-hash" .Content }}
 			{{ else -}}

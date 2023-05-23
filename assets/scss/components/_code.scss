@@ -8,8 +8,9 @@ samp {
 }
 
 code {
-  background: $doks-khaki-100;
-  color: $doks-bluishCyan-200;
+  background: $db-khaki-100;
+  // background: $db-gray-200;
+  color: $db-bluishCyan-100;
   padding: 0.25rem 0.5rem;
 }
 
@@ -63,4 +64,18 @@ pre code::-webkit-scrollbar-thumb:hover {
 
 code.language-mermaid {
   background: none;
+}
+
+.line .ln {
+  margin-right: 1rem;
+}
+
+.line.hl {
+  color: $dg-crimson-500;
+}
+
+@include color-mode(dark) {
+  .line.hl {
+    color: $yellow-100;
+  }
 }

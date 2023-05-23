@@ -1,0 +1,23 @@
+{{- /*
+  Based on: https://cloudcannon.com/tutorials/hugo-and-remote-data-files/
+*/ -}}
+
+{{ $repo := "" }}
+{{ if .IsNamedParams -}}
+  {{ $repo = .Get "repo" | default "h-enk/doks" -}}
+{{ else -}}
+  {{ $repo = .Get 0 | default "h-enk/doks" -}}
+{{ end -}}
+
+{{ $url := print "https://api.github.com/repos/" $repo "/contributors" }}
+{{ $contributors := getJSON $url }}
+
+<ul class="list-contributors list-inline">
+{{ range $contributors }}
+  <li class="list-inline-item">
+    <a href="{{ .html_url }}">
+      <img class="img-fluid lazyload blur-up rounded-circle" src="{{ .avatar_url }}" alt="{{ .login }}" title="{{ .login }}" width="48" height="48">
+    </a>
+  </li>
+{{ end }}
+</ul>

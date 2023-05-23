@@ -1,0 +1,30 @@
+{{- /*
+  Usage: `callout "type"`, where `type` is one of light (default), info, danger, or warning
+  Based on: https://github.com/twbs/bootstrap/blob/283cbd902669732943885e94115a0e29a952baf6/site/layouts/shortcodes/callout.html
+*/ -}}
+
+{{ $css_class := "" }}
+{{ if .IsNamedParams -}}
+  {{ $css_class = .Get "context" | default "light" -}}
+{{ else -}}
+  {{ $css_class = .Get 0 | default "light" -}}
+{{ end -}}
+
+{{ $icon := .Get "icon" -}}
+{{ $title := .Get "title" -}}
+
+{{ $flex_direction := "row" }}
+{{ if or (and $icon $title) ($title) -}}
+  {{ $flex_direction = "column"}}
+{{ end -}}
+
+<div class="callout callout-{{ $css_class }} d-flex flex-{{ $flex_direction }}">
+  {{- if and $icon $title -}}
+    <div class="callout-title">{{ partial "svg" $icon }}{{ $title | safeHTML }}</div>
+  {{- else if $icon -}}
+    <div class="callout-icon me-2">{{ partial "svg" $icon }}</div>
+  {{- else if $title -}}
+    <p class="callout-title">{{ $title | safeHTML }}</p>
+  {{- end -}}
+  <div class="callout-content">{{ .Inner | markdownify }}</div>
+</div>

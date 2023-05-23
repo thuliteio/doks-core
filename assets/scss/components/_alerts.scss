@@ -16,8 +16,8 @@
 }
 
 .alert-doks {
-  background: $doks-khaki-100;
-  color: $doks-bluishCyan-200;
+  background: $db-khaki-100;
+  color: $db-bluishCyan-100;
 }
 
 /*
@@ -168,7 +168,7 @@
 }
 
 .alert code {
-  background: darken($doks-khaki-100, 5%);
-  color: $doks-bluishCyan-200;
+  background: darken($db-khaki-100, 5%);
+  color: $db-bluishCyan-100;
   padding: 0.25rem 0.5rem;
 }

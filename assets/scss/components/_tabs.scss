@@ -28,11 +28,11 @@
 
 @include color-mode(dark) {
   .nav-tabs {
-    border-bottom: 0.0625rem solid rgb(33, 38, 45);
+    border-bottom: 0.0625rem solid $gray-800;
   }
 
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
-    border-bottom: 0.125rem solid $primary;
+    border-bottom: 0.125rem solid $link-color-dark;
   }
 }

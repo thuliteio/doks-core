@@ -73,28 +73,28 @@ pre {
   font-size: $font-size-sm;
   padding: 0.25rem 0.5rem;
   color: $white;
-  background-color: $doks-crimson-100;
-  border-color: $doks-crimson-100;
+  background-color: $dg-crimson-500;
+  border-color: $dg-crimson-500;
 }
 
 .btn-copy:hover {
   color: $white;
-  background-color: lighten($doks-crimson-100, 5%);
-  border-color: lighten($doks-crimson-100, 15%);
+  background-color: lighten($dg-crimson-500, 5%);
+  border-color: lighten($dg-crimson-500, 15%);
 }
 
 .btn-copy:focus {
   color: $white;
-  background-color: $doks-crimson-100;
-  border-color: lighten($doks-crimson-100, 15%);
+  background-color: $dg-crimson-500;
+  border-color: lighten($dg-crimson-500, 15%);
   box-shadow: none;
 }
 
 .btn-copy:active,
 .btn-copy.active {
   color: $white;
-  background-color: $doks-crimson-100;
-  border-color: lighten($doks-crimson-100, 15%);
+  background-color: $dg-crimson-500;
+  border-color: lighten($dg-crimson-500, 15%);
 }
 
 .btn-copy:active:focus,
@@ -268,11 +268,6 @@ pre {
   background-color: transparent;
 }
 
-
-
-//
-
-
 .clipboard {
   position: relative;
   float: right;
@@ -287,9 +282,15 @@ pre {
   top: 0.5rem;
   line-height: 1;
   padding: 0.3125rem 0.3125rem 0.1875rem;
-  color: $doks-crimson-100;
-  background-color: #f6f8fa;
-  border-color: transparent
+  background-color: transparent;
+  // border-color: $gray-300;
+  border-color: transparent;
+
+  @include media-breakpoint-down(md) {
+    position: absolute;
+    right: -0.5rem;
+    top: 0.5rem;
+  }
 }
 
 // Clipboard icon
@@ -302,14 +303,13 @@ pre {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-copy' width='22' height='22' viewBox='0 0 24 24' stroke-width='1' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z'%3E%3C/path%3E%3Cpath d='M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2'%3E%3C/path%3E%3C/svg%3E") no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: $doks-crimson-100;
+  background-color: $gray-700;
 }
 
 // Clipboard button
 .btn-clipboard:hover {
-  color: $doks-crimson-100;
-  background-color: darken($doks-khaki-100, 5%);
-  border-color: darken($doks-khaki-100, 10%);
+  // border-color: $gray-500;
+  border-color: transparent;
 }
 
 // Clipboard icon
@@ -322,13 +322,15 @@ pre {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-copy' width='22' height='22' viewBox='0 0 24 24' stroke-width='1' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M8 8m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z'%3E%3C/path%3E%3Cpath d='M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2'%3E%3C/path%3E%3C/svg%3E") no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: $doks-crimson-100;
+  // background-color: $gray-700;
+  background-color: $gray-900;
 }
 
 // Clipboard button
 .btn-clipboard:focus,
 .btn-clipboard:active {
-  border-color: darken($doks-khaki-100, 10%) !important;
+  // border-color: $gray-500 !important;
+  border-color: transparent !important;
 }
 
 // Check icon
@@ -342,45 +344,50 @@ pre {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' stroke-width='1.25' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M5 12l5 5l10 -10'%3E%3C/path%3E%3C/svg%3E") no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
-  background-color: $doks-crimson-100;
+  // background-color: $gray-700;
+  background-color: $gray-900;
 }
 
 @include color-mode(dark) {
   // Clipboard button
   .btn-clipboard {
-    color: $doks-bluishCyan-100;
     background-color: transparent;
-    border-color: rgba(240,246,252,0.1);
+    // border-color: $gray-800;
+    border-color: transparent;
   }
 
   // Clipboard icon
   .btn-clipboard::after {
-    background-color: $doks-bluishCyan-100;
+    background-color: $gray-400;
   }
 
   // Clipboard button
   .btn-clipboard:hover {
-    color: $doks-bluishCyan-100;
-    background-color: transparent;
-    border-color: rgba(240,246,252,0.3);
+    // border-color: $gray-600;
+    border-color: transparent;
   }
 
   // Clipboard icon
   .btn-clipboard:hover::after {
-    background-color: $doks-bluishCyan-100;
+    background-color: $gray-200;
   }
 
   // Clipboard button
   .btn-clipboard:focus,
   .btn-clipboard:active {
-    border-color: rgba(240,246,252,0.3) !important;
+    // border-color: $gray-600 !important;
+    border-color: transparent;
   }
 
   // Check icon
   .btn-clipboard:focus::after,
   .btn-clipboard:active::after {
-    background-color: $doks-bluishCyan-100;
+    background-color: $gray-200;
   }
+}
+
+.highlight {
+  position: relative;
 }
 
 @include media-breakpoint-up(md) {
@@ -396,4 +403,9 @@ pre {
 
 #toTop.fade {
   opacity: 1;
+}
+
+.btn-cta {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }

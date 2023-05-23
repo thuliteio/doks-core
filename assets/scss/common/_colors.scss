@@ -1,25 +1,180 @@
 // Doks color scheme
 
+// db-
+
 /* Bluish cyan */
-$doks-bluishCyan-100: #8ed6fb;
-$doks-bluishCyan-200: #1d2d35;
+$db-bluishCyan-100: #1d2d35;
 
 /* Gray */
-$doks-gray-100: #ffffff;
-$doks-gray-200: #fcfaff;
-
-/* Khaki */
-$doks-khaki-100: #fbf7f0;
-$doks-khaki-200: #aa9c84;
-
-/* Crimson */
-$doks-crimson-100: #d32e9d;
-
-/* Purple */
-$doks-purple-100: #5d2f86;
-
-/* Vermilion */
-$doks-vermilion-100: #e55235;
+$db-gray-100: #ffffff;
+$db-gray-200: #fcf8f2;
+$db-gray-300: #f3f3f3;
+$db-gray-400: #efebf3;
+$db-gray-500: #e6e6e6;
+$db-gray-600: #d9d9d9;
+$db-gray-700: #808080;
+$db-gray-800: #666666;
 
 /* Yellow */
-$doks-yellow-100: #ffe000;
+$db-yellow-100: #fffce6;
+$db-yellow-200: #fff9cc;
+$db-yellow-300: #fff6b3;
+$db-yellow-400: #fff399;
+$db-yellow-500: #fff080;
+$db-yellow-600: #ffea4d;
+$db-yellow-700: #ffe733;
+$db-yellow-800: #ffe41a;
+$db-yellow-900: #ffe000;
+
+/* Khaki */
+$db-khaki-100: #fbf7f0;
+$db-khaki-200: #dcccaf;
+$db-khaki-300: #aa9c84;
+
+/* Purple */
+$db-purple-100: #cfc1db;
+$db-purple-200: #8e6eab;
+$db-purple-300: #5d2f86;
+
+/* Vermilion */
+$db-vermilion-100: #e55235;
+
+// dg-
+
+/* Blue */
+$dg-blue-100: #8aa1b4;
+$dg-blue-200: #6d7e96;
+$dg-blue-300: #458ee1;
+$dg-blue-400: #174d8c;
+$dg-blue-500: #263542;
+$dg-blue-600: #0d2538;
+$dg-blue-700: #0e2233;
+$dg-blue-800: #091a28;
+$dg-blue-900: #071521;
+
+/* Gray */
+$dg-gray-100: #ffffff;
+$dg-gray-200: #fef9fd;
+$dg-gray-300: #f7f9f8;
+$dg-gray-400: #f8f8f8;
+$dg-gray-500: #fdf9f3;
+$dg-gray-600: #ebf4f1;
+$dg-gray-700: #ebebeb;
+$dg-gray-800: #e2ecec;
+$dg-gray-900: #d9d9d9;
+$dg-gray-1000: #d8d8d8;
+$dg-gray-1100: #b3b3b3;
+$dg-gray-1200: #a4a7ae;
+$dg-gray-1300: #63676d;
+$dg-gray-1400: #585858;
+$dg-gray-1500: #3f4145;
+$dg-gray-1600: #33363d;
+$dg-gray-1700: #333333;
+$dg-gray-1800: #02060c;
+
+/* Crimson */
+$dg-crimson-100: #fbebf6;
+$dg-crimson-200: #f7d7ec;
+$dg-crimson-300: #ba8baf;
+$dg-crimson-400: #e24cb2;
+$dg-crimson-500: #d32e9d; //
+$dg-crimson-600: #b32585;
+
+/* Greenish cyan */
+$dg-greenishCyan-100: #d6ece5;
+$dg-greenishCyan-200: #86c1b9;
+$dg-greenishCyan-300: #00a672;
+$dg-greenishCyan-400: #00835c;
+
+/* Khaki */
+$dg-khaki-100: #fff8ec;
+$dg-khaki-200: #f3ead6;
+$dg-khaki-300: #f1e7d0;
+$dg-khaki-400: #eae0c9;
+$dg-khaki-500: #eadec2;
+
+/* Orange */
+$dg-orange-100: #ded0bf;
+$dg-orange-200: #ccbca9;
+$dg-orange-300: #dd9a6d;
+$dg-orange-400: #433422;
+
+/* Bluish cyan */
+$dg-bluishCyan-100: #8ed6fb; //
+$dg-bluishCyan-200: #7cafc2;
+
+/* Bluish green */
+$dg-bluishGreen-100: #7ec699;
+
+/* Scarlet red */
+$dg-scarletRed-100: #e89497;
+$dg-scarletRed-200: #e2777a;
+
+/* Cyan */
+$dg-cyan-100: #cfe6e6;
+
+/* Magenta */
+$dg-magenta-100: #cc99cd;
+
+/* Red */
+$dg-red-100: #ab4642;
+
+// da-
+
+/* Purple magenta */
+$da-purpleMagenta-100: #e8c4f9;
+$da-purpleMagenta-200: #bc52ee;
+$da-purpleMagenta-300: #b845ed;
+
+/* Gray */
+$da-gray-100: #ffffff;
+$da-gray-125: #f2f6fa;
+$da-gray-150: #bfc1c9;
+$da-gray-200: #e5e7eb;
+$da-gray-250: #343841;
+$da-gray-300: #23262d;
+$da-gray-400: #17191e;
+$da-gray-450: #191b21;
+$da-gray-500: #000000;
+
+/* Violet */
+$da-violet-100: #6d6af0;
+$da-violet-200: #3245ff;
+
+/* Blue violet */
+$da-blueViolet-100: #9ca3af;
+$da-blueViolet-200: #858b98;
+$da-blueViolet-300: #2f4cb3;
+$da-blueViolet-400: #343841;
+
+/* Greenish cyan */
+$da-greenishCyan-100: #52eebd;
+$da-greenishCyan-200: #4af2c8;
+
+/* Magenta */
+$da-magenta-100: #f041ff;
+
+/* Red */
+$da-red-100: #ee5552;
+$da-red-200: #d83333;
+
+/* Bluish cyan */
+$da-bluishCyan-100: #52b7ee;
+
+/* Crimson */
+$da-crimson-100: #ee52b7;
+
+/* Green */
+$da-green-100: #52ee55;
+
+/* Khaki */
+$da-khaki-100: #eebd52;
+
+/* Lime */
+$da-lime-100: #b7ee52;
+
+/* Vermilion */
+$da-vermilion-100: #ff7d54;
+
+/* Yellow */
+$da-yellow-100: #f8e42e;

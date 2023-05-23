@@ -1,3 +1,7 @@
+// Custom variables
+
+$callout-variants: light, info, warning, danger;
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -40,12 +44,12 @@ $blue:    #0d6efd;
 $indigo:  #6610f2;
 $purple:  #6f42c1;
 $pink:    #d63384;
-$red:     #dc3545;
+$red:     $da-red-100; // #dc3545 (default)
 $orange:  #fd7e14;
-$yellow:  #ffc107;
+$yellow:  $da-yellow-100; // #ffc107 (default)
 $green:   #198754;
 $teal:    #20c997;
-$cyan:    #0dcaf0;
+$cyan:    $da-bluishCyan-100; // #0dcaf0 9default)
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -298,7 +302,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $doks-purple-100; // $blue (default)
+$primary:       $db-purple-300; // $blue (default)
 $secondary:     $gray-600;
 $success:       $green;
 $info:          $cyan;
@@ -336,10 +340,10 @@ $dark-text-emphasis:      $gray-700;
 $primary-bg-subtle:       tint-color($primary, 80%);
 $secondary-bg-subtle:     tint-color($secondary, 80%);
 $success-bg-subtle:       tint-color($success, 80%);
-$info-bg-subtle:          tint-color($info, 80%);
-$warning-bg-subtle:       tint-color($warning, 80%);
-$danger-bg-subtle:        tint-color($danger, 80%);
-$light-bg-subtle:         mix($gray-100, $white);
+$info-bg-subtle:          tint-color($info, 90%); // tint-color($info, 80%) (default)
+$warning-bg-subtle:       tint-color($warning, 90%); // tint-color($warning, 80%) (default)
+$danger-bg-subtle:        tint-color($danger, 90%); // tint-color($danger, 80%) (default)
+$light-bg-subtle:         tint-color($da-gray-200, 80%); // mix($gray-100, $white) (default)
 $dark-bg-subtle:          $gray-400;
 // scss-docs-end theme-bg-subtle-variables
 
@@ -348,9 +352,9 @@ $primary-border-subtle:   tint-color($primary, 60%);
 $secondary-border-subtle: tint-color($secondary, 60%);
 $success-border-subtle:   tint-color($success, 60%);
 $info-border-subtle:      tint-color($info, 60%);
-$warning-border-subtle:   tint-color($warning, 60%);
+$warning-border-subtle:   tint-color($warning, 10%); // tint-color($warning, 60%) (default)
 $danger-border-subtle:    tint-color($danger, 60%);
-$light-border-subtle:     $gray-200;
+$light-border-subtle:     tint-color($da-gray-200, 0%); // $gray-200 (default)
 $dark-border-subtle:      $gray-500;
 // scss-docs-end theme-border-subtle-variables
 
@@ -435,7 +439,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null;
-$body-color:                $doks-bluishCyan-200; // $gray-900 (default)
+$body-color:                $db-bluishCyan-100; // $gray-900 (default)
 $body-bg:                   $white;
 
 $body-secondary-color:      rgba($body-color, .75);

@@ -1,10 +1,14 @@
+.search-form .form-control:focus {
+  border: 2px solid $primary;
+}
+
 @include color-mode(dark) {
   .search-form .form-control:focus {
-    border: 1px solid $doks-bluishCyan-100;
+    border: 2px solid $link-color-dark;
   }
 
   .search-form .btn-link {
-    color: $doks-bluishCyan-100;
+    color: $link-color-dark;
   }
 }
 
@@ -64,8 +68,13 @@
 @include color-mode(dark) {
   .search-result:hover .card,
   .search-result.selected .card {
-    background-color: $doks-bluishCyan-100;
-    color: $doks-bluishCyan-200;
+    background-color: $link-color-dark;
+    color: $body-overlay-dark;
+  }
+
+  .search-result:hover .card h2,
+  .search-result.selected .card h2 {
+    color: $body-bg-dark;
   }
 }
 
