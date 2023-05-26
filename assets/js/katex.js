@@ -1,5 +1,6 @@
 import katex from 'katex';
-import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
+
+import renderMathInElement from 'katex/dist/contrib/auto-render.mjs';
 
 document.addEventListener('DOMContentLoaded', function() {
   renderMathInElement(document.body, {
@@ -9,6 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
       {left: '\\(', right: '\\)', display: false},
       {left: '\\[', right: '\\]', display: true},
     ],
-    throwOnError : false
+    throwOnError : false,
   });
 });

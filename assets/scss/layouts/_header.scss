@@ -49,6 +49,7 @@
 @include media-breakpoint-up(lg) {
   .navbar {
     z-index: 1025;
+
     /*
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -214,17 +215,8 @@ h5.offcanvas-title {
 
 .header-bar {
   border-top: 4px solid;
-  border-image-source: linear-gradient(90deg, $primary, $dg-bluishCyan-100 50%, $dg-crimson-500);
+  border-image-source: linear-gradient(83.21deg, $da-bluishCyan-100 0%, $da-magenta-100 100%);
   border-image-slice: 1;
-}
-
-
-@include color-mode(dark) {
-  .header-bar {
-    border-top: 4px solid;
-    border-image-source: linear-gradient(83.21deg, $da-bluishCyan-100 0%, $da-magenta-100 100%);
-    border-image-slice: 1;
-  }
 }
 
 .offcanvas .header-bar {
@@ -378,6 +370,7 @@ h5.offcanvas-title {
 */
 
 /*! purgecss start ignore */
+
 /*
 .algolia-autocomplete {
   display: flex !important;
@@ -625,8 +618,17 @@ h5.offcanvas-title {
 .modal-backdrop,
 .offcanvas-backdrop {
   visibility: hidden;
-  background: rgba(27,31,36,0.5);
+  background: rgba(25,27,33,0.5);
   opacity: 0
+}
+
+@include color-mode(dark) {
+  .modal-backdrop,
+  .offcanvas-backdrop {
+    visibility: hidden;
+    background: rgba(25,27,33,0.75);
+    opacity: 0
+  }
 }
 
 .modal-backdrop.show,

@@ -6,7 +6,7 @@ if (topButton !== null) {
     scrollFunction()
   };
 
-  topButton.addEventListener("click", topFunction);
+  topButton.addEventListener('click', topFunction);
 }
 
 function scrollFunction() {

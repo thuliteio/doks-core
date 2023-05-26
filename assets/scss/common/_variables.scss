@@ -1345,7 +1345,7 @@ $card-title-spacer-y:               $spacer * .5;
 $card-title-color:                  null;
 $card-subtitle-color:               null;
 $card-border-width:                 var(--#{$prefix}border-width);
-$card-border-color:                 var(--#{$prefix}border-color-translucent);
+$card-border-color:                 $gray-200; // var(--#{$prefix}border-color-translucent) (default)
 $card-border-radius:                var(--#{$prefix}border-radius);
 $card-box-shadow:                   null;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);

@@ -1,7 +1,6 @@
 /** Theme styles */
 
 @include color-mode(dark) {
-
 h1,
 h2,
 h3,
@@ -74,7 +73,7 @@ a.text-{
 
 .navbar,
 .doks-subnavbar {
-  background-color: $body-bg-dark;
+  background-color: rgba(25, 27, 33, 0.95);
   border-bottom: 1px solid $border-dark;
 }
 
@@ -454,7 +453,7 @@ table {
   background-color: $body-bg-dark;
 }
 
-.btn-close {
+.alert-dismissible .btn-close {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNkZWUyZTYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXgiPjxsaW5lIHgxPSIxOCIgeTE9IjYiIHgyPSI2IiB5Mj0iMTgiPjwvbGluZT48bGluZSB4MT0iNiIgeTE9IjYiIHgyPSIxOCIgeTI9IjE4Ij48L2xpbmU+PC9zdmc+");
   background-size: 1.5rem;
 }

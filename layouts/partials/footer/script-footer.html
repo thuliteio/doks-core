@@ -16,6 +16,6 @@
   {{ partial "footer/esbuild" (dict "src" "js/mermaid.js" "load" "defer" "transpile" false) -}}
 {{ end -}}
 
-{{ if .Params.katex -}}
+{{ if site.Data.doks.katex -}}
   {{ partial "footer/esbuild" (dict "src" "js/katex.js" "load" "defer" "transpile" false) -}}
 {{ end -}}

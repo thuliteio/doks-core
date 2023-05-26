@@ -11,6 +11,7 @@
   margin-bottom: 1.5rem;
   color: var(--callout-color, inherit);
   background-color: var(--callout-bg, var(--bs-gray-100));
+
   // border-left: .25rem solid var(--callout-border, var(--bs-gray-300));
   border: .0625rem solid var(--callout-border, var(--bs-gray-300));
   border-radius: 0.25rem;
@@ -66,6 +67,7 @@
   .callout-#{$variant} {
     --callout-color: var(--bs-#{$variant}-text-emphasis);
     --callout-bg: var(--bs-#{$variant}-bg-subtle);
+
     // --callout-bg: var(--bs-light-bg-subtle);
     --callout-border: var(--bs-#{$variant}-border-subtle);
   }

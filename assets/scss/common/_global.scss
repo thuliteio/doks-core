@@ -128,11 +128,6 @@ a:focus {
   transform: scale(1.025);
 }
 
-.docs-navigation a:hover,
-.docs-navigation a:focus {
-  text-decoration: none;
-}
-
 a.btn:hover,
 a.btn:focus {
   text-decoration: none;
@@ -187,13 +182,18 @@ body {
     .docs-sidebar {
       position: -webkit-sticky;
       position: sticky;
-      top: 4rem;
+      top: 4.25rem;
       z-index: 1000;
-      height: calc(100vh - 4rem);
+      height: calc(100vh - 4.25rem);
+    }
+
+    .docs-sidebar-offset {
+      top: 4.5rem;
+      height: calc(100vh - 4.5rem);
     }
 
     .docs-sidebar-top {
-      top: 0;
+      position: static;
     }
   }
 }
@@ -234,13 +234,18 @@ body {
   .docs-toc {
     position: -webkit-sticky;
     position: sticky;
-    top: 4rem;
-    height: calc(100vh - 4rem);
+    top: 4.25rem;
+    height: calc(100vh - 4.25rem);
     overflow-y: auto;
   }
 
+  .docs-toc-offset {
+    top: 4.5rem;
+    height: calc(100vh - 4.5rem);
+  }
+
   .docs-toc-top {
-    top: 0;
+    position: static;
   }
 }
 
@@ -268,6 +273,11 @@ body {
   .docs-navigation a {
     font-size: $font-size-base;
   }
+}
+
+.docs-navigation a:hover,
+.docs-navigation a:focus {
+  text-decoration: none;
 }
 
 .navbar a:hover,
@@ -358,7 +368,6 @@ a.footnote-backref {
 }
 
 li input[type="checkbox"] {
-
   @extend .form-check-input;
 
   margin: 0.25rem;
@@ -384,6 +393,7 @@ li input[type="checkbox"]:checked {
   li input[type="checkbox"]:checked {
     background-color: $link-color-dark;
     border-color: $link-color-dark;
+
     --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%231d2d35' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
   }
 }
@@ -420,9 +430,35 @@ li input[type="checkbox"]:checked {
   }
 }
 
+.icon-lightmode {
+  display: block;
+}
+
+.icon-darkmode {
+  display: none;
+}
+
+.icon-monochrome path {
+  fill: $db-bluishCyan-100;
+}
+
 @include color-mode(dark) {
+  .icon-lightmode {
+    display: none;
+  }
+  
+  .icon-darkmode {
+    display: block;
+  }
+
   .netlify-logo path,
   .netlify-monogram path {
     fill: $white;
   }
+
+  .icon-monochrome path {
+    fill: $da-gray-125;
+  }
+  
 }
+

@@ -8,7 +8,7 @@
   {{ if templates.Exists "partials/head/script-header-priority.html" -}}
     {{ partial "head/script-header-priority" . }}
   {{ end -}}
-  {{ partial "head/stylesheet" . }}
+  {{ partialCached "head/stylesheet" . }}
   {{ if templates.Exists "partials/head/seo.html" -}}
     {{ partial "head/seo" . }}
   {{ else -}}

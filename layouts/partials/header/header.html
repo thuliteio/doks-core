@@ -149,24 +149,10 @@
         </button>
         {{ end -}}
 
-        <!-- Color mode toggler -->
-        {{ if and (not site.Data.doks.forceColorMode) site.Data.doks.colorModeToggler -}}
-        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
-          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-          </svg>
-          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
-          </svg>
-        </button>
-        {{ end -}}
-
         <!-- Language dropdown -->
         {{ if eq site.Data.doks.multilingualMode true -}}
 
-        <div class="dropdown order-lg-2">
+        <div class="dropdown mt-1 order-lg-2">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
             {{ .Site.Params.languageName }}
             <span class="dropdown-caret">
@@ -204,9 +190,9 @@
         <!-- Versioning dropdown  -->
         {{ if eq site.Data.doks.docsVersioning true -}}
 
-        <div class="dropdown order-lg-3">
+        <div class="dropdown mt-1 order-lg-3">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
-            <span class="d-none">Doks</span> v{{ .Site.Params.docsVersion }}
+            <span class="d-none">Doks</span> v{{ site.Data.doks.docsVersion }}
             <span class="dropdown-caret">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -215,7 +201,7 @@
             </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-versions">
-            <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ .Site.Params.docsVersion }}/prologue/introduction/">Latest ({{ .Site.Params.docsVersion }}.x)</a></li>
+            <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ site.Data.doks.docsVersion }}/prologue/introduction/">Latest ({{ site.Data.doks.docsVersion }}.x)</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/docs/0.2/prologue/introduction/">v0.2.x</a></li>
             <li><a class="dropdown-item" href="/docs/0.1/prologue/introduction/">v0.1.x</a></li>
@@ -224,6 +210,20 @@
           </ul>
         </div>
         {{ end -}}
+
+        <!-- Color mode toggler -->
+        {{ if and (eq site.Data.doks.colorMode "auto") site.Data.doks.colorModeToggler -}}
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        {{ end -}}  
 
         <!-- Social menu -->
         {{ if .Site.Menus.social -}}
@@ -239,14 +239,14 @@
 
         <!-- Navbar button mobile -->
         {{ if site.Data.doks.navBarButton -}}
-          <a class="btn btn-primary mt-2 btn-block d-lg-none" href="{{ site.Data.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Data.doks.navBarButtonText }}</a>
+          <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Data.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Data.doks.navBarButtonText }}</a>
         {{ end -}}
       </div>
     </div>
 
     <!-- Navbar button desktop -->
     {{ if site.Data.doks.navBarButton -}}
-      <a class="btn btn-primary ms-3 me-2 px-3 order-lg-3 d-none d-lg-block" href="{{ site.Data.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Data.doks.navBarButtonText }}</a>
+      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Data.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Data.doks.navBarButtonText }}</a>
     {{ end -}}
 
   </div>

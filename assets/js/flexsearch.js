@@ -23,9 +23,9 @@ import * as params from '@params';
     document: {
       id: 'id',
       index: ['title','tags','content','date'],
-      store: ['title','summary','date','permalink']
+      store: ['title','summary','date','permalink'],
     },
-    tokenize: 'forward'
+    tokenize: 'forward',
   });
 
   function showResults(items) {
@@ -78,7 +78,7 @@ import * as params from '@params';
     const results = index.search({
       query: query,
       enrich: true,
-      limit: limit
+      limit: limit,
     });
     const items = {};
 

@@ -4,7 +4,7 @@
   {{ partial "head/body-class" . }}
   <body class="{{ delimit (.Scratch.Get "class") " " }}"{{ if eq site.Data.doks.scrollSpy true }} data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0"{{ end }}>
     {{ partial "header/header" . }}
-    <div class="wrap container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}" role="document">
+    <div class="wrap container-{{ site.Data.doks.containerBreakpoint | default "lg" }}" role="document">
       <div class="content">
         {{ block "main" . }}{{ end }}
       </div>

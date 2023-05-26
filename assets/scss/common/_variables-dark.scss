@@ -90,7 +90,7 @@ $border-dark:            $da-gray-250;
 $body-color-dark:        $da-gray-150;
 $headings-color-dark:    $da-gray-125;
 $dots-dark:              darken($body-color-dark, 50%);
-$link-color-dark:        tint-color($da-bluishCyan-100, 35%);
+$link-color-dark:        tint-color($da-bluishCyan-100, 25%);
 $button-color-dark:      $link-color-dark;
 $focus-color-dark:       lighten($link-color-dark, 2.5%);
 

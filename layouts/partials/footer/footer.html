@@ -1,9 +1,9 @@
 <footer class="footer text-muted">
-  <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
+  <div class="container-{{ site.Data.doks.containerBreakpoint | default "lg" }}">
     <div class="row">
       <div class="col-lg-8 order-last order-lg-first text-center text-lg-start">
         <ul class="list-inline">
-          <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
+          <li class="list-inline-item">{{ site.Data.doks.footer | safeHTML }}</li>
         </ul>
       </div>
       <div class="col-lg-8 order-first order-lg-last text-center text-lg-end">

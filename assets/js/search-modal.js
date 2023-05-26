@@ -5,7 +5,7 @@
  */
 
 import {
-  Modal
+  Modal,
 } from 'bootstrap';
 
 (() => {
@@ -21,12 +21,12 @@ import {
 
   // Create search modal
   const flexSearchModal = new Modal(searchModal, {
-    focus: true
+    focus: true,
   })
 
   // Show search modal when search button is clicked
-  searchToggleMobile.addEventListener("click", showModalOnClick);
-  searchToggleDesktop.addEventListener("click", showModalOnClick);
+  searchToggleMobile.addEventListener('click', showModalOnClick);
+  searchToggleDesktop.addEventListener('click', showModalOnClick);
 
   function showModalOnClick() {
     flexSearchModal.toggle();
@@ -96,7 +96,7 @@ import {
       if (searchResultSelected) {
         removeClass(searchResultSelected, 'selected');
         const next = searchResults.getElementsByTagName('article')[index];
-        if (typeof next !== undefined && index <= len) {
+        if (typeof next !== 'undefined' && index <= len) {
           searchResultSelected = next;
         } else {
           index = 0;
@@ -115,7 +115,7 @@ import {
         index--;
         // console.log(index);
         const next = searchResults.getElementsByTagName('article')[index];
-        if (typeof next !== undefined && index >= 0) {
+        if (typeof next !== 'undefined' && index >= 0) {
           searchResultSelected = next;
         } else {
           index = len;
@@ -138,7 +138,7 @@ import {
     }
     // Remove focus on selected search result
     searchResultSelected.querySelector('a').blur();
-  };
+  }
   
   function addClass(el, className) {
     if (el.classList) {
@@ -148,10 +148,10 @@ import {
     }
     // Set focus on selected search result
     searchResultSelected.querySelector('a').focus();
-  };
+  }
 
   // Handle mouse navigation search results
-  searchResults.addEventListener("mouseover", (event) => {
+  searchResults.addEventListener('mouseover', () => {
     if (searchResultSelected) {
     removeClass(searchResultSelected, 'selected');
     }
