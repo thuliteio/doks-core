@@ -20,9 +20,9 @@
 
 <div class="callout callout-{{ $css_class }} d-flex flex-{{ $flex_direction }}">
   {{- if and $icon $title -}}
-    <div class="callout-title">{{ partial "svg" $icon }}{{ $title | safeHTML }}</div>
+    <div class="callout-title">{{ partial "inline-svg" (dict "src" $icon "stroke-width" "1.5") }}{{ $title | safeHTML }}</div>
   {{- else if $icon -}}
-    <div class="callout-icon me-2">{{ partial "svg" $icon }}</div>
+    <div class="callout-icon me-2">{{ partial "inline-svg" (dict "src" $icon "stroke-width" "1.5") }}</div>
   {{- else if $title -}}
     <p class="callout-title">{{ $title | safeHTML }}</p>
   {{- end -}}

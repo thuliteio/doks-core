@@ -1,7 +1,7 @@
 {
   "name": "@hyas/doks-core",
-  "version": "0.1.8",
-  "description": "Doks core",
+  "version": "1.0.0",
+  "description": "Hyas Doks core",
   "main": "index.js",
   "scripts": {
     "check": "npm run check:scripts && npm run check:styles",
@@ -34,12 +34,13 @@
     "shx": "^0.3.4"
   },
   "dependencies": {
-    "@hyas/bootstrap": "^0.1.3",
-    "@hyas/images": "^0.3.2",
-    "@hyas/seo": "^0.1.3",
-    "@hyas/tabler-icons": "^1.2.0",
+    "@hyas/bootstrap": "^1.0.1",
+    "@hyas/images": "^1.0.1",
+    "@hyas/inline-svg": "^1.0.1",
+    "@hyas/seo": "^1.0.1",
+    "@tabler/icons": "^2.22.0",
     "clipboard": "^2.0.11",
     "flexsearch": "^0.7.31",
-    "gethyas": "^2.0.5"
+    "gethyas": "^2.0.6"
   }
 }

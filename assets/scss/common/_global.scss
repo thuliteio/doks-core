@@ -398,11 +398,11 @@ li input[type="checkbox"]:checked {
   }
 }
 
-.content .icon {
+.content .svg-inline {
   margin-bottom: 1.5rem;
 }
 
-.content .icon:not(.icon-custom) {
+.content .svg-inline:not(.svg-inline-custom) {
   height: 1.5rem;
   width: 1.5rem;
   stroke-width: 1.5;
@@ -430,24 +430,24 @@ li input[type="checkbox"]:checked {
   }
 }
 
-.icon-lightmode {
+.svg-lightmode {
   display: block;
 }
 
-.icon-darkmode {
+.svg-darkmode {
   display: none;
 }
 
-.icon-monochrome path {
+.svg-monochrome path {
   fill: $db-bluishCyan-100;
 }
 
 @include color-mode(dark) {
-  .icon-lightmode {
+  .svg-lightmode {
     display: none;
   }
   
-  .icon-darkmode {
+  .svg-darkmode {
     display: block;
   }
 
@@ -456,7 +456,7 @@ li input[type="checkbox"]:checked {
     fill: $white;
   }
 
-  .icon-monochrome path {
+  .svg-monochrome path {
     fill: $da-gray-125;
   }
   

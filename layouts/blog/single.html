@@ -11,7 +11,12 @@
     {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) -}}
     {{ if $image -}}
       <div class="col-md-13">
-        {{ partial "lazyimg" (dict "img" $image "alt" .Title "class" "img-fluid img-post-single w-100 h-auto rounded-0") }}
+        {{ partial "picture" (dict
+        "ctx" .
+        "src" $image
+        "alt" .Title
+        "class" "img-fluid blur-up img-post-single w-100 h-auto rounded-0"
+        )}}
       </div>
     {{ end -}}
 
