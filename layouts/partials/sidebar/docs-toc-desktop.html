@@ -1,0 +1,8 @@
+<div class="page-links">
+  <h3>{{ i18n "on-this-page" }}</h3>
+  {{ if eq site.Data.doks.scrollSpy true -}}
+    {{ .TableOfContents | replaceRE "<nav id=\"TableOfContents\">" "<nav id=\"toc\">" | safeHTML }}
+  {{ else -}}
+    {{ .TableOfContents }}
+  {{ end -}}
+</div>

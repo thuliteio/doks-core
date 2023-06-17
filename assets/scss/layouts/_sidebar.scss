@@ -83,11 +83,13 @@ a.docs-link {
   display: block;
   padding: 0.125rem 0;
   font-size: $font-size-base * 0.9375;
+  text-decoration: none;
 }
 
 .docs-link:hover,
 .docs-link.active,
-.page-links a:hover {
+.page-links a:hover,
+.page-links a.active {
   text-decoration: none;
   color: $link-color;
 }

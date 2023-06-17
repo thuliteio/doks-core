@@ -7,19 +7,17 @@
       {{ partial "main/blog-meta.html" . }}
     </div>
   </div>
-
-    {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) -}}
-    {{ if $image -}}
-      <div class="col-md-13">
-        {{ partial "picture" (dict
-        "ctx" .
-        "src" $image
-        "alt" .Title
-        "class" "img-fluid blur-up img-post-single w-100 h-auto rounded-0"
-        )}}
-      </div>
-    {{ end -}}
-
+  {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) -}}
+  {{ if $image -}}
+    <div class="col-md-13">
+      {{ partial "picture" (dict
+      "ctx" .
+      "src" $image
+      "alt" .Title
+      "class" "img-fluid blur-up img-post-single w-100 h-auto rounded-0"
+      )}}
+    </div>
+  {{ end -}}
   <div class="col-md-12 col-lg-9">
     {{ with .Params.summary -}}<p class="lead">{{ . }}</p>{{ end -}}
     {{ .Content }}
@@ -33,11 +31,7 @@
   </div>
 </div>
 </article>
-
-
-
 {{ end }}
-
 
 {{ define "sidebar-footer" }}
 {{ if site.Data.doks.relatedPosts -}}

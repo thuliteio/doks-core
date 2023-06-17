@@ -1,0 +1,8 @@
+{{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") -}}
+  <details>
+    <summary>On this page</summary>
+    <div class="page-links">
+      {{ .TableOfContents }}
+    </div>
+  </details>
+{{ end -}}

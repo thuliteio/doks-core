@@ -1,14 +1,16 @@
 {
   "name": "@hyas/doks-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hyas Doks core",
   "main": "index.js",
   "scripts": {
-    "check": "npm run check:scripts && npm run check:styles",
-    "check:scripts": "eslint assets/js",
-    "check:styles": "stylelint \"assets/scss/**/*.{css,sass,scss}\"",
+    "clean": "npm run clean:lint && npm run clean:install",
     "clean:install": "shx rm -rf package-lock.json node_modules",
-    "test": "npm run check",
+    "clean:lint": "shx rm -rf .eslintcache .stylelintcache",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "lint:scripts": "eslint --cache assets/js",
+    "lint:styles": "stylelint --cache \"assets/scss/**/*.{css,sass,scss}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
@@ -29,18 +31,17 @@
     "url": "https://github.com/gethyas/doks-core/issues"
   },
   "homepage": "https://github.com/gethyas/doks-core#readme",
-  "devDependencies": {
-    "auto-changelog": "^2.4.0",
-    "shx": "^0.3.4"
-  },
   "dependencies": {
     "@hyas/bootstrap": "^1.0.1",
     "@hyas/images": "^1.0.1",
-    "@hyas/inline-svg": "^1.0.1",
-    "@hyas/seo": "^1.0.1",
+    "@hyas/inline-svg": "^1.0.2",
+    "@hyas/seo": "^1.0.2",
     "@tabler/icons": "^2.22.0",
     "clipboard": "^2.0.11",
     "flexsearch": "^0.7.31",
-    "gethyas": "^2.0.6"
+    "gethyas": "^2.0.7"
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.4.0"
   }
 }
