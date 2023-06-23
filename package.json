@@ -1,6 +1,6 @@
 {
   "name": "@hyas/doks-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Doks core",
   "author": "Hyas",
   "license": "MIT",
@@ -19,14 +19,14 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@hyas/bootstrap": "^1.0.1",
-    "@hyas/images": "^1.0.1",
-    "@hyas/inline-svg": "^1.0.2",
-    "@hyas/seo": "^1.0.2",
+    "@hyas/bootstrap": "^1.0.2",
+    "@hyas/images": "^1.0.2",
+    "@hyas/inline-svg": "^1.0.3",
+    "@hyas/seo": "^1.0.3",
     "@tabler/icons": "^2.22.0",
     "clipboard": "^2.0.11",
     "flexsearch": "^0.7.31",
-    "gethyas": "^2.0.7"
+    "gethyas": "^2.1.0"
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0"

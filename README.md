@@ -1,6 +1,6 @@
 # Doks core
 
-Official Doks core integration for the Hyas Doks theme.
+Official Doks core integration for the Doks theme.
 
 ## Status
 
