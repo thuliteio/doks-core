@@ -34,4 +34,10 @@
       {{ end }}
     </ul>
   {{ end }}
+  {{ range .RegularPages -}}
+    {{ $active := in $currentPage.RelPermalink .RelPermalink -}}
+    <ul class="list-unstyled">
+      <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+    </ul>
+  {{- end }}
 {{ end }}
