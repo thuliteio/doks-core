@@ -528,6 +528,17 @@ hr.text-black-50 {
 
 .dropdown-menu .dropdown-item {
   color: $body-color-dark;
+  &.untranslated {
+    color: $gray-600;
+    text-decoration: line-through;
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-home' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='%23#{str-slice(inspect($link-color-dark), 2)}' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 12l-2 0l9 -9l9 9l-2 0' /%3E%3Cpath d='M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7' /%3E%3Cpath d='M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem top 0.6rem;
+      background-size: 0.9rem 0.9rem;
+      text-decoration: unset;
+    }
+  }
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -541,7 +552,7 @@ hr.text-black-50 {
   background: $body-bg-dark;
 }
 
-.doks-navbar .dropdown-item.current,
+.navbar .dropdown-item.current,
 .doks-subnavbar .dropdown-item.current {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23dee2e6' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -582,12 +593,8 @@ table th {
 .table-dark, [data-bs-theme="dark"] table {
   --bs-table-color: inherit;
   --bs-table-bg: $body-bg-dark;
-  
+
   background: $body-bg-dark;
   border-color: $border-dark;
 }
-
-
-
 }
-
