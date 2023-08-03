@@ -24,7 +24,7 @@
     {{ if .Params.tags -}}
     <div class="tag-list-single">
       {{ range $index, $tag := .Params.tags -}}
-        <a class="btn btn-light" href="{{ "/tags/" | absURL }}{{ . | urlize }}/" role="button">{{ . }}</a>
+        <a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" role="button">{{ . }}</a>
       {{ end -}}
     </div>
     {{ end -}}
