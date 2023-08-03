@@ -1,4 +1,4 @@
-{{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") -}}
+{{ if and (ne .Params.toc false) (partial "private/has-headings.html" .) -}}
   <details>
     <summary>On this page</summary>
     <div class="page-links">
