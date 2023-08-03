@@ -183,7 +183,7 @@
             {{ else -}}
               {{ range .Site.Languages -}}
                 {{ if ne $.Site.Language.Lang .Lang }}
-                  <li><a class="dropdown-item untranslated" rel="alternate" href="{{ .Lang | relLangURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+                  <li><a class="dropdown-item untranslated" rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
                 {{ end -}}
               {{ end -}}
             {{ end -}}
