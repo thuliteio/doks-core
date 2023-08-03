@@ -245,27 +245,26 @@ pre {
   margin-right: -0.3125rem;
 }
 
-.dropdown-menu-main .dropdown-item {
-  color: inherit;
-  font-size: $font-size-base;
-  font-weight: 400;
-  text-decoration: none;
+.dropdown-menu .dropdown-item.untranslated {
+  color: $gray-600;
+  text-decoration: line-through;
+
+  &:focus-visible,
+  &:hover {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-home' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='%23#{str-slice(inspect($link-color), 2)}' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M5 12l-2 0l9 -9l9 9l-2 0' /%3E%3Cpath d='M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7' /%3E%3Cpath d='M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem top 0.6rem;
+    background-size: 0.9rem 0.9rem;
+    text-decoration: unset;
+  }
 }
 
-.dropdown-menu-main .dropdown-item:hover {
-  background-color: transparent;
-  color: $primary;
+.dropdown-menu .dropdown-item:hover {
+  color: $link-color;
 }
 
-.dropdown-menu-main .dropdown-item.active {
-  color: $primary;
-  font-weight: 400;
-  text-decoration: none;
-  background-color: inherit;
-}
-
-.dropdown-menu-main .dropdown-item.active:hover {
-  background-color: transparent;
+.dropdown-menu span.dropdown-item.current:hover {
+  color: unset;
 }
 
 .clipboard {
