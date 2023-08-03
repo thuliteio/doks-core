@@ -35,7 +35,7 @@
 
     <!-- Section navigation -->
     {{ if (in site.Data.doks.sectionNav .Section) -}}
-    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
@@ -43,12 +43,12 @@
         <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
       </svg>
     </button>
-    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
       {{ if site.Data.doks.headerBar -}}
         <div class="header-bar"></div>
       {{ end -}}
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">{{ .Section | humanize }}</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">{{ .Section | humanize }}</h5>
         <button type="button" class="btn btn-link nav-link p-0" data-bs-dismiss="offcanvas" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -68,7 +68,7 @@
     {{ end -}}
 
     <!-- Main navigation button -->
-    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Open menu">
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <line x1="4" y1="8" x2="20" y2="8"></line>
@@ -77,12 +77,12 @@
     </button>
 
     <!-- Main navigation -->
-    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
       {{ if site.Data.doks.headerBar -}}
         <div class="header-bar d-lg-none"></div>
       {{ end -}}
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">{{ site.Title }}</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ site.Title }}</h5>
         <button type="button" class="btn btn-link nav-link p-0" data-bs-dismiss="offcanvas" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -93,7 +93,7 @@
       </div>
       <!--
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">{{ .Site.Params.Title }}</h5>
+        <h5 class="offcanvas-title fw-bold" id="offcanvasNavMainLabel">{{ .Site.Params.Title }}</h5>
         <button class="btn btn-link nav-link ms-auto" type="button" data-bs-dismiss="offcanvas" aria-label="Close menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -154,8 +154,16 @@
 
         <div class="dropdown mt-1 order-lg-2">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-            {{ .Site.Params.languageName }}
+            {{ .Site.Language.LanguageName }}
             <span class="dropdown-caret">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 5h7"></path>
+                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                <path d="M12 20l4 -9l4 9"></path>
+                <path d="M19.1 18h-6.2"></path>
+              </svg>
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M6 9l6 6l6 -6"></path>
@@ -164,7 +172,7 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-languages">
 
-            <li><a class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a></li>
+            <li><span class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</span></li>
 
             <li><hr class="dropdown-divider"></li>
 
@@ -175,7 +183,7 @@
             {{ else -}}
               {{ range .Site.Languages -}}
                 {{ if ne $.Site.Language.Lang .Lang }}
-                  <li><a class="dropdown-item" rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+                  <li><a class="dropdown-item untranslated" rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
                 {{ end -}}
               {{ end -}}
             {{ end -}}
