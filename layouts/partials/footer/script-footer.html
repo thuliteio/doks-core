@@ -1,8 +1,11 @@
 {{ $bootstrapJavascript := site.Data.doks.bootstrapJavascript -}}
 {{ if $bootstrapJavascript -}}
   {{ partial "footer/esbuild" (dict "src" "js/bootstrap.js" "load" "async" "transpile" false) -}}
-{{ end -}}
-{{ partial "footer/script-footer-core.html" . -}}
+{{- end }}
+
+{{ partial "footer/esbuild" (dict "src" "js/app.js" "targetPath" "main.js" "load" "async" "transpile" false) -}}
+
+{{ partial "footer/script-footer-custom.html" . -}}
 
 {{ partial "main/showFlexSearch" . -}}
 {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
