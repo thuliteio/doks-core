@@ -1,9 +1,6 @@
-{{- $pages := slice -}}
-{{- with site.Data.doks.indexPages -}}
-  {{- $pages = (where (where site.RegularPages "Type" "in" .) "Params.exclude_search" nil) -}}
-{{- else -}}
-  {{- $pages = where site.RegularPages "Params.exclude_search" nil -}}
-{{- end -}}
+{{- $pages := where site.Pages "Params.exclude_search" "!=" true -}}
+{{- if gt (len site.Data.doks.searchExclKinds) 0 }}{{- $pages = where $pages "Kind" "not in" site.Data.doks.searchExclKinds }}{{ end -}}
+{{- if gt (len site.Data.doks.searchExclKinds) 0 }}{{- $pages = where $pages "Type" "not in" site.Data.doks.searchExclTypes }}{{ end -}}
 
 {{/* Source: https://github.com/frjo/hugo-theme-zen/blob/main/layouts/home.searchindex.json */}}
 {{- $.Scratch.Add "searchindex" slice -}}
