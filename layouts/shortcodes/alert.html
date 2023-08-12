@@ -1,0 +1,4 @@
+<div class="alert alert-{{ with .Get "context" }}{{.}}{{ else }}doks{{ end }} d-flex rounded" role="alert">
+  {{ with .Get "prefix" }}<div class="flex-shrink-1 alert-prefix">{{ . | page.RenderString (dict "display" "block") }} </div>{{ end -}}
+  <div class="w-100">{{ .Inner | page.RenderString (dict "display" "block") }}</div>
+</div>
