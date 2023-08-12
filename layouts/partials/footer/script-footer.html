@@ -11,7 +11,7 @@
 {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
 {{ $searchLimit := site.Data.doks.searchLimit -}}
 {{ if $showFlexSearch -}}
-  {{ partial "footer/esbuild" (dict "src" "js/flexsearch.js" "load" "async" "transpile" false "params" (dict "searchLimit" $searchLimit)) -}}
+  {{ partial "footer/esbuild-template" (dict "src" "js/flexsearch.js" "load" "async" "transpile" false "isMultilingual" site.IsMultiLingual "searchLimit" $searchLimit) -}}
   {{ partial "footer/esbuild" (dict "src" "js/search-modal.js" "load" "async" "transpile" false) -}}
 {{ end -}}
 

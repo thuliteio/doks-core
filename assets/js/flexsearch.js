@@ -13,19 +13,40 @@
  */
 
 import * as FlexSearch from 'flexsearch';
-import * as params from '@params';
+
+// determine language identifier
+{{ if .isMultilingual -}}
+  const langId = window.location.pathname.split('/')[1];
+{{- else -}}
+  const langId = "";
+{{- end }}
 
 (function () {
 
   'use strict';
 
   const index = new FlexSearch.Document({
+    tokenize: 'forward',
     document: {
       id: 'id',
-      index: ['title','tags','content','date'],
-      store: ['title','summary','date','permalink'],
-    },
-    tokenize: 'forward',
+      index: [
+        {
+          field: 'title'
+        },
+        {
+          field: 'tags'
+        },
+        {
+          field: {{ if site.Data.doks.indexSummary }}'summary'{{ else }}'content'{{ end }}
+        },
+        {
+          field:  'date',
+          tokenize: 'strict',
+          encode: false
+        }
+      ],
+      store: ['title','summary','date','permalink']
+    }
   });
 
   function showResults(items) {
@@ -74,7 +95,7 @@ import * as params from '@params';
 
   function doSearch() {
     const query = document.querySelector('.search-text').value.trim();
-    const limit = params.searchLimit;
+    const limit = {{ .searchLimit }};
     const results = index.search({
       query: query,
       enrich: true,
@@ -107,7 +128,7 @@ import * as params from '@params';
 
   function buildIndex() {
     document.querySelector('.search-loading').classList.remove('d-none');
-    fetch('/search-index.json')
+    fetch("/" + langId + "/search-index.json")
       .then(function (response) {
         return response.json();
       })
