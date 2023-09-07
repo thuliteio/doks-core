@@ -18,7 +18,7 @@
   {{ end -}}
 
     <!-- Site title -->
-    <a class="navbar-brand me-auto me-lg-3" href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
+    <a class="navbar-brand me-auto me-lg-3" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
 
     <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
