@@ -11,10 +11,8 @@
   margin-bottom: 1.5rem;
   color: var(--callout-color, inherit);
   background-color: var(--callout-bg, var(--bs-gray-100));
-
-  // border-left: .25rem solid var(--callout-border, var(--bs-gray-300));
-  border: .0625rem solid var(--callout-border, var(--bs-gray-300));
-  border-radius: 0.25rem;
+  border-left: 0.25rem solid var(--callout-border, var(--bs-gray-300));
+  border-radius: 0;
 
   h4 {
     margin-top: 0;
@@ -30,19 +28,22 @@
   }
 
   .svg-inline {
-    position: relative;    
-    margin: -0.25rem 0 0;
+    position: relative;
+    margin: -0.375rem 0 0;
   }
 
   .callout-title {
     display: block;
     margin-bottom: 0.25rem;
     font-weight: $headings-font-weight;
-    text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.125rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+    }
 
     .svg-inline {
-      margin-right: 0.25rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -62,51 +63,116 @@
   }
 }
 
-// Variations
-@each $variant in $callout-variants {
-  .callout-#{$variant} {
-    --callout-color: var(--bs-#{$variant}-text-emphasis);
-    --callout-bg: var(--bs-#{$variant}-bg-subtle);
+.callout.callout-note {
+  border-color: var(--sl-color-blue);
+  background-color: var(--sl-color-blue-high);
 
-    // --callout-bg: var(--bs-light-bg-subtle);
-    --callout-border: var(--bs-#{$variant}-border-subtle);
+  .callout-title {
+    color: var(--sl-color-blue-low);
+  }
+
+  code {
+    background: tint-color($info, 80%);
   }
 }
 
-.callout.callout-info code {
-  background: tint-color($info, 80%);
+.callout.callout-tip {
+  border-color: var(--sl-color-purple);
+  background-color: var(--sl-color-purple-high);
+
+  .callout-title {
+    color: var(--sl-color-purple-low);
+  }
+
+  code {
+    background: tint-color($purple, 80%);
+  }
 }
 
-.callout.callout-danger code {
-  background: tint-color($danger, 80%);
+.callout.callout-caution {
+  border-color: var(--sl-color-orange);
+  background-color: var(--sl-color-orange-high);
+  
+  .callout-title {
+    color: var(--sl-color-orange-low);
+  }
+
+  code {
+    background: tint-color($yellow, 80%);
+  }
 }
 
-.callout.callout-warning code {
-  background: tint-color($warning, 80%);
+.callout.callout-danger {
+  border-color: var(--sl-color-red);
+  background-color: var(--sl-color-red-high);
+  
+  .callout-title {
+    color: var(--sl-color-red-low);
+  }
+
+  code {
+    background: tint-color($red, 80%);
+  }
 }
 
 .callout.callout-light code {
-  background: tint-color($da-gray-200, 60%);
+  background: var(--sl-color-gray-1);
 }
 
 @include color-mode(dark) {
-  .callout.callout-info code {
-    background: shade-color($info, 70%);
-    color: inherit;
+  .callout {
+    color: var(--sl-color-gray-1);
+  }
+
+  .callout.callout-note {
+    border-color: var(--sl-color-blue);
+    background-color: var(--sl-color-blue-low);
+  
+    .callout-title {
+      color: var(--sl-color-blue-high);
+    }
+  
+    code {
+      background: shade-color($info, 75%);    
+    }
   }
   
-  .callout.callout-danger code {
-    background: shade-color($danger, 70%);
-    color: inherit;
+  .callout.callout-tip {
+    border-color: var(--sl-color-purple);
+    background-color: var(--sl-color-purple-low);
+  
+    .callout-title {
+      color: var(--sl-color-purple-high);
+    }
+  
+    code {
+      background: shade-color($purple, 75%);
+    }
   }
   
-  .callout.callout-warning code {
-    background: shade-color($warning, 70%);
-    color: inherit;
+  .callout.callout-caution {
+    border-color: var(--sl-color-orange);
+    background-color: var(--sl-color-orange-low);
+    
+    .callout-title {
+      color: var(--sl-color-orange-high);
+    }
+  
+    code {
+      background: shade-color($yellow, 75%);
+    }
   }
   
-  .callout.callout-light code {
-    background: shade-color($da-gray-200, 70%);
-    color: inherit;
+  .callout.callout-danger {
+    border-color: var(--sl-color-red);
+    background-color: var(--sl-color-red-low);
+    
+    .callout-title {
+      color: var(--sl-color-red-high);
+    }
+  
+    code {
+      background: shade-color($red, 75%);
+    }
   }
 }

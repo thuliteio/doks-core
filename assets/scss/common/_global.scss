@@ -323,7 +323,7 @@ body {
 // https://fossheim.io/writing/posts/css-text-gradient/
 .gradient-text {
   background-color: $primary;
-  background-image: linear-gradient(90deg, $primary, $link-color-dark 50%, $dg-crimson-500);
+  background-image: linear-gradient(90deg, $primary, $link-color-dark 50%, var(--sl-color-blue));
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -338,7 +338,7 @@ body {
 
 .card-bar {
   border-top: 4px solid;
-  border-image-source: linear-gradient(90deg, $primary, $link-color-dark 50%, $dg-crimson-500);
+  border-image-source: linear-gradient(90deg, $primary, $link-color-dark 50%, var(--sl-color-blue));
   border-image-slice: 1;
 }
 
@@ -457,8 +457,16 @@ li input[type="checkbox"]:checked {
   }
 
   .svg-monochrome path {
-    fill: $da-gray-125;
+    fill: var(--sl-color-gray-1);
   }
-  
 }
 
+hr {
+  border-color: $db-gray-700;
+}
+
+@include color-mode(dark) {
+  hr {
+    border-color: var(--sl-color-gray-3);
+  }
+}

@@ -25,7 +25,7 @@ $success-bg-subtle-dark:            shade-color($success, 80%);
 $info-bg-subtle-dark:               shade-color($info, 80%); // shade-color($info, 80%) (default)
 $warning-bg-subtle-dark:            shade-color($warning, 80%); // shade-color($warning, 80%) (default)
 $danger-bg-subtle-dark:             shade-color($danger, 80%); // shade-color($danger, 80%) (default)
-$light-bg-subtle-dark:              shade-color($da-gray-300, 0%); // $gray-800 (default)
+$light-bg-subtle-dark:              hsl(224, 14%, 16%); // $gray-800 (default)
 $dark-bg-subtle-dark:               mix($gray-800, $black);
 // scss-docs-end theme-bg-subtle-dark-variables
 
@@ -36,7 +36,7 @@ $success-border-subtle-dark:        shade-color($success, 40%);
 $info-border-subtle-dark:           shade-color($info, 10%); // shade-color($info, 40%) (default)
 $warning-border-subtle-dark:        shade-color($warning, 25%); // shade-color($warning, 40%) (default)
 $danger-border-subtle-dark:         shade-color($danger, 10%); // shade-color($danger, 40%) (default)
-$light-border-subtle-dark:          tint-color($da-gray-300, 40%); // $gray-700 (default)
+$light-border-subtle-dark:          hsl(224, 10%, 23%); // $gray-700 (default)
 $dark-border-subtle-dark:           $gray-800;
 // scss-docs-end theme-border-subtle-dark-variables
 
@@ -77,6 +77,8 @@ $form-invalid-border-color-dark:    $red-300;
 // Accordion
 //
 
+$accordion-icon-color-dark:         $primary-text-emphasis-dark;
+$accordion-icon-active-color-dark:  $primary-text-emphasis-dark;
 $accordion-button-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary-text-emphasis-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 $accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary-text-emphasis-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 // scss-docs-end sass-dark-mode-vars
@@ -84,13 +86,13 @@ $accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://
 
 /** Theme variables */
 
-$body-bg-dark:           $da-gray-450;
-$body-overlay-dark:      $da-gray-300;
-$border-dark:            $da-gray-250;
-$body-color-dark:        $da-gray-150;
-$headings-color-dark:    $da-gray-125;
+$body-bg-dark:           hsl(224, 10%, 10%);
+$body-overlay-dark:      hsl(224, 14%, 16%);
+$border-dark:            hsl(224, 14%, 16%);
+$body-color-dark:        hsl(224, 6%, 77%);
+$headings-color-dark:    hsl(0, 0%, 100%);
 $dots-dark:              darken($body-color-dark, 50%);
-$link-color-dark:        tint-color($da-bluishCyan-100, 25%);
+$link-color-dark:        hsl(224, 100%, 85%);
 $button-color-dark:      $link-color-dark;
 $focus-color-dark:       lighten($link-color-dark, 2.5%);
 

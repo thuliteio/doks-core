@@ -216,8 +216,16 @@ h5.offcanvas-title {
 
 .header-bar {
   border-top: 4px solid;
-  border-image-source: linear-gradient(83.21deg, $da-bluishCyan-100 0%, $da-magenta-100 100%);
+  border-image-source: linear-gradient(83.21deg, $db-yellow-900 0%, $db-vermilion-100 100%);
   border-image-slice: 1;
+}
+
+@include color-mode(dark) {
+  .header-bar {
+    border-top: 4px solid;
+    border-image-source: linear-gradient(83.21deg, var(--sl-color-accent) 0%, var(--sl-color-green) 100%);
+    border-image-slice: 1;
+  }
 }
 
 .offcanvas .header-bar {
@@ -619,7 +627,7 @@ h5.offcanvas-title {
 .modal-backdrop,
 .offcanvas-backdrop {
   visibility: hidden;
-  background: rgba(25,27,33,0.5);
+  background: hsla(224deg, 10%, 10%, 0.5);
   opacity: 0
 }
 
@@ -627,7 +635,7 @@ h5.offcanvas-title {
   .modal-backdrop,
   .offcanvas-backdrop {
     visibility: hidden;
-    background: rgba(25,27,33,0.75);
+    background: hsla(224deg, 10%, 10%, 0.5);
     opacity: 0
   }
 }
@@ -636,8 +644,8 @@ h5.offcanvas-title {
 .offcanvas-backdrop.show {
   visibility: visible;
   opacity: 1;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px)
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px)
 }
 
 .showing,

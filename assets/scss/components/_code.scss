@@ -72,7 +72,7 @@ code.language-mermaid {
 }
 
 .line.hl {
-  color: $dg-crimson-500;
+  color: var(--sl-color-blue);
 }
 
 @include color-mode(dark) {

@@ -1,16 +1,16 @@
 <footer class="footer text-muted">
   <div class="container-{{ site.Data.doks.containerBreakpoint | default "lg" }}">
     <div class="row">
-      <div class="col-lg-8 order-last order-lg-first text-center text-lg-start">
-        <ul class="list-inline">
-          <li class="list-inline-item">{{ site.Data.doks.footer | safeHTML }}</li>
-        </ul>
-      </div>
-      <div class="col-lg-8 order-first order-lg-last text-center text-lg-end">
+      <div class="col-lg-8 text-center text-lg-start">
         <ul class="list-inline">
           {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            <li class="list-inline-item"><a class="text-muted" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
           {{ end -}}
+        </ul>
+      </div>
+      <div class="col-lg-8 text-center text-lg-end">
+        <ul class="list-inline">
+          <li class="list-inline-item">{{ site.Data.doks.footer | safeHTML }}</li>
         </ul>
       </div>
     </div>

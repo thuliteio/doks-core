@@ -1,4 +1,5 @@
 assets/scss/common/_colors.scss
+assets/scss/common/_syntax.scss
 assets/scss/common/_variables.scss
 assets/scss/common/_variables-dark.scss
 assets/scss/vendor

@@ -193,3 +193,27 @@ ul.list-star li {
     top: 0;
   }
 }
+
+.page-nav .card {
+  .icon-tabler-arrow-left {
+    margin-right: 0.75rem;
+  }
+
+  .icon-tabler-arrow-right {
+    margin-left: 0.75rem;
+  }
+}
+
+.page-nav .card:hover {
+  border: 1px solid $db-gray-600;
+}
+
+@include color-mode(dark) {
+  .page-nav .card {
+    border: 1px solid hsl(224deg, 10%, 23%);
+  }
+
+  .page-nav .card:hover {
+    border: 1px solid hsl(224deg, 6%, 56%);
+  }
+}
