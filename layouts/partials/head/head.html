@@ -4,21 +4,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ if templates.Exists "partials/head/resource-hints.html" -}}
     {{ partial "head/resource-hints" . }}
-  {{ end -}}
+  {{- end }}
   {{ if templates.Exists "partials/head/script-header-priority.html" -}}
     {{ partial "head/script-header-priority" . }}
-  {{ end -}}
-  {{ partialCached "head/stylesheet" . }}
+  {{- end }}
+  {{ if templates.Exists "partials/head/stylesheet.html" -}}
+    {{ partialCached "head/stylesheet" . }}
+  {{- end }}
   {{ if templates.Exists "partials/head/seo.html" -}}
     {{ partial "head/seo" . }}
-  {{ else -}}
+  {{- else if templates.Exists "partials/head/seo-default.html" -}}
     {{ partial "head/seo-default" . }}
-  {{ end -}}
-  {{ partial "head/favicons" . }}
+  {{- end }}
+  {{ if templates.Exists "partials/head/favicons.html" -}}
+    {{ partial "head/favicons" . }}
+  {{- end }}
   {{ if templates.Exists "partials/head/script-header.html" -}}
     {{ partial "head/script-header" . }}
-  {{ end -}}
+  {{- end }}
   {{ if templates.Exists "partials/head/custom-head.html" -}}
     {{ partial "head/custom-head" . }}
-  {{ end -}}
+  {{- end }}
 </head>
