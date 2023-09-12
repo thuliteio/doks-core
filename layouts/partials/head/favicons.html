@@ -1,0 +1,11 @@
+{{ if os.FileExists "static/favicon.ico" }}<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">{{ end }}
+{{ if os.FileExists "static/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">{{ end }}
+{{ if os.FileExists "static/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}">{{ end }}
+{{ if os.FileExists "static/favicon-32x32.png" }}<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}">{{ end }}
+{{ if os.FileExists "static/favicon-16x16.png" }}<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}">{{ end }}
+{{ if os.FileExists "static/site.webmanifest" }}<link rel="manifest" crossorigin="use-credentials" href="{{ "site.webmanifest" | absURL }}">{{ end }}
+{{ if os.FileExists "static/safari-pinned-tab.svg" }}<link rel="mask-icon" crossorigin="use-credentials" href="{{ "safari-pinned-tab.svg" | absURL }}" color="#5bbad5">{{ end }}
+<meta name="apple-mobile-web-app-title" content="{{ default site.Params.favicon.title | default site.Title }}">
+<meta name="application-name" content="{{ default site.Params.favicon.title | default site.Title }}">
+<meta name="msapplication-TileColor" content="{{ site.Params.favicon.color_tile | default "#da532c" }}">
+<meta name="theme-color" content="{{ site.Params.favicon.color_theme | default "#ffffff" }}">
