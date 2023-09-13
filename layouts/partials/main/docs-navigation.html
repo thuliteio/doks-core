@@ -20,7 +20,7 @@
 			</div>
 		</div>
 	{{ end -}}
-	{{ if and .Prev .Next -}}
+	{{ with and ($pages.Next . ) ($pages.Prev .) -}}
 		<div class="m-2"></div>
 	{{ end -}}
 	{{ with $pages.Prev . -}}
