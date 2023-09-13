@@ -50,6 +50,24 @@ h4:hover a {
   }
 }
 
+.edit-page a,
+.last-modified a {
+  color: var(--sl-color-gray-3);
+}
+
+.edit-page a:hover,
+.last-modified a:hover {
+  color: var(--sl-color-gray-4);
+  text-decoration: none;
+}
+
+@include color-mode(dark) {
+  .edit-page a:hover,
+  .last-modified a:hover {
+    color: var(--sl-color-gray-2);
+  }
+}
+
 .edit-page svg,
 .last-modified svg {
   margin-right: 0.25rem;
