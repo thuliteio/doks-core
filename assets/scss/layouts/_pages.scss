@@ -17,6 +17,11 @@
   margin-left: 0.375rem;
 }
 
+.edit-page a,
+.last-modified a {
+  color: var(--sl-color-gray-3);
+}
+
 h1:hover a,
 h2:hover a,
 h3:hover a,
@@ -48,11 +53,6 @@ h4:hover a {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
   }
-}
-
-.edit-page a,
-.last-modified a {
-  color: var(--sl-color-gray-3);
 }
 
 .edit-page a:hover,
