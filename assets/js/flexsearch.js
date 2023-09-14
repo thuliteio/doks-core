@@ -15,7 +15,7 @@
 import * as FlexSearch from 'flexsearch';
 
 // determine language identifier
-{{ if .isMultilingual -}}
+{{ if site.LanguagePrefix -}}
   const langId = window.location.pathname.split('/')[1];
 {{- else -}}
   const langId = "";
