@@ -7,14 +7,16 @@
 			</nav>
 		</div>
 		{{ end -}}
-		
+		{{ if and (eq site.Data.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+			<div class="col container-fw d-flex flex-row justify-content-center mx-auto">
+		{{ end }}
 		{{ if ne .Params.toc false -}}
 		<nav class="docs-toc{{ if ne site.Data.doks.navbarSticky true }} docs-toc-top{{ end }}{{ if site.Data.doks.headerBar }} docs-toc-offset{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			{{ partial "sidebar/docs-toc-desktop.html" . }}
 		</nav>
 		{{ end -}}
 		{{ if .Params.toc -}}
-		<main class="docs-content col-lg-11 col-xl{{ if ne site.Data.doks.containerBreakpoint "fluid" }}-9{{ end }}">
+		<main class="docs-content col-lg-11 col-xl-9">
 		{{ else -}}
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		{{ end -}}
@@ -57,5 +59,8 @@
 			{{ end -}}
 			-->
 		</main>
+		{{ if and (eq site.Data.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+			</div>
+		{{ end }}
 	</div>
 {{ end }}
