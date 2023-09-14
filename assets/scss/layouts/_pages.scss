@@ -236,3 +236,11 @@ ul.list-star li {
     border: 1px solid hsl(224deg, 6%, 56%);
   }
 }
+
+.container-fw {
+  max-width: 1200px;
+
+  .docs-toc {
+    margin-left: 3rem;
+  }
+}
