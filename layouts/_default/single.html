@@ -8,7 +8,7 @@
 		</div>
 		{{ end -}}
 		{{ if and (eq site.Data.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
-			<div class="col container-fw d-flex flex-row justify-content-center mx-auto">
+			<div class="col container-fw d-lg-flex flex-lg-row justify-content-center mx-auto">
 		{{ end }}
 		{{ if ne .Params.toc false -}}
 		<nav class="docs-toc{{ if ne site.Data.doks.navbarSticky true }} docs-toc-top{{ end }}{{ if site.Data.doks.headerBar }} docs-toc-offset{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
