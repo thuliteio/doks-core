@@ -73,7 +73,7 @@
 {{- else -}}
   {{- $params = $paramsDefault -}}
 {{- end -}}
-{{- $resource = $resource | resources.ExecuteAsTemplate "js/script.js" . -}}
+{{- $resource = $resource | resources.ExecuteAsTemplate $src . -}}
 
 {{- /* standard production configuration for es build */ -}}
 {{- $jsConfig := (dict "target" "es2015" "minify" "true" "params" $params) }}

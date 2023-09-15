@@ -121,7 +121,7 @@ import * as FlexSearch from 'flexsearch';
 
   function buildIndex() {
     document.querySelector('.search-loading').classList.remove('d-none');
-    fetch("REPLACE-ME-WITH-LANG-PREFIX/search-index.json")
+    fetch("{{ site.LanguagePrefix }}/search-index.json")
       .then(function (response) {
         return response.json();
       })
