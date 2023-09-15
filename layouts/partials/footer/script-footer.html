@@ -11,7 +11,20 @@
 {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
 {{ $searchLimit := site.Data.doks.searchLimit -}}
 {{ if $showFlexSearch -}}
-  {{ partial "footer/esbuild-template" (dict "src" "js/flexsearch.js" "load" "async" "transpile" false "isMultilingual" site.IsMultiLingual "searchLimit" $searchLimit) -}}
+  {{- /* generate lang-specific FlexSearch JS config file to work around Hugo's asset caching */ -}}
+  {{- $flexsearchLangConfigPath := "" -}}
+  {{- if site.LanguagePrefix -}}
+    {{- $flexsearchLangConfigPath = printf "js/flexsearch.%s.js" site.Language.Lang -}}
+  {{- else -}}
+    {{- $flexsearchLangConfigPath = "js/flexsearch.js" -}}
+  {{- end -}}
+  {{-
+    os.ReadFile "/assets/js/flexsearch.js" |
+      replaceRE "REPLACE-ME-WITH-LANG-PREFIX" site.LanguagePrefix |
+      resources.FromString $flexsearchLangConfigPath |
+      resources.Copy $flexsearchLangConfigPath
+  -}}
+  {{ partial "footer/esbuild-template" (dict "src" $flexsearchLangConfigPath "load" "async" "transpile" false "isMultilingual" site.IsMultiLingual "searchLimit" $searchLimit) -}}
   {{ partial "footer/esbuild" (dict "src" "js/search-modal.js" "load" "async" "transpile" false) -}}
 {{ end -}}
 

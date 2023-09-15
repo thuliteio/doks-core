@@ -14,13 +14,6 @@
 
 import * as FlexSearch from 'flexsearch';
 
-// determine language identifier
-{{ if site.LanguagePrefix -}}
-  const langPart = "/" + window.location.pathname.split('/')[1];
-{{- else -}}
-  const langPart = "";
-{{- end }}
-
 (function () {
 
   'use strict';
@@ -128,7 +121,7 @@ import * as FlexSearch from 'flexsearch';
 
   function buildIndex() {
     document.querySelector('.search-loading').classList.remove('d-none');
-    fetch(window.location.origin + langPart + "/search-index.json")
+    fetch("REPLACE-ME-WITH-LANG-PREFIX/search-index.json")
       .then(function (response) {
         return response.json();
       })
