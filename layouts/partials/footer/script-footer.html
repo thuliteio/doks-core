@@ -18,8 +18,9 @@
   {{- else -}}
     {{- $flexsearchLangConfigPath = "js/flexsearch.js" -}}
   {{- end -}}
+  {{- /*  NOTE: we have to assign the pipe below to avoid outputting its return value ($flexsearchLangConfigPath) */ -}}
   {{-
-    os.ReadFile "/assets/js/flexsearch.js" |
+    $flexsearchLangConfigPath := os.ReadFile "/assets/js/flexsearch.js" |
       replaceRE "REPLACE-ME-WITH-LANG-PREFIX" site.LanguagePrefix |
       resources.FromString $flexsearchLangConfigPath |
       resources.Copy $flexsearchLangConfigPath
