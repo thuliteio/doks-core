@@ -15,7 +15,8 @@
   {{- $flexsearchLangConfigPath := "" -}}
   {{- if site.LanguagePrefix -}}
     {{- $flexsearchLangConfigPath = printf "js/flexsearch.%s.js" site.Language.Lang -}}
-    {{- resources.Get "js/flexsearch.js" | resources.Copy $flexsearchLangConfigPath -}}
+    {{- /*  NOTE: we have to assign the pipe below to avoid outputting its return value ($flexsearchLangConfigPath) */ -}}
+    {{- $unusedVar := resources.Get "js/flexsearch.js" | resources.Copy $flexsearchLangConfigPath -}}
   {{- else -}}
     {{- $flexsearchLangConfigPath = "js/flexsearch.js" -}}
   {{- end -}}
