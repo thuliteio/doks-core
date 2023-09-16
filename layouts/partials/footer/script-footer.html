@@ -1,4 +1,4 @@
-{{ $bootstrapJavascript := site.Data.doks.bootstrapJavascript -}}
+{{ $bootstrapJavascript := site.Params.doks.bootstrapJavascript -}}
 {{ if $bootstrapJavascript -}}
   {{ partial "footer/esbuild" (dict "src" "js/bootstrap.js" "load" "async" "transpile" false) -}}
 {{- end }}
@@ -9,7 +9,7 @@
 
 {{ partial "main/showFlexSearch" . -}}
 {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
-{{ $searchLimit := site.Data.doks.searchLimit -}}
+{{ $searchLimit := site.Params.doks.searchLimit -}}
 {{ if $showFlexSearch -}}
   {{ partial "footer/esbuild" (dict "src" "js/flexsearch.js" "load" "async" "transpile" false "params" (dict "searchLimit" $searchLimit)) -}}
   {{ partial "footer/esbuild" (dict "src" "js/search-modal.js" "load" "async" "transpile" false) -}}
@@ -19,6 +19,6 @@
   {{ partial "footer/esbuild" (dict "src" "js/mermaid.js" "load" "defer" "transpile" false) -}}
 {{ end -}}
 
-{{ if site.Data.doks.katex -}}
+{{ if site.Params.doks.katex -}}
   {{ partial "footer/esbuild" (dict "src" "js/katex.js" "load" "defer" "transpile" false) -}}
 {{ end -}}

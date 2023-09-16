@@ -34,7 +34,7 @@
 {{ end }}
 
 {{ define "sidebar-footer" }}
-{{ if site.Data.doks.relatedPosts -}}
+{{ if site.Params.doks.relatedPosts -}}
   {{ $related := .Site.RegularPages.Related . | first 3 -}}
   {{ with $related -}}
   <div class="bg-light">
