@@ -1,6 +1,6 @@
 // Doks color scheme
 
-// db-
+// Light mode
 
 /* Bluish cyan */
 $db-bluishCyan-100: #1d2d35;
@@ -39,142 +39,98 @@ $db-purple-300: #5d2f86;
 /* Vermilion */
 $db-vermilion-100: #e55235;
 
-// dg-
+// Dark mode
 
-/* Blue */
-$dg-blue-100: #8aa1b4;
-$dg-blue-200: #6d7e96;
-$dg-blue-300: #458ee1;
-$dg-blue-400: #174d8c;
-$dg-blue-500: #263542;
-$dg-blue-600: #0d2538;
-$dg-blue-700: #0e2233;
-$dg-blue-800: #091a28;
-$dg-blue-900: #071521;
+:root,
+::backdrop {
+  --sl-color-white: hsl(0, 0%, 100%);
+  --sl-color-gray-1: hsl(224, 20%, 94%);
+  --sl-color-gray-2: hsl(224, 6%, 77%);
+  --sl-color-gray-3: hsl(224, 6%, 56%);
+  --sl-color-gray-4: hsl(224, 7%, 36%);
+  --sl-color-gray-5: hsl(224, 10%, 23%);
+  --sl-color-gray-6: hsl(224, 14%, 16%);
+  --sl-color-black: hsl(224, 10%, 10%);
+  --sl-hue-orange: 41;
+  --sl-color-orange-low: hsl(var(--sl-hue-orange), 39%, 22%);
+  --sl-color-orange: hsl(var(--sl-hue-orange), 82%, 63%);
+  --sl-color-orange-high: hsl(var(--sl-hue-orange), 82%, 87%);
+  --sl-hue-green: 101;
+  --sl-color-green-low: hsl(var(--sl-hue-green), 39%, 22%);
+  --sl-color-green: hsl(var(--sl-hue-green), 82%, 63%);
+  --sl-color-green-high: hsl(var(--sl-hue-green), 82%, 80%);
+  --sl-hue-blue: 234;
+  --sl-color-blue-low: hsl(var(--sl-hue-blue), 54%, 20%);
+  --sl-color-blue: hsl(var(--sl-hue-blue), 100%, 60%);
+  --sl-color-blue-high: hsl(var(--sl-hue-blue), 100%, 87%);
+  --sl-hue-purple: 281;
+  --sl-color-purple-low: hsl(var(--sl-hue-purple), 39%, 22%);
+  --sl-color-purple: hsl(var(--sl-hue-purple), 82%, 63%);
+  --sl-color-purple-high: hsl(var(--sl-hue-purple), 82%, 89%);
+  --sl-hue-red: 339;
+  --sl-color-red-low: hsl(var(--sl-hue-red), 39%, 22%);
+  --sl-color-red: hsl(var(--sl-hue-red), 82%, 63%);
+  --sl-color-red-high: hsl(var(--sl-hue-red), 82%, 87%);
+  --sl-color-accent-low: hsl(224, 54%, 20%);
+  --sl-color-accent: hsl(224, 100%, 60%);
+  --sl-color-accent-high: hsl(224, 100%, 85%);
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent-high);
+  --sl-color-text-invert: var(--sl-color-accent-low);
+  --sl-color-bg: var(--sl-color-black);
+  --sl-color-bg-nav: var(--sl-color-gray-6);
+  --sl-color-bg-sidebar: var(--sl-color-gray-6);
+  --sl-color-bg-inline-code: var(--sl-color-gray-5);
+  --sl-color-hairline-light: var(--sl-color-gray-5);
+  --sl-color-hairline: var(--sl-color-gray-6);
+  --sl-color-hairline-shade: var(--sl-color-black);
+  --sl-color-backdrop-overlay: hsla(223, 13%, 10%, .66);
+  --sl-shadow-sm: 0px 1px 1px hsla(0, 0%, 0%, .12), 0px 2px 1px hsla(0, 0%, 0%, .24);
+  --sl-shadow-md: 0px 8px 4px hsla(0, 0%, 0%, .08), 0px 5px 2px hsla(0, 0%, 0%, .08), 0px 3px 2px hsla(0, 0%, 0%, .12), 0px 1px 1px hsla(0, 0%, 0%, .15);
+  --sl-shadow-lg: 0px 25px 7px hsla(0, 0%, 0%, .03), 0px 16px 6px hsla(0, 0%, 0%, .1), 0px 9px 5px hsla(223, 13%, 10%, .33), 0px 4px 4px hsla(0, 0%, 0%, .75), 0px 4px 2px hsla(0, 0%, 0%, .25);
+  --sl-text-xs: .8125rem;
+  --sl-text-sm: .875rem;
+  --sl-text-base: 1rem;
+  --sl-text-lg: 1.125rem;
+  --sl-text-xl: 1.25rem;
+  --sl-text-2xl: 1.5rem;
+  --sl-text-3xl: 1.8125rem;
+  --sl-text-4xl: 2.1875rem;
+  --sl-text-5xl: 2.625rem;
+  --sl-text-6xl: 4rem;
+  --sl-text-body: var(--sl-text-base);
+  --sl-text-body-sm: var(--sl-text-xs);
+  --sl-text-code: var(--sl-text-sm);
+  --sl-text-code-sm: var(--sl-text-xs);
+  --sl-text-h1: var(--sl-text-4xl);
+  --sl-text-h2: var(--sl-text-3xl);
+  --sl-text-h3: var(--sl-text-2xl);
+  --sl-text-h4: var(--sl-text-xl);
+  --sl-text-h5: var(--sl-text-lg);
+  --sl-line-height: 1.8;
+  --sl-line-height-headings: 1.2;
+  --sl-font-system: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --sl-font-system-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --__sl-font: var(--sl-font, ""), var(--sl-font-system);
+  --__sl-font-mono: var(--sl-font-mono, ""), var(--sl-font-system-mono);
+  --sl-nav-height: 3.5rem;
+  --sl-nav-pad-x: 1rem;
+  --sl-nav-pad-y: .75rem;
+  --sl-mobile-toc-height: 3rem;
+  --sl-sidebar-width: 18.75rem;
+  --sl-sidebar-pad-x: 1rem;
+  --sl-content-width: 45rem;
+  --sl-content-pad-x: 1rem;
+  --sl-menu-button-size: 2rem;
+  --sl-nav-gap: var(--sl-content-pad-x);
+  --sl-outline-offset-inside: -.1875rem;
+  --sl-z-index-toc: 4;
+  --sl-z-index-menu: 5;
+  --sl-z-index-navbar: 10;
+  --sl-z-index-skiplink: 20
+}
 
-/* Gray */
-$dg-gray-100: #ffffff;
-$dg-gray-200: #fef9fd;
-$dg-gray-300: #f7f9f8;
-$dg-gray-400: #f8f8f8;
-$dg-gray-500: #fdf9f3;
-$dg-gray-600: #ebf4f1;
-$dg-gray-700: #ebebeb;
-$dg-gray-800: #e2ecec;
-$dg-gray-900: #d9d9d9;
-$dg-gray-1000: #d8d8d8;
-$dg-gray-1100: #b3b3b3;
-$dg-gray-1200: #a4a7ae;
-$dg-gray-1300: #63676d;
-$dg-gray-1400: #585858;
-$dg-gray-1500: #3f4145;
-$dg-gray-1600: #33363d;
-$dg-gray-1700: #333333;
-$dg-gray-1800: #02060c;
-
-/* Crimson */
-$dg-crimson-100: #fbebf6;
-$dg-crimson-200: #f7d7ec;
-$dg-crimson-300: #ba8baf;
-$dg-crimson-400: #e24cb2;
-$dg-crimson-500: #d32e9d; //
-$dg-crimson-600: #b32585;
-
-/* Greenish cyan */
-$dg-greenishCyan-100: #d6ece5;
-$dg-greenishCyan-200: #86c1b9;
-$dg-greenishCyan-300: #00a672;
-$dg-greenishCyan-400: #00835c;
-
-/* Khaki */
-$dg-khaki-100: #fff8ec;
-$dg-khaki-200: #f3ead6;
-$dg-khaki-300: #f1e7d0;
-$dg-khaki-400: #eae0c9;
-$dg-khaki-500: #eadec2;
-
-/* Orange */
-$dg-orange-100: #ded0bf;
-$dg-orange-200: #ccbca9;
-$dg-orange-300: #dd9a6d;
-$dg-orange-400: #433422;
-
-/* Bluish cyan */
-$dg-bluishCyan-100: #8ed6fb; //
-$dg-bluishCyan-200: #7cafc2;
-
-/* Bluish green */
-$dg-bluishGreen-100: #7ec699;
-
-/* Scarlet red */
-$dg-scarletRed-100: #e89497;
-$dg-scarletRed-200: #e2777a;
-
-/* Cyan */
-$dg-cyan-100: #cfe6e6;
-
-/* Magenta */
-$dg-magenta-100: #cc99cd;
-
-/* Red */
-$dg-red-100: #ab4642;
-
-// da-
-
-/* Purple magenta */
-$da-purpleMagenta-100: #e8c4f9;
-$da-purpleMagenta-200: #bc52ee;
-$da-purpleMagenta-300: #b845ed;
-
-/* Gray */
-$da-gray-100: #ffffff;
-$da-gray-125: #f2f6fa;
-$da-gray-150: #bfc1c9;
-$da-gray-200: #e5e7eb;
-$da-gray-250: #343841;
-$da-gray-300: #23262d;
-$da-gray-400: #17191e;
-$da-gray-450: #191b21;
-$da-gray-500: #000000;
-
-/* Violet */
-$da-violet-100: #6d6af0;
-$da-violet-200: #3245ff;
-
-/* Blue violet */
-$da-blueViolet-100: #9ca3af;
-$da-blueViolet-200: #858b98;
-$da-blueViolet-300: #2f4cb3;
-$da-blueViolet-400: #343841;
-
-/* Greenish cyan */
-$da-greenishCyan-100: #52eebd;
-$da-greenishCyan-200: #4af2c8;
-
-/* Magenta */
-$da-magenta-100: #f041ff;
-
-/* Red */
-$da-red-100: #ee5552;
-$da-red-200: #d83333;
-
-/* Bluish cyan */
-$da-bluishCyan-100: #52b7ee;
-
-/* Crimson */
-$da-crimson-100: #ee52b7;
-
-/* Green */
-$da-green-100: #52ee55;
-
-/* Khaki */
-$da-khaki-100: #eebd52;
-
-/* Lime */
-$da-lime-100: #b7ee52;
-
-/* Vermilion */
-$da-vermilion-100: #ff7d54;
-
-/* Yellow */
-$da-yellow-100: #f8e42e;
+:root {
+  --purple-hsl: 255, 60%, 60%;
+  --overlay-blurple: hsla(var(--purple-hsl), .2)
+}

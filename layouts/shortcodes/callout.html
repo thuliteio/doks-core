@@ -5,9 +5,9 @@
 
 {{ $css_class := "" }}
 {{ if .IsNamedParams -}}
-  {{ $css_class = .Get "context" | default "light" -}}
+  {{ $css_class = .Get "context" | default "note" -}}
 {{ else -}}
-  {{ $css_class = .Get 0 | default "light" -}}
+  {{ $css_class = .Get 0 | default "note" -}}
 {{ end -}}
 
 {{ $icon := .Get "icon" -}}

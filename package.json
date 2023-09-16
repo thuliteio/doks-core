@@ -1,6 +1,6 @@
 {
   "name": "@hyas/doks-core",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Doks core",
   "author": "Hyas",
   "license": "MIT",
@@ -22,11 +22,11 @@
     "@hyas/bootstrap": "^1.0.2",
     "@hyas/images": "^1.0.2",
     "@hyas/inline-svg": "^1.0.3",
-    "@hyas/seo": "^1.0.3",
-    "@tabler/icons": "^2.22.0",
+    "@hyas/seo": "^1.0.4",
+    "@tabler/icons": "^2.34.0",
     "clipboard": "^2.0.11",
     "flexsearch": "^0.7.31",
-    "gethyas": "^2.1.0"
+    "gethyas": "^2.2.0"
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0"
