@@ -11,7 +11,7 @@
 {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
 {{ $searchLimit := site.Data.doks.searchLimit -}}
 {{ if $showFlexSearch -}}
-  {{- /* generate lang-specific FlexSearch JS config file to work around Hugo's asset caching */ -}}
+  {{- /* use lang-specific FlexSearch JS config file for multilingual site */ -}}
   {{- $flexsearchLangConfigPath := "" -}}
   {{- if site.LanguagePrefix -}}
     {{- $flexsearchLangConfigPath = printf "js/flexsearch.%s.js" site.Language.Lang -}}
