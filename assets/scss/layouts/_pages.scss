@@ -17,6 +17,11 @@
   margin-left: 0.375rem;
 }
 
+.edit-page a,
+.last-modified a {
+  color: var(--sl-color-gray-3);
+}
+
 h1:hover a,
 h2:hover a,
 h3:hover a,
@@ -30,7 +35,8 @@ h4:hover a {
 }
 
 .page-footer-meta {
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .edit-page,
@@ -46,6 +52,19 @@ h4:hover a {
     font-size: $font-size-base;
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
+  }
+}
+
+.edit-page a:hover,
+.last-modified a:hover {
+  color: var(--sl-color-gray-4);
+  text-decoration: none;
+}
+
+@include color-mode(dark) {
+  .edit-page a:hover,
+  .last-modified a:hover {
+    color: var(--sl-color-gray-2);
   }
 }
 
@@ -215,5 +234,13 @@ ul.list-star li {
 
   .page-nav .card:hover {
     border: 1px solid hsl(224deg, 6%, 56%);
+  }
+}
+
+.container-fw {
+  max-width: 1200px;
+
+  .docs-toc {
+    margin-left: 3rem;
   }
 }
