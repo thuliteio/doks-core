@@ -14,7 +14,7 @@
   {{ end -}}
 {{ end -}}
 <a class="stretched-link position-relative" href="{{ "/contributors/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>{{ end -}}{{ end -}}&nbsp;&hyphen;&nbsp;<strong>{{ .ReadingTime -}}{{ with  i18n "reading-time" }}
-  {{i18n "reading-time"}}
+  {{ . }}
   {{ else }}
   min read
   {{ end }}
