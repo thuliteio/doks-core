@@ -1,17 +1,17 @@
-{{ if site.Data.doks.alert -}}
+{{ if site.Params.doks.alert -}}
   {{ partial "header/alert.html" . }}
 {{ end -}}
 
-{{ if site.Data.doks.navbarSticky -}}
+{{ if site.Params.doks.navbarSticky -}}
 <div class="sticky-top">
 {{ end -}}
 
-{{ if site.Data.doks.headerBar -}}
+{{ if site.Params.doks.headerBar -}}
 <div class="header-bar"></div>
 {{ end -}}
 
 <header class="navbar navbar-expand-lg">
-  {{ with site.Data.doks.containerBreakpoint -}}
+  {{ with site.Params.doks.containerBreakpoint -}}
     <div class="container-{{ . }}">
   {{ else -}}
     <div class="container">
@@ -34,7 +34,7 @@
     {{ end -}}
 
     <!-- Section navigation -->
-    {{ if (in site.Data.doks.sectionNav .Section) -}}
+    {{ if (in site.Params.doks.sectionNav .Section) -}}
     <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -44,7 +44,7 @@
       </svg>
     </button>
     <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
-      {{ if site.Data.doks.headerBar -}}
+      {{ if site.Params.doks.headerBar -}}
         <div class="header-bar"></div>
       {{ end -}}
       <div class="offcanvas-header">
@@ -78,7 +78,7 @@
 
     <!-- Main navigation -->
     <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
-      {{ if site.Data.doks.headerBar -}}
+      {{ if site.Params.doks.headerBar -}}
         <div class="header-bar d-lg-none"></div>
       {{ end -}}
       <div class="offcanvas-header">
@@ -150,7 +150,7 @@
         {{ end -}}
 
         <!-- Language dropdown -->
-        {{ if eq site.Data.doks.multilingualMode true -}}
+        {{ if eq site.Params.doks.multilingualMode true -}}
 
         <div class="dropdown mt-1 order-lg-2">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
@@ -163,7 +163,7 @@
                 <path d="M12 20l4 -9l4 9"></path>
                 <path d="M19.1 18h-6.2"></path>
               </svg>
-              {{ .Site.Language.LanguageName }}
+              {{- /* trim preceding whitespace */}}<span id="doks-language-current"></span>{{ .Site.Language.LanguageName }}</span>{{/* trim subsequent whitespace */ -}}
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M6 9l6 6l6 -6"></path>
@@ -176,7 +176,7 @@
 
             <li><hr class="dropdown-divider"></li>
 
-            {{ if site.Data.doks.showMissingLanguages -}}
+            {{ if site.Params.doks.showMissingLanguages -}}
               {{ $translatedLangs := slice -}}
               {{ range .Translations -}}
                 {{ $translatedLangs = $translatedLangs | append .Lang }}
@@ -201,11 +201,11 @@
         {{ end -}}
 
         <!-- Versioning dropdown  -->
-        {{ if eq site.Data.doks.docsVersioning true -}}
+        {{ if eq site.Params.doks.docsVersioning true -}}
 
         <div class="dropdown mt-1 order-lg-3">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
-            <span class="d-none">Doks</span> v{{ site.Data.doks.docsVersion }}
+            <span class="d-none">Doks</span> v{{ site.Params.doks.docsVersion }}
             <span class="dropdown-caret">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -214,7 +214,7 @@
             </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-versions">
-            <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ site.Data.doks.docsVersion }}/prologue/introduction/">Latest ({{ site.Data.doks.docsVersion }}.x)</a></li>
+            <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ site.Params.doks.docsVersion }}/prologue/introduction/">Latest ({{ site.Params.doks.docsVersion }}.x)</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/docs/0.2/prologue/introduction/">v0.2.x</a></li>
             <li><a class="dropdown-item" href="/docs/0.1/prologue/introduction/">v0.1.x</a></li>
@@ -225,7 +225,7 @@
         {{ end -}}
 
         <!-- Color mode toggler -->
-        {{ if and (eq site.Data.doks.colorMode "auto") site.Data.doks.colorModeToggler -}}
+        {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
         <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
           <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -251,25 +251,25 @@
 
 
         <!-- Navbar button mobile -->
-        {{ if site.Data.doks.navBarButton -}}
-          <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Data.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Data.doks.navBarButtonText }}</a>
+        {{ if site.Params.doks.navBarButton -}}
+          <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
         {{ end -}}
       </div>
     </div>
 
     <!-- Navbar button desktop -->
-    {{ if site.Data.doks.navBarButton -}}
-      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Data.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Data.doks.navBarButtonText }}</a>
+    {{ if site.Params.doks.navBarButton -}}
+      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
     {{ end -}}
 
   </div>
 </header>
-{{ if site.Data.doks.navbarSticky -}}
+{{ if site.Params.doks.navbarSticky -}}
 </div>
 {{ end -}}
 
 <!-- Search modal -->
-{{ if site.Data.doks.flexSearch -}}
+{{ if site.Params.doks.flexSearch -}}
 {{ partial "header/search-modal" . }}
 {{ end -}}
 
