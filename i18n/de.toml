@@ -25,6 +25,9 @@ other = "Zuletzt aktualisiert am"
 [on_this_page]
 other = "Auf dieser Seite"
 
+[reading_time]
+other = "Minuten Lesedauer"
+
 [search_loading]
 other = "Suchindex wird geladen…"
 

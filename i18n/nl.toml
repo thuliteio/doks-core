@@ -25,6 +25,9 @@ other = "Laatst bijgewerkt op"
 [on_this_page]
 other = "Op deze pagina"
 
+[reading_time]
+other = "minuten leestijd"
+
 [search_loading]
 other = "Zoekindex wordt geladen…"
 
