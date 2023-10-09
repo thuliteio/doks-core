@@ -30,7 +30,7 @@ import * as FlexSearch from 'flexsearch';
           field: 'tags'
         },
         {
-          field: {{ if site.Data.doks.indexSummary }}'summary'{{ else }}'content'{{ end }}
+          field: {{ if site.Params.doks.indexSummary }}'summary'{{ else }}'content'{{ end }}
         },
         {
           field:  'date',
