@@ -2,15 +2,19 @@
   border-top: 1px solid $gray-200;
   padding-top: 1.125rem;
   padding-bottom: 1.125rem;
-}
 
-.footer ul {
-  margin-bottom: 0;
-}
+  ul {
+    margin-bottom: 0;
+  }
 
-.footer li {
-  font-size: $font-size-sm;
-  margin-bottom: 0;
+  li {
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+  }
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
 
 @include media-breakpoint-down(lg) {
