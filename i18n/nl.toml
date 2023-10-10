@@ -22,11 +22,15 @@ other = "Aan de slag"
 [last_updated]
 other = "Laatst bijgewerkt op"
 
+[minute]
+one = "minuut"
+other = "minuten"
+
 [on_this_page]
 other = "Op deze pagina"
 
 [reading_time]
-other = "minuten leestijd"
+other = "Geschatte leestijd"
 
 [search_loading]
 other = "Zoekindex wordt geladen…"

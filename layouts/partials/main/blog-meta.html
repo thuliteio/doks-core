@@ -24,15 +24,14 @@
         <a class="stretched-link position-relative" href="{{ "/contributors/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
       {{- end }}
     {{- end -}}
-    {{- /* NOTE: class 'stretched-link' is necessary to properly display the title attribute on hover */ -}}
-    <span class="reading-time">{{/* trim subsequent whitespace */ -}}
+    {{- /* NOTE: classes 'stretched-link position-relative' are necessary to properly display the title attribute on hover */ -}}
+    <span class="stretched-link position-relative reading-time" title="{{ i18n "reading_time" }}">{{/* trim subsequent whitespace */ -}}
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <title>Clock icon</title>
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
         <path d="M12 7v5l3 3"></path>
       </svg>
-      {{- .ReadingTime }}&nbsp;{{ i18n "reading_time" .ReadingTime -}}
+      {{- .ReadingTime }}&nbsp;{{ i18n "minute" .ReadingTime -}}
     </span>{{/* trim subsequent whitespace */ -}}
   </small>
 </p>
