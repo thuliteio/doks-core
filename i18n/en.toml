@@ -22,11 +22,15 @@ other = "Example Guide"
 [last_updated]
 other = "Last updated on"
 
+[minute]
+one = "minute"
+other = "minutes"
+
 [on_this_page]
 other = "Example Guide"
 
 [reading_time]
-other = "min read"
+other = "Estimated reading time"
 
 [search_loading]
 other = "Loading search index…"

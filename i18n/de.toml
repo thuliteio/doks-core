@@ -22,11 +22,15 @@ other = "Loslegen"
 [last_updated]
 other = "Zuletzt aktualisiert am"
 
+[minute]
+one = "Minute"
+other = "Minuten"
+
 [on_this_page]
 other = "Auf dieser Seite"
 
 [reading_time]
-other = "Minuten Lesedauer"
+other = "Geschätzte Lesedauer"
 
 [search_loading]
 other = "Suchindex wird geladen…"
