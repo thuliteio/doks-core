@@ -5,6 +5,17 @@
 {{/* Source: https://github.com/frjo/hugo-theme-zen/blob/main/layouts/home.searchindex.json */}}
 {{- $.Scratch.Add "searchindex" slice -}}
 {{- range $index, $element := $pages -}}
-  {{- $.Scratch.Add "searchindex" (dict "id" $index "title" $element.Title "permalink" $element.RelPermalink "tags" (delimit ($element.Params.tags | default "") " ") "content" $element.Plain "summary" $element.Summary "date" ($element.Date.Format ($.Param "dateformat" | default "January 2, 2006"))) -}}
+  {{-
+    $.Scratch.Add "searchindex" (
+                                  dict
+                                  "id" $index
+                                  "title" $element.Title
+                                  "permalink" $element.RelPermalink
+                                  "tags" ($element.Params.tags | default slice)
+                                  "content" $element.Plain
+                                  "summary" $element.Summary
+                                  "date" (time.Format (site.Params.searchDateFormat | default "2006-01-02") $element.Date)
+                                )
+  -}}
 {{- end -}}
 {{- $.Scratch.Get "searchindex" | jsonify -}}
