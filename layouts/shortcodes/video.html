@@ -8,7 +8,7 @@
   /*    @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
   /*
   */ -}}
-  
+
   {{- $video_src := .Get "src" -}}
   {{- $video_mp4 := "" -}}
   {{- $video_webm := "" -}}
@@ -17,13 +17,13 @@
   {{- $width := "100%" -}}
   {{- $filenotfound := true -}}
   {{- $unsupportedfile := true -}}
-  
+
   {{- /* Find all files with filename (without suffix) matching "src" parameter. */ -}}
   {{- $video_files := (.Page.Resources.Match (printf "%s*" $video_src)) -}}
-  
+
   {{- /* Find first image file with filename (without suffix) matching "src" parameter. */ -}}
   {{- $poster := ((.Page.Resources.ByType "image").GetMatch (printf "%s*" $video_src)) -}}
-  
+
   {{- /* Find in page bundle all valid video files with matching name. */ -}}
   {{- with $video_files -}}
     {{- $filenotfound = false -}}
@@ -42,7 +42,7 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
-  
+
   {{- if $filenotfound -}}
     {{- /* No file of given name was found, we stop here. */ -}}
     {{- errorf "No file with filename %q found." $video_src -}}
@@ -62,6 +62,6 @@
       <source src="{{ .RelPermalink }}" type="video/mp4">
       {{- $video_dl = . -}}
     {{- end }}
-    <span>{{ i18n "videoUnsupported" $video_dl | safeHTML}}</span>
+    <span>{{ i18n "video_unsupported" $video_dl | safeHTML}}</span>
   </video>
   {{- end -}}
