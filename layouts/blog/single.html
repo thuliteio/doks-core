@@ -7,16 +7,20 @@
       {{ partial "main/blog-meta.html" . }}
     </div>
   </div>
-  {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) -}}
-  {{ if $image -}}
-    <div class="col-md-13">
-      {{ partial "picture" (dict
-      "ctx" .
-      "src" $image
-      "alt" .Title
-      "class" "img-fluid blur-up img-post-single w-100 h-auto rounded-0"
-      )}}
-    </div>
+  {{ if site.Params.doks.imageSingle -}}
+    {{- $images := .Resources.ByType "image" -}}
+    {{- $featured := $images.GetMatch "*feature*" -}}
+    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+    {{- if $featured -}}
+      <div class="col-md-13">
+        {{ partial "picture" (dict
+        "page" .
+        "src" $featured
+        "alt" .Title
+        "class" "img-post-single rounded-0"
+        )}}
+      </div>
+    {{ end -}}
   {{ end -}}
   <div class="col-md-12 col-lg-9">
     {{ with .Params.summary -}}<p class="lead">{{ . }}</p>{{ end -}}
