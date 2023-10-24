@@ -356,13 +356,6 @@ body {
   }
 }
 
-sup[id]::after {
-  display: block;
-  height: 6rem;
-  margin-top: -6rem;
-  content: "";
-}
-
 a.footnote-backref {
   text-decoration: none;
 }
@@ -446,7 +439,7 @@ li input[type="checkbox"]:checked {
   .svg-lightmode {
     display: none;
   }
-  
+
   .svg-darkmode {
     display: block;
   }
