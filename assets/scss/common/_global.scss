@@ -363,6 +363,10 @@ sup[id]::after {
   content: "";
 }
 
+div.footnotes {
+  font-size: $font-size-sm;
+}
+
 a.footnote-backref {
   text-decoration: none;
 }
@@ -446,7 +450,7 @@ li input[type="checkbox"]:checked {
   .svg-lightmode {
     display: none;
   }
-  
+
   .svg-darkmode {
     display: block;
   }
