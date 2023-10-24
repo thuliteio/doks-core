@@ -36,10 +36,10 @@
     display: block;
     margin-bottom: 0.25rem;
     font-weight: $headings-font-weight;
-    font-size: 1.125rem;
+    font-size: $font-size-md;
 
     @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
+      font-size: $font-size-lg;
     }
 
     .svg-inline {
@@ -92,7 +92,7 @@
 .callout.callout-caution {
   border-color: var(--sl-color-orange);
   background-color: var(--sl-color-orange-high);
-  
+
   .callout-title {
     color: var(--sl-color-orange-low);
   }
@@ -105,7 +105,7 @@
 .callout.callout-danger {
   border-color: var(--sl-color-red);
   background-color: var(--sl-color-red-high);
-  
+
   .callout-title {
     color: var(--sl-color-red-low);
   }
@@ -127,50 +127,50 @@
   .callout.callout-note {
     border-color: var(--sl-color-blue);
     background-color: var(--sl-color-blue-low);
-  
+
     .callout-title {
       color: var(--sl-color-blue-high);
     }
-  
+
     code {
-      background: shade-color($info, 75%);    
+      background: shade-color($info, 75%);
     }
   }
-  
+
   .callout.callout-tip {
     border-color: var(--sl-color-purple);
     background-color: var(--sl-color-purple-low);
-  
+
     .callout-title {
       color: var(--sl-color-purple-high);
     }
-  
+
     code {
       background: shade-color($purple, 75%);
     }
   }
-  
+
   .callout.callout-caution {
     border-color: var(--sl-color-orange);
     background-color: var(--sl-color-orange-low);
-    
+
     .callout-title {
       color: var(--sl-color-orange-high);
     }
-  
+
     code {
       background: shade-color($yellow, 75%);
     }
   }
-  
+
   .callout.callout-danger {
     border-color: var(--sl-color-red);
     background-color: var(--sl-color-red-low);
-    
+
     .callout-title {
       color: var(--sl-color-red-high);
     }
-  
+
     code {
       background: shade-color($red, 75%);
     }
