@@ -6,7 +6,10 @@
   --#{$prefix}link-color-rgb: var(--callout-link);
   --#{$prefix}code-color: var(--callout-code-color);
 
-  padding: 1.25rem;
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--callout-color, inherit);
@@ -14,37 +17,8 @@
   border-left: 0.25rem solid var(--callout-border, var(--bs-gray-300));
   border-radius: 0;
 
-  h4 {
-    margin-top: 0;
-    margin-bottom: .25rem;
-  }
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-
-  + .callout {
-    margin-top: -.25rem;
-  }
-
-  .svg-inline {
-    position: relative;
-    margin: -0.375rem 0 0;
-  }
-
-  .callout-title {
-    display: block;
-    margin-bottom: 0.25rem;
-    font-weight: $headings-font-weight;
-    font-size: 1.125rem;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
-    }
-
-    .svg-inline {
-      margin-right: 0.5rem;
-    }
+  a {
+    text-decoration: underline;
   }
 
   code {
@@ -52,22 +26,30 @@
     color: inherit;
   }
 
-  a {
-    @extend .alert-link;
-
-    font-weight: $font-weight-medium;
-  }
-
   .highlight {
     background-color: rgba($black, .05);
   }
+
+  .callout-icon.svg-inline {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    height: calc(#{$line-height-base} * #{$font-size-md});
+  }
+
+  .callout-title {
+    font-weight: $headings-font-weight;
+  }
 }
 
+// Colors
 .callout.callout-note {
   border-color: var(--sl-color-blue);
   background-color: var(--sl-color-blue-high);
 
-  .callout-title {
+  .callout-icon,
+  .callout-title,
+  .callout-body {
     color: var(--sl-color-blue-low);
   }
 
@@ -80,7 +62,9 @@
   border-color: var(--sl-color-purple);
   background-color: var(--sl-color-purple-high);
 
-  .callout-title {
+  .callout-icon,
+  .callout-title,
+  .callout-body {
     color: var(--sl-color-purple-low);
   }
 
@@ -92,8 +76,10 @@
 .callout.callout-caution {
   border-color: var(--sl-color-orange);
   background-color: var(--sl-color-orange-high);
-  
-  .callout-title {
+
+  .callout-icon,
+  .callout-title,
+  .callout-body {
     color: var(--sl-color-orange-low);
   }
 
@@ -105,8 +91,10 @@
 .callout.callout-danger {
   border-color: var(--sl-color-red);
   background-color: var(--sl-color-red-high);
-  
-  .callout-title {
+
+  .callout-icon,
+  .callout-title,
+  .callout-body {
     color: var(--sl-color-red-low);
   }
 
@@ -127,50 +115,58 @@
   .callout.callout-note {
     border-color: var(--sl-color-blue);
     background-color: var(--sl-color-blue-low);
-  
-    .callout-title {
+
+    .callout-icon,
+    .callout-title,
+    .callout-body {
       color: var(--sl-color-blue-high);
     }
-  
+
     code {
-      background: shade-color($info, 75%);    
+      background: shade-color($info, 75%);
     }
   }
-  
+
   .callout.callout-tip {
     border-color: var(--sl-color-purple);
     background-color: var(--sl-color-purple-low);
-  
-    .callout-title {
+
+    .callout-icon,
+    .callout-title,
+    .callout-body {
       color: var(--sl-color-purple-high);
     }
-  
+
     code {
       background: shade-color($purple, 75%);
     }
   }
-  
+
   .callout.callout-caution {
     border-color: var(--sl-color-orange);
     background-color: var(--sl-color-orange-low);
-    
-    .callout-title {
+
+    .callout-icon,
+    .callout-title,
+    .callout-body {
       color: var(--sl-color-orange-high);
     }
-  
+
     code {
       background: shade-color($yellow, 75%);
     }
   }
-  
+
   .callout.callout-danger {
     border-color: var(--sl-color-red);
     background-color: var(--sl-color-red-low);
-    
-    .callout-title {
+
+    .callout-icon,
+    .callout-title,
+    .callout-body {
       color: var(--sl-color-red-high);
     }
-  
+
     code {
       background: shade-color($red, 75%);
     }
