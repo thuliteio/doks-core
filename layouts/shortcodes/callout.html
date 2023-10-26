@@ -13,9 +13,9 @@
 {{- $icon := .Get "icon" -}}
 {{- $title := .Get "title" -}}
 
-<div class="callout callout-{{ $css_class }} d-flex flex-row">
+<div class="callout callout-{{ $css_class }} d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
   {{ with $icon -}}
-    {{ partial "inline-svg" (dict "src" $icon "class" "callout-icon") }}
+    {{ partial "inline-svg" (dict "src" $icon "class" "callout-icon me-2 mb-3") }}
   {{- end }}
   <div class="callout-content">
     {{ with $title -}}
