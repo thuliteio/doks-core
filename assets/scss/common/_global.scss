@@ -356,11 +356,8 @@ body {
   }
 }
 
-sup[id]::after {
-  display: block;
-  height: 6rem;
-  margin-top: -6rem;
-  content: "";
+sup[id] {
+  scroll-margin-top: 5rem; 
 }
 
 div.footnotes {
