@@ -59,10 +59,26 @@
   outline: 0 none;
 } 
 
+.search-result .card .content {
+  P {
+    margin-bottom: 0;
+  }
+
+  a {
+    position: relative;
+    z-index: $stretched-link-z-index;
+  }
+}
+
 .search-result:hover .card,
 .search-result.selected .card {
   background-color: $primary;
   color: $white;
+
+  .content a {
+    color: $white;
+    text-decoration: underline;
+  }
 }
 
 @include color-mode(dark) {
@@ -70,6 +86,11 @@
   .search-result.selected .card {
     background-color: $link-color-dark;
     color: $body-overlay-dark;
+
+    .content a {
+      color: $body-overlay-dark;
+      text-decoration: underline;
+    }
   }
 
   .search-result:hover .card h2,
