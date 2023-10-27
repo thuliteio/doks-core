@@ -356,13 +356,6 @@ body {
   }
 }
 
-sup[id]::after {
-  display: block;
-  height: 6rem;
-  margin-top: -6rem;
-  content: "";
-}
-
 div.footnotes {
   font-size: $font-size-sm;
 }
