@@ -80,3 +80,9 @@ code.language-mermaid {
     color: $yellow-100;
   }
 }
+
+@include color-mode(dark) {
+  .math-block img {
+    filter: invert(1);
+  }
+}
