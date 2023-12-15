@@ -1,14 +1,17 @@
-// Light mode: github
+// Light mode: github based
 
-/* Background */ .bg { background-color: #ffffff; }
-/* PreWrapper */ .chroma { background-color: #ffffff; }
+.highlight > .chroma { border: 1px solid color-mix(in srgb, var(--sl-color-gray-5), transparent 25%); }
+/* Background */ .bg { background-color: var(--sl-color-gray-7); }
+/* PreWrapper */ .chroma { background-color: var(--sl-color-gray-7); }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: inherit }
 /* CodeLine */ .chroma .cl {  }
 /* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
-/* LineHighlight */ .chroma .hl { background-color: #ffffcc }
+/* LineHighlight */ .chroma .hl { background-color: #0000001a }
+.chroma .lntd:first-child .hl { border-inline-start: 0.15rem solid #00000055;; }
+.chroma .lntd:first-child .hl .lnt { margin-left: -0.15rem }
 /* LineNumbersTable */ .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
 /* LineNumbers */ .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
 /* Line */ .chroma .line { display: flex; }
@@ -87,18 +90,21 @@
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #bbbbbb }
 
-// Dark mode: github-dark
+// Dark mode: github-dark based
 
 @include color-mode(dark) {
-  /* Background */ .bg { color: #c9d1d9; background-color: #0d1117; }
-  /* PreWrapper */ .chroma { color: #c9d1d9; background-color: #0d1117; }
+  .highlight > .chroma { border: 1px solid color-mix(in srgb, var(--sl-color-gray-5), transparent 25%); }
+  /* Background */ .bg { color: #c9d1d9; background-color: var(--sl-color-gray-6); }
+  /* PreWrapper */ .chroma { color: #c9d1d9; background-color: var(--sl-color-gray-6); }
   /* Other */ .chroma .x {  }
   /* Error */ .chroma .err { color: inherit }
   /* CodeLine */ .chroma .cl {  }
   /* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
   /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
   /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
-  /* LineHighlight */ .chroma .hl { background-color: #ffffcc }
+  /* LineHighlight */ .chroma .hl { background-color: #ffffff17; }
+  .chroma .lntd:first-child .hl { border-inline-start: 0.15rem solid #ffffff40; }
+  .chroma .lntd:first-child .hl .lnt { margin-left: -0.15rem }
   /* LineNumbersTable */ .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #64686c }
   /* LineNumbers */ .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #6e7681 }
   /* Line */ .chroma .line { display: flex; }
