@@ -471,3 +471,8 @@ hr {
     border-color: var(--sl-color-gray-3);
   }
 }
+
+// Fix for overflowing code block
+.container-fw {
+  min-width: 0;
+}

@@ -34,6 +34,11 @@
   }
 }
 
+// Fix for overflowing code block
+.callout-content {
+  min-width: 0;
+}
+
 // Colors
 .callout.callout-note {
   border-color: var(--sl-color-blue);
