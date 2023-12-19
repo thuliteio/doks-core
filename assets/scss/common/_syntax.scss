@@ -10,8 +10,17 @@
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
 /* LineHighlight */ .chroma .hl { background-color: #0000001a }
-.chroma .lntd:first-child .hl { border-inline-start: 0.15rem solid #00000055;; }
-.chroma .lntd:first-child .hl .lnt { margin-left: -0.15rem }
+.chroma .hl {
+  border-inline-start: 0.15rem solid #00000055;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem; 
+
+  .ln {
+    margin-left: -0.15rem;
+  }
+}
 /* LineNumbersTable */ .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
 /* LineNumbers */ .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
 /* Line */ .chroma .line { display: flex; }
@@ -103,8 +112,17 @@
   /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
   /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
   /* LineHighlight */ .chroma .hl { background-color: #ffffff17; }
-  .chroma .lntd:first-child .hl { border-inline-start: 0.15rem solid #ffffff40; }
-  .chroma .lntd:first-child .hl .lnt { margin-left: -0.15rem }
+  .chroma .hl {
+    border-inline-start: 0.15rem solid #ffffff40;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  
+    .ln {
+      margin-left: -0.15rem;
+    }
+  }
   /* LineNumbersTable */ .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #64686c }
   /* LineNumbers */ .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #6e7681 }
   /* Line */ .chroma .line { display: flex; }

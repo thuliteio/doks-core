@@ -15,10 +15,12 @@
     text-decoration: underline;
   }
 
+  /*
   code {
     background: transparent;
     color: inherit;
   }
+  */
 
   .highlight {
     background-color: rgba($black, .05);
@@ -46,13 +48,21 @@
 
   .callout-icon,
   .callout-title,
-  .callout-body {
+  .callout-body a {
     color: var(--sl-color-blue-low);
   }
 
-  code {
+  .callout-body,
+  .callout-body a:hover,
+  .callout-body a:active {
+    color: var(--sl-color-white);
+  }
+
+  /*
+  code:not(:where(.not-content *)) {
     background: tint-color($info, 80%);
   }
+  */
 }
 
 .callout.callout-tip {
@@ -61,13 +71,21 @@
 
   .callout-icon,
   .callout-title,
-  .callout-body {
+  .callout-body a {
     color: var(--sl-color-purple-low);
   }
 
-  code {
+  .callout-body,
+  .callout-body a:hover,
+  .callout-body a:active {
+    color: var(--sl-color-white);
+  }
+
+  /*
+  code:not(:where(.not-content *)) {
     background: tint-color($purple, 80%);
   }
+  */
 }
 
 .callout.callout-caution {
@@ -76,13 +94,21 @@
 
   .callout-icon,
   .callout-title,
-  .callout-body {
+  .callout-body a {
     color: var(--sl-color-orange-low);
   }
+  
+  .callout-body,
+  .callout-body a:hover,
+  .callout-body a:active {
+    color: var(--sl-color-white);
+  }
 
-  code {
+  /*
+  code:not(:where(.not-content *)) {
     background: tint-color($yellow, 80%);
   }
+  */
 }
 
 .callout.callout-danger {
@@ -91,18 +117,28 @@
 
   .callout-icon,
   .callout-title,
-  .callout-body {
+  .callout-body a {
     color: var(--sl-color-red-low);
   }
 
-  code {
+  .callout-body,
+  .callout-body a:hover,
+  .callout-body a:active {
+    color: var(--sl-color-white);
+  }
+
+  /*
+  code:not(:where(.not-content *)) {
     background: tint-color($red, 80%);
   }
+  */
 }
 
+/*
 .callout.callout-light code {
   background: var(--sl-color-gray-1);
 }
+*/
 
 @include color-mode(dark) {
   .callout {
@@ -115,12 +151,19 @@
 
     .callout-icon,
     .callout-title,
-    .callout-body {
+    .callout-body a {
       color: var(--sl-color-blue-high);
     }
 
-    code {
-      background: shade-color($info, 75%);
+    .callout-body,
+    .callout-body a:hover,
+    .callout-body a:active {
+      color: var(--sl-color-white);
+    }
+
+    code:not(:where(.not-content *)) {
+      // background: shade-color($info, 75%);
+      color: var(--ec-codeFg);
     }
   }
 
@@ -130,12 +173,19 @@
 
     .callout-icon,
     .callout-title,
-    .callout-body {
+    .callout-body a {
       color: var(--sl-color-purple-high);
     }
 
-    code {
-      background: shade-color($purple, 75%);
+    .callout-body,
+    .callout-body a:hover,
+    .callout-body a:active {
+      color: var(--sl-color-white);
+    }
+
+    code:not(:where(.not-content *)) {
+      // background: shade-color($purple, 75%);
+      color: var(--ec-codeFg);
     }
   }
 
@@ -145,12 +195,19 @@
 
     .callout-icon,
     .callout-title,
-    .callout-body {
+    .callout-body a {
       color: var(--sl-color-orange-high);
     }
 
-    code {
-      background: shade-color($yellow, 75%);
+    .callout-body,
+    .callout-body a:hover,
+    .callout-body a:active {
+      color: var(--sl-color-white);
+    }
+
+    code:not(:where(.not-content *)) {
+      // background: shade-color($yellow, 75%);
+      color: var(--ec-codeFg);
     }
   }
 
@@ -160,12 +217,19 @@
 
     .callout-icon,
     .callout-title,
-    .callout-body {
+    .callout-body a {
       color: var(--sl-color-red-high);
     }
 
-    code {
-      background: shade-color($red, 75%);
+    .callout-body,
+    .callout-body a:hover,
+    .callout-body a:active {
+      color: var(--sl-color-white);
+    }
+
+    code:not(:where(.not-content *)) {
+      // background: shade-color($red, 75%);
+      color: var(--ec-codeFg);
     }
   }
 }

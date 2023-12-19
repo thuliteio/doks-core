@@ -6,6 +6,19 @@ samp {
   font-size: $font-size-sm;
 }
 
+code:not(:where(.not-content *)) {
+  background-color: var(--sl-color-gray-6);
+  margin-block: -0.125rem;
+  padding: 0.125rem 0.375rem;
+  color: inherit;
+}
+
+@include color-mode(dark) {
+  code:not(:where(.not-content *)) {
+    background-color: var(--sl-color-gray-5);
+  }
+}
+
 /*
 code {
   background: $db-khaki-100;
@@ -92,7 +105,7 @@ code.language-mermaid {
 
 /* Applies when there are no line numbers, or when line numbers are inline. */
 .highlight > pre {
-  padding: 0.875rem 0 0.875rem 1rem;
+  padding: 0.875rem 1rem;
 }
 
 /* Applies when line numbers are in a table cell. */
@@ -105,18 +118,30 @@ code.language-mermaid {
 // .highlight > pre,
 .highlight > .chroma {
   overflow-x: auto;
+
   /* add border-radius and box-shadow here */
 }
 
-/* Applies when using an external style sheet. */
-/* https://github.com/alecthomas/chroma/issues/722 */
+/* Applies when using an external style sheet */
 .highlight .chroma .lntable .lnt,
 .highlight .chroma .lntable .hl {
   display: flex;
 }
 
-/* Applies when using an external style sheet. */
-/* https://github.com/alecthomas/chroma/issues/722 */
+/* Applies when highlihting using table */
+.chroma .lntd:first-child {
+  padding: 0;
+
+  .lnt {
+    padding-left: 1rem;
+  }
+}
+
+.chroma .lntd:nth-child(2) {
+  padding: 0;
+}
+
+/* Applies when using an external style sheet */
 .highlight .chroma .lntable .lntd + .lntd {
   width: 100%;
 }
@@ -132,22 +157,9 @@ code.language-mermaid {
   }
 }
 
-/* Applies when highlihting using table*/
-.chroma .lntd:first-child {
-  padding: 0;
-
-  .lnt {
-    padding-left: 1rem;
-  }
-}
-
-.chroma .lntd:nth-child(2) {
-  padding: 0;
-}
-
 /* LineTableTD */
 .chroma .lntd pre {
-  padding: 1rem 0 1rem;
+  padding: 1rem 0;
   margin-bottom: 0;
 }
 
