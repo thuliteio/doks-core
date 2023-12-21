@@ -191,3 +191,49 @@ code.language-mermaid {
     background-color: #ffffff49;
   }
 }
+
+.highlight > .chroma {
+  border: 1px solid color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+}
+
+/*
+.chroma .hl {
+  background-color: #0000001a
+}
+*/
+
+.chroma .hl {
+  border-inline-start: 0.15rem solid #00000055;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem; 
+
+  .ln {
+    margin-left: -0.15rem;
+  }
+}
+
+@include color-mode(dark) {
+  .highlight > .chroma {
+    border: 1px solid color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+  }
+
+  /*
+  .chroma .hl {
+    background-color: #ffffff17;
+  }
+  */
+
+  .chroma .hl {
+    border-inline-start: 0.15rem solid #ffffff40;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  
+    .ln {
+      margin-left: -0.15rem;
+    }
+  }
+}
