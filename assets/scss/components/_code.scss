@@ -95,10 +95,33 @@ code.language-mermaid {
 }
 */
 
+// Math styling
+.math-block {
+  display: block;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.math-inline {
+  display: inline;
+}
+
 @include color-mode(dark) {
+  .math-inline img,
   .math-block img {
     filter: invert(1);
   }
+}
+
+// Diagram styling
+img.diagram {
+  height: auto;
+  width: 100%;
+  margin: 1rem 0 2rem;
+}
+ 
+img.diagram-kroki-mermaid {
+  background: $white;
 }
 
 // Source: https://www.veriphor.com/articles/code-block-line-numbers/
