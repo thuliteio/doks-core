@@ -39,6 +39,19 @@ $db-purple-300: #5d2f86;
 /* Vermilion */
 $db-vermilion-100: #e55235;
 
+:root[data-bs-theme=light],
+[data-bs-theme=light] ::backdrop {
+--sl-color-white: hsl(224, 10%, 10%);
+--sl-color-gray-1: hsl(224, 14%, 16%);
+--sl-color-gray-2: hsl(224, 10%, 23%);
+--sl-color-gray-3: hsl(224, 7%, 36%);
+--sl-color-gray-4: hsl(224, 6%, 56%);
+--sl-color-gray-5: hsl(224, 6%, 77%);
+--sl-color-gray-6: hsl(224, 20%, 94%);
+--sl-color-gray-7: hsl(224, 19%, 97%);
+--sl-color-black: hsl(0, 0%, 100%);
+}
+
 // Dark mode
 
 :root,
@@ -133,4 +146,81 @@ $db-vermilion-100: #e55235;
 :root {
   --purple-hsl: 255, 60%, 60%;
   --overlay-blurple: hsla(var(--purple-hsl), .2)
+}
+
+:root {
+  --ec-brdRad: 0px;
+  --ec-brdWd: 1px;
+  --ec-brdCol: 
+color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+  --ec-codeFontFml: var(--__sl-font-mono);
+  --ec-codeFontSize: var(--sl-text-code);
+  --ec-codeFontWg: 400;
+  --ec-codeLineHt: var(--sl-line-height);
+  --ec-codePadBlk: 0.75rem;
+  --ec-codePadInl: 1rem;
+  --ec-codeBg: #011627;
+  --ec-codeFg: #d6deeb;
+  --ec-codeSelBg: #1d3b53;
+  --ec-uiFontFml: var(--__sl-font);
+  --ec-uiFontSize: 0.9rem;
+  --ec-uiFontWg: 400;
+  --ec-uiLineHt: 1.65;
+  --ec-uiPadBlk: 0.25rem;
+  --ec-uiPadInl: 1rem;
+  --ec-uiSelBg: #234d708c;
+  --ec-uiSelFg: #ffffff;
+  --ec-focusBrd: #122d42;
+  --ec-sbThumbCol: #ffffff17;
+  --ec-sbThumbHoverCol: #ffffff49;
+  --ec-tm-lineMarkerAccentMarg: 0rem;
+  --ec-tm-lineMarkerAccentWd: 0.15rem;
+  --ec-tm-lineDiffIndMargLeft: 0.25rem;
+  --ec-tm-inlMarkerBrdWd: 1.5px;
+  --ec-tm-inlMarkerBrdRad: 0.2rem;
+  --ec-tm-inlMarkerPad: 0.15rem;
+  --ec-tm-insDiffIndContent: '+';
+  --ec-tm-delDiffIndContent: '-';
+  --ec-tm-markBg: #ffffff17;
+  --ec-tm-markBrdCol: #ffffff40;
+  --ec-tm-insBg: #1e571599;
+  --ec-tm-insBrdCol: #487f3bd0;
+  --ec-tm-insDiffIndCol: #79b169d0;
+  --ec-tm-delBg: #862d2799;
+  --ec-tm-delBrdCol: #b4554bd0;
+  --ec-tm-delDiffIndCol: #ed8779d0;
+  --ec-frm-shdCol: #011627;
+  --ec-frm-frameBoxShdCssVal: none;
+  --ec-frm-edActTabBg: var(--sl-color-gray-6);
+  --ec-frm-edActTabFg: var(--sl-color-text);
+  --ec-frm-edActTabBrdCol: transparent;
+  --ec-frm-edActTabIndHt: 1px;
+  --ec-frm-edActTabIndTopCol: var(--sl-color-accent-high);
+  --ec-frm-edActTabIndBtmCol: transparent;
+  --ec-frm-edTabsMargInlStart: 0;
+  --ec-frm-edTabsMargBlkStart: 0;
+  --ec-frm-edTabBrdRad: 0px;
+  --ec-frm-edTabBarBg: var(--sl-color-black);
+  --ec-frm-edTabBarBrdCol: 
+color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+  --ec-frm-edTabBarBrdBtmCol: 
+color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+  --ec-frm-edBg: var(--sl-color-gray-6);
+  --ec-frm-trmTtbDotsFg: 
+color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+  --ec-frm-trmTtbDotsOpa: 0.75;
+  --ec-frm-trmTtbBg: var(--sl-color-black);
+  --ec-frm-trmTtbFg: var(--sl-color-text);
+  --ec-frm-trmTtbBrdBtmCol: 
+color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
+  --ec-frm-trmBg: var(--sl-color-gray-6);
+  --ec-frm-inlBtnFg: var(--sl-color-text);
+  --ec-frm-inlBtnBg: var(--sl-color-text);
+  --ec-frm-inlBtnBgIdleOpa: 0;
+  --ec-frm-inlBtnBgHoverOrFocusOpa: 0.2;
+  --ec-frm-inlBtnBgActOpa: 0.3;
+  --ec-frm-inlBtnBrd: var(--sl-color-text);
+  --ec-frm-inlBtnBrdOpa: 0.4;
+  --ec-frm-tooltipSuccessBg: #158744;
+  --ec-frm-tooltipSuccessFg: white;
 }

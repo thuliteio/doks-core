@@ -357,7 +357,7 @@ body {
 }
 
 sup[id] {
-  scroll-margin-top: 5rem; 
+  scroll-margin-top: 4.5rem; 
 }
 
 div.footnotes {
@@ -470,4 +470,9 @@ hr {
   hr {
     border-color: var(--sl-color-gray-3);
   }
+}
+
+// Fix for overflowing code block
+.container-fw {
+  min-width: 0;
 }
