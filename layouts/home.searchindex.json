@@ -3,7 +3,7 @@
 {{- if gt (len site.Params.doks.searchExclKinds) 0 }}{{- $pages = where $pages "Type" "not in" site.Params.doks.searchExclTypes }}{{ end -}}
 
 {{/* Source: https://github.com/frjo/hugo-theme-zen/blob/main/layouts/home.searchindex.json */}}
-{{- $.Scratch.Add "searchindex" slice -}}
+{{- $.Scratch.Set "searchindex" slice -}}
 {{- range $index, $element := $pages -}}
   {{-
     $.Scratch.Add "searchindex" (
