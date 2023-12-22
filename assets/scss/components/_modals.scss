@@ -59,8 +59,14 @@
   outline: 0 none;
 } 
 
+.search-result .content {
+  margin-top: 0.5rem;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .search-result .card .content {
-  P {
+  p {
     margin-bottom: 0;
   }
 
@@ -102,10 +108,4 @@
 .search-result .submitted {
   font-size: $font-size-sm;
   margin-top: 0.5rem;
-}
-
-.search-result .content {
-  margin-top: 0.5rem;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }

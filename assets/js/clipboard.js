@@ -14,10 +14,10 @@ import Clipboard from 'clipboard';
   for (var i = 0; i < cb.length; ++ i)
   {
     var element = cb[i];
-    element.insertAdjacentHTML('afterbegin', '<div class="clipboard"><button class="btn btn-clipboard" aria-label="Clipboard button"></button></div>');
+    element.insertAdjacentHTML('afterbegin', '<div class="copy"><button title="Copy to clipboard" class="btn-copy" aria-label="Clipboard button"><div></div></button></div>');
   }
 
-  var clipboard = new Clipboard('.btn-clipboard', {
+  var clipboard = new Clipboard('.btn-copy', {
 
     target: function(trigger) {
       return trigger.parentNode.nextElementSibling;

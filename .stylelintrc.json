@@ -12,6 +12,7 @@
     "alpha-value-notation": null,
     "scss/no-global-function-names": null,
     "selector-id-pattern": null,
+    "custom-property-pattern": null,
     "at-rule-no-unknown": [
       true,
       {
