@@ -23,11 +23,3 @@
   {{ partial "footer/esbuild-template" (dict "src" $flexsearchLangConfigPath "load" "async" "transpile" false "isMultilingual" site.IsMultiLingual "searchLimit" $searchLimit) -}}
   {{ partial "footer/esbuild" (dict "src" "js/search-modal.js" "load" "async" "transpile" false) -}}
 {{ end -}}
-
-{{ if .Page.Store.Get "hasMermaid" -}}
-  {{ partial "footer/esbuild" (dict "src" "js/mermaid.js" "load" "defer" "transpile" false) -}}
-{{ end -}}
-
-{{ if site.Params.doks.katex -}}
-  {{ partial "footer/esbuild" (dict "src" "js/katex.js" "load" "defer" "transpile" false) -}}
-{{ end -}}

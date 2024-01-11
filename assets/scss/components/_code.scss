@@ -141,8 +141,26 @@ img.diagram-kroki-mermaid {
 // .highlight > pre,
 .highlight > .chroma {
   overflow-x: auto;
+  border: 1px solid color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
 
   /* add border-radius and box-shadow here */
+}
+
+/* Applies when line numbers are inline */
+.chroma .ln {
+  padding: 0 0.5rem 0 0;
+}
+
+.chroma .hl {
+  border-inline-start: 0.15rem solid #0005;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem; 
+
+  .ln {
+    margin-left: -0.15rem;
+  }
 }
 
 /* Applies when using an external style sheet */
@@ -167,11 +185,6 @@ img.diagram-kroki-mermaid {
 /* Applies when using an external style sheet */
 .highlight .chroma .lntable .lntd + .lntd {
   width: 100%;
-}
-
-/* Applies when line numbers are inline */
-.chroma .ln {
-  padding: 0 0.5rem 0 0;
 }
 
 @include color-mode(dark) {
@@ -215,27 +228,11 @@ img.diagram-kroki-mermaid {
   }
 }
 
-.highlight > .chroma {
-  border: 1px solid color-mix(in srgb, var(--sl-color-gray-5), transparent 25%);
-}
-
 /*
 .chroma .hl {
   background-color: #0000001a
 }
 */
-
-.chroma .hl {
-  border-inline-start: 0.15rem solid #00000055;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding-left: 1rem;
-  padding-right: 1rem; 
-
-  .ln {
-    margin-left: -0.15rem;
-  }
-}
 
 @include color-mode(dark) {
   .highlight > .chroma {
