@@ -3,7 +3,6 @@
 // Source: https://github.com/twbs/examples/blob/main/vite/src/js/main.js
 
 // Include parts of Bootstrap
-/*
 import {
   Alert,
   Button,
@@ -16,6 +15,5 @@ import {
   ScrollSpy,
   Tab,
   Toast,
-  Tooltip
+  Tooltip,
 } from 'bootstrap';
-*/

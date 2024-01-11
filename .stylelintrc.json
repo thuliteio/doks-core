@@ -3,7 +3,6 @@
   "rules": {
     "no-empty-source": null,
     "scss/comment-no-empty": null,
-    "max-line-length": null,
     "scss/at-extend-no-missing-placeholder": null,
     "property-no-vendor-prefix": null,
     "value-no-vendor-prefix": null,
