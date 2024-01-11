@@ -4,7 +4,7 @@
   <div class="col-md-12 col-lg-10">
     <div class="blog-header">
       <h1>{{ .Title }}</h1>
-      <p>Last updated on {{ .Lastmod.Format "January 2, 2006" }}</p>
+      <p>{{ i18n "last_updated"}}&nbsp;{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Lastmod -}}</p>
     </div>
   </div>
   {{- $images := .Resources.ByType "image" -}}
