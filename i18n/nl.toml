@@ -19,6 +19,9 @@ other = "Bewerk deze pagina op"
 [get_started]
 other = "Aan de slag"
 
+[home]
+other = "Thuis"
+
 [last_updated]
 other = "Laatst bijgewerkt op"
 

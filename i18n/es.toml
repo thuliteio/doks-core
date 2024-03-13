@@ -19,6 +19,9 @@ other = "Edita esta página en"
 [get_started]
 other = "Empieza"
 
+[home]
+other = "Hogar"
+
 [last_updated]
 other = "Última actualización en"
 
