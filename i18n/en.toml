@@ -19,6 +19,9 @@ other = "Edit this page on"
 [get_started]
 other = "Example Guide"
 
+[home]
+other = "Home"
+
 [last_updated]
 other = "Last updated on"
 
