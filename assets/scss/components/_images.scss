@@ -64,30 +64,30 @@ figure.wide .figure-caption {
 */
 
 img[data-sizes="auto"] {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .figure {
-  display: block;
+    display: block;
 }
 
 .blur-up {
-  filter: blur(5px);
-  transition: filter 400ms;
+    filter: blur(5px);
+    transition: filter 400ms;
 }
 
 .blur-up.lazyloaded {
-  filter: unset;
+    filter: unset;
 }
 
 .content .gitpod-mark-monochrome.icon {
-  margin-bottom: 0.125rem;
-  margin-right: 0.5rem;
+    margin-bottom: 0.125rem;
+    margin-right: 0.5rem;
 }
 
 figcaption {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  font-style: italic;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-style: italic;
 }

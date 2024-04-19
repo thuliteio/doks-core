@@ -6,31 +6,31 @@
  */
 
 (() => {
-  'use strict'
+    'use strict';
 
-  const storedTheme = localStorage.getItem('theme')
+    const storedTheme = localStorage.getItem('theme');
 
-  // Check if theme has been set, otherwise get OS/browser setting if browser supports
-  const getPreferredTheme = () => {
-    if (storedTheme) {
-      return storedTheme
-    }
+    // Check if theme has been set, otherwise get OS/browser setting if browser supports
+    const getPreferredTheme = () => {
+        if (storedTheme) {
+            return storedTheme;
+        }
 
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
 
-  // Check if theme has been set, and add theme to data-bs-theme
-  const setTheme = function (theme) {
-    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'dark')
-    } else {
-      document.documentElement.setAttribute('data-bs-theme', theme)
-    }
-  }
+    // Check if theme has been set, and add theme to data-bs-theme
+    const setTheme = function (theme) {
+        if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-bs-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        }
+    };
 
-  setTheme(getPreferredTheme())
+    setTheme(getPreferredTheme());
 
-  /*
+    /*
   const showActiveTheme = (theme, focus = false) => {
     const themeSwitcher = document.querySelector('#bd-theme')
 
@@ -60,25 +60,24 @@
   }
   */
 
-  // Update theme if browser/OS setting is changed
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    if (storedTheme !== 'light' || storedTheme !== 'dark') {
-      setTheme(getPreferredTheme())
-    }
-  })
+    // Update theme if browser/OS setting is changed
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (storedTheme !== 'light' || storedTheme !== 'dark') {
+            setTheme(getPreferredTheme());
+        }
+    });
 
-  // Enable theme switching, on DOMContentLoaded
-  window.addEventListener('DOMContentLoaded', () => {
-    // showActiveTheme(getPreferredTheme())
+    // Enable theme switching, on DOMContentLoaded
+    window.addEventListener('DOMContentLoaded', () => {
+        // showActiveTheme(getPreferredTheme())
 
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('theme', theme)
-          setTheme(theme)
-          // showActiveTheme(theme)
-        })
-      })
-  })
-})()
+        document.querySelectorAll('[data-bs-theme-value]').forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+                const theme = toggle.getAttribute('data-bs-theme-value');
+                localStorage.setItem('theme', theme);
+                setTheme(theme);
+                // showActiveTheme(theme)
+            });
+        });
+    });
+})();
