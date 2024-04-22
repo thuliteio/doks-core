@@ -1,5 +1,11 @@
 # @hyas/doks-core
 
+## 1.6.0
+
+### Minor Changes
+
+- [#100](https://github.com/gethyas/doks-core/pull/100) [`24f5b32`](https://github.com/gethyas/doks-core/commit/24f5b3288b61c66e973a7bee181182d9f5b5d0f2) Thanks [@h-enk](https://github.com/h-enk)! - Update dependencies to latest versions
+
 ## 1.5.1
 
 ### Patch Changes
