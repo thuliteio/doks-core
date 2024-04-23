@@ -1,5 +1,11 @@
 # @hyas/doks-core
 
+## 1.6.1
+
+### Patch Changes
+
+- [#101](https://github.com/gethyas/doks-core/pull/101) [`09f0195`](https://github.com/gethyas/doks-core/commit/09f019546652b70830b01bfc51938537301f97fe) Thanks [@h-enk](https://github.com/h-enk)! - Remove gethyas dependency
+
 ## 1.6.0
 
 ### Minor Changes
