@@ -53,7 +53,7 @@ References:
 {{- $position := .Position }}
 
 {{- /* Initialize. */}}
-{{- $apiEndpoint := "https://kroki.io/" }}
+{{- $apiEndpoint := or site.Params.doks.krokiURL "https://kroki.io/" }}
 {{- $diagramType := $attrs.type | lower }}
 
 {{- /* Validate diagram type. */}}
