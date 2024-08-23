@@ -1,6 +1,6 @@
 /*!
- * Dismissable alert for Bootstrap based Hyas sites
- * Copyright 2021-2023 Hyas
+ * Dismissable alert for Bootstrap based Thulite sites
+ * Copyright 2021-2024 Thulite
  * Licensed under the MIT License
  */
 

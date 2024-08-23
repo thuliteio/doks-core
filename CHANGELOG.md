@@ -1,4 +1,4 @@
-# @hyas/doks-core
+# @thulite/doks-core
 
 ## 1.6.1
 
