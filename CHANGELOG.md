@@ -1,5 +1,15 @@
 # @thulite/doks-core
 
+## 1.7.0
+
+### Minor Changes
+
+- [#103](https://github.com/thuliteio/doks-core/pull/103) [`d4f294d`](https://github.com/thuliteio/doks-core/commit/d4f294de86d79a8d78b3024f24d13b761aa52fbf) Thanks [@h-enk](https://github.com/h-enk)! - Update for migration from Hyas to Thulite
+
+### Patch Changes
+
+- [#102](https://github.com/thuliteio/doks-core/pull/102) [`7b402f9`](https://github.com/thuliteio/doks-core/commit/7b402f9db4c83dedbafdb667583a1fe24c3a51a2) Thanks [@l-zeuch](https://github.com/l-zeuch)! - Allow custom kroki host
+
 ## 1.6.1
 
 ### Patch Changes
