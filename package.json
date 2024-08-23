@@ -1,25 +1,25 @@
 {
-  "name": "@hyas/doks-core",
+  "name": "@thulite/doks-core",
   "version": "1.6.1",
   "description": "Doks core",
-  "author": "Hyas",
+  "author": "Thulite",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gethyas/doks-core.git"
+    "url": "https://github.com/thuliteio/doks-core.git"
   },
   "scripts": {
     "format": "prettier **/** -w -c"
   },
   "dependencies": {
-    "@hyas/bootstrap": "^1.1.1",
+    "@thulite/bootstrap": "^1.2.0",
     "clipboard": "^2.0.11",
     "flexsearch": "^0.7.43"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.1",
-    "prettier": "^3.2.5"
+    "@changesets/cli": "^2.27.7",
+    "prettier": "^3.3.3"
   },
   "engines": {
     "node": ">=20.11.0"

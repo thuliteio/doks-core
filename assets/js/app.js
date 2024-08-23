@@ -2,7 +2,7 @@
 'use strict';
 
 // import core.js
-import '@hyas/core/assets/js/core.js';
+import '@thulite/core/assets/js/core.js';
 
 // Import clipboard.js
 import 'js/clipboard.js';

@@ -1,6 +1,6 @@
 /*!
- * FlexSearch for Bootstrap based Hyas sites
- * Copyright 2021-2023 Hyas
+ * FlexSearch for Bootstrap based Thulite sites
+ * Copyright 2021-2024 Thulite
  * Licensed under the MIT License
  * Based on https://github.com/frjo/hugo-theme-zen/blob/main/assets/js/search.js
  */
