@@ -22,14 +22,14 @@ other = "Example Guide"
 [home]
 other = "Home"
 
-[last_updated]
-other = "Last updated on"
-
 [in]
 other = "in"
 
 [by]
 other = "by"
+
+[last_updated]
+other = "Last updated on"
 
 [minute]
 one = "minute"
