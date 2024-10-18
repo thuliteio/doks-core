@@ -25,6 +25,12 @@ other = "Home"
 [last_updated]
 other = "Last updated on"
 
+[in]
+other = "in"
+
+[by]
+other = "by"
+
 [minute]
 one = "minute"
 other = "minutes"
