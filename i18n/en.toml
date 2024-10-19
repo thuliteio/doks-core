@@ -22,6 +22,12 @@ other = "Example Guide"
 [home]
 other = "Home"
 
+[in]
+other = "in"
+
+[by]
+other = "by"
+
 [last_updated]
 other = "Last updated on"
 
