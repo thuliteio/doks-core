@@ -20,6 +20,6 @@
   {{- else -}}
     {{- $flexsearchLangConfigPath = "js/flexsearch.js" -}}
   {{- end -}}
-  {{ partial "footer/esbuild-template" (dict "src" $flexsearchLangConfigPath "load" "async" "transpile" false "isMultilingual" site.IsMultiLingual "searchLimit" $searchLimit) -}}
+  {{ partial "footer/esbuild-template" (dict "src" $flexsearchLangConfigPath "load" "async" "transpile" false "isMultilingual" hugo.IsMultilingual "searchLimit" $searchLimit) -}}
   {{ partial "footer/esbuild" (dict "src" "js/search-modal.js" "load" "async" "transpile" false) -}}
 {{ end -}}
