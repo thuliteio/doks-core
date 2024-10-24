@@ -1,5 +1,21 @@
 # @thulite/doks-core
 
+## 1.8.0
+
+### Minor Changes
+
+- [#112](https://github.com/thuliteio/doks-core/pull/112) [`8c7b287`](https://github.com/thuliteio/doks-core/commit/8c7b287cb96b8c72499bc5e27bb1e5947d06152a) Thanks [@h-enk](https://github.com/h-enk)! - Add Steps shortcode
+
+### Patch Changes
+
+- [#111](https://github.com/thuliteio/doks-core/pull/111) [`3896cbb`](https://github.com/thuliteio/doks-core/commit/3896cbb789647bf69d683069374f304b5a39d1d5) Thanks [@sk4mi](https://github.com/sk4mi)! - Fix IsMultilingual hugo command
+
+- [#110](https://github.com/thuliteio/doks-core/pull/110) [`ee06b2f`](https://github.com/thuliteio/doks-core/commit/ee06b2f5cca363fc345b9f145433a2e64cf4bd39) Thanks [@rezahidayatm](https://github.com/rezahidayatm)! - Using i18n for "in" and "by" for list and single blog post.
+
+- [#109](https://github.com/thuliteio/doks-core/pull/109) [`b9fae7e`](https://github.com/thuliteio/doks-core/commit/b9fae7ef33696bcc4a265e2b690c39fad2d381c7) Thanks [@sr4001](https://github.com/sr4001)! - Fix showing taxonomy terms
+
+- [#108](https://github.com/thuliteio/doks-core/pull/108) [`bb833c8`](https://github.com/thuliteio/doks-core/commit/bb833c880251cf532f42d50024597f73b7d5ab1d) Thanks [@kugarocks](https://github.com/kugarocks)! - Remove redundant check on the navbar
+
 ## 1.7.0
 
 ### Minor Changes
