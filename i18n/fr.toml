@@ -1,0 +1,60 @@
+[404_text]
+other = "La page que vous cherchez n'existe pas ou a été déplacée."
+
+[404_title]
+other = "Page introuvable :("
+
+[browse]
+other = "Naviguer"
+
+[chapter_next]
+other = "Suiv"
+
+[chapter_previous]
+other = "Préc"
+
+[edit_page]
+other = "Éditer cette page sur"
+
+[get_started]
+other = "Exemple de guide"
+
+[home]
+other = "Accueil"
+
+[in]
+other = "dans"
+
+[by]
+other = "par"
+
+[last_updated]
+other = "Dernière mise à jour le"
+
+[minute]
+one = "minute"
+other = "minutes"
+
+[on_this_page]
+other = "Sur cette page"
+
+[reading_time]
+other = "Temps de lecture estimé"
+
+[search_loading]
+other = "Chargement de l'index de recherche…"
+
+[search_no_recent]
+other = "Pas de recherche récente"
+
+[search_no_results]
+other = "Pas de résultats"
+
+[search_placeholder]
+other = "Chercher"
+
+[search_title]
+other = "Chercher"
+
+[video_unsupported]
+other = "Votre navigateur ne supporte pas les vidéos intégrés, mais ne vous inquiétez pas, vous pouvez <a href=\"{{ .RelPermalink }}\">la télécharger</a> et la regarder avec votre lecteur vidéo préféré !"
