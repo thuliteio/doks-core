@@ -48,7 +48,7 @@ other = "Chargement de l'index de recherche…"
 other = "Pas de recherche récente"
 
 [search_no_results]
-other = "Pas de résultats"
+other = "Aucun résultat"
 
 [search_placeholder]
 other = "Chercher"
@@ -57,4 +57,4 @@ other = "Chercher"
 other = "Chercher"
 
 [video_unsupported]
-other = "Votre navigateur ne supporte pas les vidéos intégrés, mais ne vous inquiétez pas, vous pouvez <a href=\"{{ .RelPermalink }}\">la télécharger</a> et la regarder avec votre lecteur vidéo préféré !"
+other = "Votre navigateur ne supporte pas les vidéos intégrées, mais ne vous inquiétez pas, vous pouvez <a href=\"{{ .RelPermalink }}\">la télécharger</a> et la regarder avec votre lecteur vidéo préféré !"
