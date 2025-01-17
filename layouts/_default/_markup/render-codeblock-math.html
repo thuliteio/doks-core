@@ -102,14 +102,14 @@ References:
 
 {{- /* Get image. */}}
 {{- $url := printf "%s?%s" $apiEndpoint $qs }}
-{{- with resources.GetRemote $url }}
+{{- with try (resources.GetRemote $url) }}
   {{- with .Err }}
     {{- errorf "The %q code block render hook was unable to get the remote image. See %s. %s" $renderHookName $position . }}
-  {{- else }}
+  {{- else with .Value }}
     {{- $url = .RelPermalink }}
+  {{- else }}
+    {{- errorf "The %q code block render hook was unable to get the remote image. See %s" $renderHookName $position }}
   {{- end }}
-{{- else }}
-  {{- errorf "The %q code block render hook was unable to get the remote image. See %s" $renderHookName $position }}
 {{- end }}
 
 {{- /* Render. */}}
