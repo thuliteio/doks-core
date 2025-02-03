@@ -41,7 +41,7 @@ References:
 {{- $renderHookName := "kroki" }}
 
 {{- /* Verify minimum required version. */}}
-{{- $minHugoVersion := "0.114.0" }}
+{{- $minHugoVersion := "0.141.0" }}
 {{- if lt hugo.Version $minHugoVersion }}
   {{- errorf "The %q code block render hook requires Hugo v%s or later." $renderHookName $minHugoVersion }}
 {{- end }}
