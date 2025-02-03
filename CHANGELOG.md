@@ -1,5 +1,15 @@
 # @thulite/doks-core
 
+## 1.8.1
+
+### Patch Changes
+
+- [#113](https://github.com/thuliteio/doks-core/pull/113) [`a22bd34`](https://github.com/thuliteio/doks-core/commit/a22bd34973b9f535e29c49a258a185c9664bffa3) Thanks [@Te-k](https://github.com/Te-k)! - Adds French translation
+
+- [#114](https://github.com/thuliteio/doks-core/pull/114) [`31f6e0d`](https://github.com/thuliteio/doks-core/commit/31f6e0dc61ab96b916ec56dfb0611ae3f5117a24) Thanks [@BoboTiG](https://github.com/BoboTiG)! - fix: French translations
+
+- [#115](https://github.com/thuliteio/doks-core/pull/115) [`e906dff`](https://github.com/thuliteio/doks-core/commit/e906dffb2e960efe116ce64ba3de674815fd88fd) Thanks [@l-zeuch](https://github.com/l-zeuch)! - layouts: use new try function (Hugo 0.141.0 and above)
+
 ## 1.8.0
 
 ### Minor Changes
