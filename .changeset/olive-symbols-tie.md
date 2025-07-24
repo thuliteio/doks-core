@@ -2,4 +2,4 @@
 "@thulite/doks-core": patch
 ---
 
-Fix \_partial paths
+Fix _partial paths
