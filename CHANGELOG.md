@@ -1,5 +1,11 @@
 # @thulite/doks-core
 
+## 1.8.2
+
+### Patch Changes
+
+- [#120](https://github.com/thuliteio/doks-core/pull/120) [`9cf8b18`](https://github.com/thuliteio/doks-core/commit/9cf8b1873ba20057003e62778506a3894bf529fc) Thanks [@h-enk](https://github.com/h-enk)! - Update for new template system in Hugo v0.146.0
+
 ## 1.8.1
 
 ### Patch Changes
