@@ -1,5 +1,11 @@
 # @thulite/doks-core
 
+## 1.8.3
+
+### Patch Changes
+
+- [#121](https://github.com/thuliteio/doks-core/pull/121) [`bf8c8f0`](https://github.com/thuliteio/doks-core/commit/bf8c8f0fc6c0006d2410d3b53c9136f0f49a5e11) Thanks [@h-enk](https://github.com/h-enk)! - Fix \_partial paths
+
 ## 1.8.2
 
 ### Patch Changes
