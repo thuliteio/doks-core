@@ -19,7 +19,7 @@ By default, a home page reference in the page collection or menu will be
 skipped. To override this behavior, set $skipHome to false below.
 
 @param {page} currentPage   The page currently being rendered.
-@paran {slice} nodes        A slice of top level pages or a menu.
+@param {slice} nodes        A slice of top level pages or a menu.
 
 @returns {template.HTML}
 
@@ -62,11 +62,11 @@ skipped. To override this behavior, set $skipHome to false below.
   </ul>
 </nav>
 
-{{- /* Recurively render list items. */}}
+{{- /* Recursively render list items. */}}
 {{- define "walk" }}
   {{- $currentPage := .currentPage }}
   {{- $node := .node }}
-  
+
   {{- $linkContent := $node.Page.LinkTitle }}
   {{- with $node.Name }}
     {{- $linkContent = . }}
@@ -86,7 +86,7 @@ skipped. To override this behavior, set $skipHome to false below.
 
   <li {{- with $liClass }} class="{{ . }}" {{ end -}}>
     {{- with $node.Page.Pages }}
-    <details{{- with $ariaCurrent }} open{{- end }}{{- if ne $node.Page.Params.sidebar.collapsed true }} open{{- end }}>
+    <details{{- with $ariaCurrent }} open{{- else}}{{- if ne $node.Page.Params.sidebar.collapsed true }} open{{- end }}{{- end}}>
       <summary>{{ $linkContent }}</summary>
       <ul class="list-unstyled list-nested">
         {{- range . }}
