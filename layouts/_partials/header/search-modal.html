@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-md-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 visually-hidden" id="searchModalLabel">{{ i18n "search_placeholder" }}</h1>
+        <h2 class="modal-title fs-5 visually-hidden" id="searchModalLabel">{{ i18n "search_placeholder" }}</h2>
         <button type="button" class="btn-close visually-hidden" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="search-input flex-grow-1 d-none">
           <form id="search-form" class="search-form" action="#" method="post" accept-charset="UTF-8" role="search">
@@ -25,7 +25,7 @@
               <div class="card-body">
                 <header>
                   <h2 class="h5 title title-submitted mb-0"><a class="stretched-link text-decoration-none text-reset" href="#">Title here</a></h2>
-                  <div class="submitted{{ if eq site.Params.doks.showDate false }} d-none{{ end }}"><time class="created-date">Date here</time></div>
+                  <div class="submitted{{ if eq site.Params.doks.showDate false }} d-none{{ end }}"><time class="created-date">{{ (time.AsTime 0).Format "2006-01-02T15:04:05-07:00" }}</time></div>
                 </header>
                 <div class="content{{ if eq site.Params.doks.showSummary false }} d-none{{ end }}">Summary here</div>
               </div>
