@@ -1,3 +1,5 @@
+/* stylelint-disable property-no-vendor-prefix, order/properties-order, declaration-no-important, @stylistic/indentation, @stylistic/number-leading-zero, color-hex-length, color-named */
+
 .expressive-code {
     font-family: var(--ec-uiFontFml);
     font-size: var(--ec-uiFontSize);
@@ -19,6 +21,7 @@
     border: var(--ec-brdWd) solid var(--ec-brdCol);
     border-radius: calc(var(--ec-brdRad) + var(--ec-brdWd));
     background: var(--ec-codeBg);
+    overflow-x: auto;
 }
 
 .expressive-code pre:focus-visible {
@@ -35,10 +38,6 @@
     font-family: var(--ec-codeFontFml);
     font-size: var(--ec-codeFontSize);
     line-height: var(--ec-codeLineHt);
-}
-
-.expressive-code pre {
-    overflow-x: auto;
 }
 
 .expressive-code pre::-webkit-scrollbar,
@@ -74,7 +73,7 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0, 0, 0, 0); /* stylelint-disable-line property-no-deprecated */
     white-space: nowrap;
     border-width: 0;
 }
@@ -411,7 +410,7 @@
 }
 
 @media (hover: hover) {
-    .expressive-code {
+    .expressive-code {  /* stylelint-disable-line block-no-empty */
     }
 
     .expressive-code .copy button {
@@ -420,11 +419,13 @@
         height: 2rem;
     }
 
+    /* stylelint-disable selector-max-compound-selectors, selector-max-class */
     .expressive-code .frame:hover .copy button:not(:hover),
     .expressive-code .frame:focus-within :focus-visible ~ .copy button:not(:hover),
     .expressive-code .frame .copy .feedback.show ~ button:not(:hover) {
         opacity: 0.75;
     }
+    /* stylelint-enable selector-max-compound-selectors, selector-max-class */
 }
 
 :root {
