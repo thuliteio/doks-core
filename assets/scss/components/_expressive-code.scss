@@ -154,37 +154,6 @@
     background-clip: padding-box;
 }
 
-.expressive-code .ec-line mark.open-start,
-.expressive-code .ec-line ins.open-start,
-.expressive-code .ec-line del.open-start {
-    margin-inline-start: 0;
-    padding-inline-start: 0;
-    --tmBrdL: 0px;
-    --tmRadL: 0;
-}
-
-.expressive-code .ec-line mark.open-end,
-.expressive-code .ec-line ins.open-end,
-.expressive-code .ec-line del.open-end {
-    margin-inline-end: 0;
-    padding-inline-end: 0;
-    --tmBrdR: 0px;
-    --tmRadR: 0;
-}
-
-.expressive-code .ec-line mark::before,
-.expressive-code .ec-line ins::before,
-.expressive-code .ec-line del::before {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    display: inline-block;
-    inset: 0;
-    border-radius: var(--tmRadL) var(--tmRadR) var(--tmRadR) var(--tmRadL);
-    border: var(--ec-tm-inlMarkerBrdWd) solid var(--tmInlineBrdCol);
-    border-inline-width: var(--tmBrdL) var(--tmBrdR);
-}
-
 .expressive-code .frame {
     all: unset;
     position: relative;
@@ -530,13 +499,6 @@
     --ec-frm-tooltipSuccessFg: white;
 }
 
-.expressive-code .ec-line span[style^="--"]:not([class]) {
-    color: var(--0, inherit);
-    font-style: var(--0fs, inherit);
-    font-weight: var(--0fw, inherit);
-    text-decoration: var(--0td, inherit);
-}
-
 @media (prefers-color-scheme: light) {
     :root:not([data-bs-theme="dark"]) {
         --ec-codeBg: #fbfbfb;
@@ -562,13 +524,6 @@
         --ec-frm-trmTtbBg: var(--sl-color-gray-6);
         --ec-frm-trmBg: var(--sl-color-gray-7);
         --ec-frm-tooltipSuccessBg: #078662;
-    }
-
-    :root:not([data-bs-theme="dark"]) .expressive-code .ec-line span[style^="--"]:not([class]) {
-        color: var(--1, inherit);
-        font-style: var(--1fs, inherit);
-        font-weight: var(--1fw, inherit);
-        text-decoration: var(--1td, inherit);
     }
 }
 
@@ -597,12 +552,4 @@
     --ec-frm-trmTtbBg: var(--sl-color-gray-6);
     --ec-frm-trmBg: var(--sl-color-gray-7);
     --ec-frm-tooltipSuccessBg: #078662;
-}
-
-:root[data-bs-theme="light"] .expressive-code .ec-line span[style^="--"]:not([class]),
-.expressive-code[data-bs-theme="light"] .ec-line span[style^="--"]:not([class]) {
-    color: var(--1, inherit);
-    font-style: var(--1fs, inherit);
-    font-weight: var(--1fw, inherit);
-    text-decoration: var(--1td, inherit);
 }
