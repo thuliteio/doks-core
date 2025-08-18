@@ -85,3 +85,7 @@ $focus-color-dark: lighten($link-color-dark, 2.5%);
 $navbar-dark-color: $body-color-dark;
 $navbar-dark-hover-color: $link-color-dark;
 $navbar-dark-active-color: $link-color-dark;
+
+:root {
+  --table-bg-dark: hsl(224, 10%, 10%);
+}
