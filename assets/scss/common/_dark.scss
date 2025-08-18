@@ -599,7 +599,7 @@ pre code::-webkit-scrollbar-thumb:hover {
     .table-dark,
     [data-bs-theme="dark"] table {
         --bs-table-color: inherit;
-        --bs-table-bg: $body-bg-dark;
+        --bs-table-bg: var(--table-bg-dark);
 
         background: $body-bg-dark;
         border-color: $border-dark;
