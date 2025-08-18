@@ -1,5 +1,9 @@
 /** Theme styles */
 
+/* stylelint-disable order/properties-order, declaration-no-important, selector-no-qualifying-type, @stylistic/indentation, @stylistic/number-leading-zero */
+
+/* cspell:ignore Ccircle Cpath Csvg */
+
 @include color-mode(dark) {
     h1,
     h2,
