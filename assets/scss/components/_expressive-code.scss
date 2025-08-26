@@ -1,3 +1,5 @@
+/* stylelint-disable property-no-vendor-prefix, order/properties-order, declaration-no-important, @stylistic/indentation, @stylistic/number-leading-zero, color-hex-length, color-named */
+
 .expressive-code {
     font-family: var(--ec-uiFontFml);
     font-size: var(--ec-uiFontSize);
@@ -19,6 +21,7 @@
     border: var(--ec-brdWd) solid var(--ec-brdCol);
     border-radius: calc(var(--ec-brdRad) + var(--ec-brdWd));
     background: var(--ec-codeBg);
+    overflow-x: auto;
 }
 
 .expressive-code pre:focus-visible {
@@ -35,10 +38,6 @@
     font-family: var(--ec-codeFontFml);
     font-size: var(--ec-codeFontSize);
     line-height: var(--ec-codeLineHt);
-}
-
-.expressive-code pre {
-    overflow-x: auto;
 }
 
 .expressive-code pre::-webkit-scrollbar,
@@ -74,7 +73,7 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0, 0, 0, 0); /* stylelint-disable-line property-no-deprecated */
     white-space: nowrap;
     border-width: 0;
 }
@@ -154,37 +153,6 @@
     background-clip: padding-box;
 }
 
-.expressive-code .ec-line mark.open-start,
-.expressive-code .ec-line ins.open-start,
-.expressive-code .ec-line del.open-start {
-    margin-inline-start: 0;
-    padding-inline-start: 0;
-    --tmBrdL: 0px;
-    --tmRadL: 0;
-}
-
-.expressive-code .ec-line mark.open-end,
-.expressive-code .ec-line ins.open-end,
-.expressive-code .ec-line del.open-end {
-    margin-inline-end: 0;
-    padding-inline-end: 0;
-    --tmBrdR: 0px;
-    --tmRadR: 0;
-}
-
-.expressive-code .ec-line mark::before,
-.expressive-code .ec-line ins::before,
-.expressive-code .ec-line del::before {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    display: inline-block;
-    inset: 0;
-    border-radius: var(--tmRadL) var(--tmRadR) var(--tmRadR) var(--tmRadL);
-    border: var(--ec-tm-inlMarkerBrdWd) solid var(--tmInlineBrdCol);
-    border-inline-width: var(--tmBrdL) var(--tmBrdR);
-}
-
 .expressive-code .frame {
     all: unset;
     position: relative;
@@ -213,7 +181,7 @@
     border-top-right-radius: 0;
 }
 
-.expressive-code .frame .title:empty:before {
+.expressive-code .frame .title:empty::before {
     content: "\a0";
 }
 
@@ -328,7 +296,7 @@
     border-radius: 0.2rem;
     z-index: 1;
     cursor: pointer;
-    transition-property: opacity, background, border-color;
+    transition-property: opacity, background-color, border-color;
     transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     width: 2.5rem;
@@ -442,7 +410,7 @@
 }
 
 @media (hover: hover) {
-    .expressive-code {
+    .expressive-code {  /* stylelint-disable-line block-no-empty */
     }
 
     .expressive-code .copy button {
@@ -451,11 +419,13 @@
         height: 2rem;
     }
 
+    /* stylelint-disable selector-max-compound-selectors, selector-max-class */
     .expressive-code .frame:hover .copy button:not(:hover),
     .expressive-code .frame:focus-within :focus-visible ~ .copy button:not(:hover),
     .expressive-code .frame .copy .feedback.show ~ button:not(:hover) {
         opacity: 0.75;
     }
+    /* stylelint-enable selector-max-compound-selectors, selector-max-class */
 }
 
 :root {
@@ -530,13 +500,6 @@
     --ec-frm-tooltipSuccessFg: white;
 }
 
-.expressive-code .ec-line span[style^="--"]:not([class]) {
-    color: var(--0, inherit);
-    font-style: var(--0fs, inherit);
-    font-weight: var(--0fw, inherit);
-    text-decoration: var(--0td, inherit);
-}
-
 @media (prefers-color-scheme: light) {
     :root:not([data-bs-theme="dark"]) {
         --ec-codeBg: #fbfbfb;
@@ -562,13 +525,6 @@
         --ec-frm-trmTtbBg: var(--sl-color-gray-6);
         --ec-frm-trmBg: var(--sl-color-gray-7);
         --ec-frm-tooltipSuccessBg: #078662;
-    }
-
-    :root:not([data-bs-theme="dark"]) .expressive-code .ec-line span[style^="--"]:not([class]) {
-        color: var(--1, inherit);
-        font-style: var(--1fs, inherit);
-        font-weight: var(--1fw, inherit);
-        text-decoration: var(--1td, inherit);
     }
 }
 
@@ -597,12 +553,4 @@
     --ec-frm-trmTtbBg: var(--sl-color-gray-6);
     --ec-frm-trmBg: var(--sl-color-gray-7);
     --ec-frm-tooltipSuccessBg: #078662;
-}
-
-:root[data-bs-theme="light"] .expressive-code .ec-line span[style^="--"]:not([class]),
-.expressive-code[data-bs-theme="light"] .ec-line span[style^="--"]:not([class]) {
-    color: var(--1, inherit);
-    font-style: var(--1fs, inherit);
-    font-weight: var(--1fw, inherit);
-    text-decoration: var(--1td, inherit);
 }

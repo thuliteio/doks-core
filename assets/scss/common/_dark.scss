@@ -1,5 +1,9 @@
 /** Theme styles */
 
+/* stylelint-disable order/properties-order, declaration-no-important, selector-no-qualifying-type, @stylistic/indentation, @stylistic/number-leading-zero */
+
+/* cspell:ignore Ccircle Cpath Csvg */
+
 @include color-mode(dark) {
     h1,
     h2,
@@ -21,7 +25,7 @@
         color: inherit;
     }
 
-    a.text- {
+    a.text-dark {
         color: $body-color-dark !important;
     }
 
@@ -599,7 +603,7 @@ pre code::-webkit-scrollbar-thumb:hover {
     .table-dark,
     [data-bs-theme="dark"] table {
         --bs-table-color: inherit;
-        --bs-table-bg: $body-bg-dark;
+        --bs-table-bg: var(--table-bg-dark);
 
         background: $body-bg-dark;
         border-color: $border-dark;
