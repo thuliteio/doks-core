@@ -171,7 +171,7 @@ either of these shortcodes in conjunction with this render hook.
                           {{- /* Destination is a global resource; drop query and fragment. */}}
                           {{- $attrs = dict "href" .RelPermalink }}
                       {{- else }}
-                        {{- if site.Params.render_hooks.link.staticFallback | default $page.Params.render_hooks.link.staticFallback | default true }}
+                        {{- if $page.Params.render_hooks.link.staticFallback | default site.Params.render_hooks.link.staticFallback | default true }}
                             {{- $attrs = dict "href" $ctx.Destination }}
                         {{- else }}
                           {{- if eq $errorLevel "warning" }}
