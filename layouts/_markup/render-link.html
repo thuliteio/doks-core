@@ -131,7 +131,7 @@ either of these shortcodes in conjunction with this render hook.
       {{- with urls.Parse .Destination }}
           {{- $u = .  }}
       {{- else }}
-          {{- errorf "The %q render hook was unable to parse the destination %q in %s as a URL" $renderHookName .Destination $contentPath }} }}
+          {{- errorf "The %q render hook was unable to parse the destination %q in %s as a URL" $renderHookName .Destination $contentPath }}
       {{- end }}
 
       {{- /* Set common message. */}}
