@@ -1,4 +1,4 @@
-# Doks core
+# Doks Core
 
 Official Doks core integration for the Doks theme.
 
