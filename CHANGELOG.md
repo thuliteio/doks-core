@@ -1,5 +1,21 @@
 # @thulite/doks-core
 
+## 1.8.4
+
+### Patch Changes
+
+- [#124](https://github.com/thuliteio/doks-core/pull/124) [`b191619`](https://github.com/thuliteio/doks-core/commit/b1916196d245b91c135bed6490ec8c1ee9f96e94) Thanks [@danielfdickinson](https://github.com/danielfdickinson)! - validation: remove unneeded attribute for script
+
+- [#133](https://github.com/thuliteio/doks-core/pull/133) [`d90591d`](https://github.com/thuliteio/doks-core/commit/d90591d67707d87ab310c6a1413776083a8d71ae) Thanks [@danielfdickinson](https://github.com/danielfdickinson)! - fix: need to check page param before site param
+
+- [#131](https://github.com/thuliteio/doks-core/pull/131) [`4c484e5`](https://github.com/thuliteio/doks-core/commit/4c484e548fd0c2931f7f771b7932687b97b4621b) Thanks [@danielfdickinson](https://github.com/danielfdickinson)! - feat: add enhanced link render hook
+
+- [#136](https://github.com/thuliteio/doks-core/pull/136) [`58d0fbf`](https://github.com/thuliteio/doks-core/commit/58d0fbf4de97c0d7bb78160bc314b1270394d6b3) Thanks [@h-enk](https://github.com/h-enk)! - Bump dependencies to their latest versions
+
+- [#130](https://github.com/thuliteio/doks-core/pull/130) [`49c47e6`](https://github.com/thuliteio/doks-core/commit/49c47e635c8135e39d4c6015ed897d59cf1a0cf5) Thanks [@danielfdickinson](https://github.com/danielfdickinson)! - fix: update search template to pass W3 validation
+
+- [#126](https://github.com/thuliteio/doks-core/pull/126) [`56058d4`](https://github.com/thuliteio/doks-core/commit/56058d43831c67a65b4957d41e3da4c48b535171) Thanks [@danielfdickinson](https://github.com/danielfdickinson)! - layouts: fix duplicates on sidebar details tag
+
 ## 1.8.3
 
 ### Patch Changes
