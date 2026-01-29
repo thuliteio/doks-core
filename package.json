@@ -12,14 +12,14 @@
     "format": "prettier **/** -w -c"
   },
   "dependencies": {
-    "@thulite/bootstrap": "^1.2.2",
+    "@thulite/bootstrap": "^1.2.3",
     "clipboard": "^2.0.11",
-    "flexsearch": "^0.8.205"
+    "flexsearch": "^0.8.212"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.5",
-    "prettier": "^3.6.2"
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8",
+    "prettier": "^3.8.1"
   },
   "engines": {
     "node": ">=20.11.0"
