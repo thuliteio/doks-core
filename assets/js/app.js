@@ -13,6 +13,9 @@ import 'js/to-top.js';
 // Import tabs.js
 import 'js/tabs.js';
 
+// Import toc.js
+import 'js/toc.js';
+
 // Import custom.js
 import 'js/custom.js';
 

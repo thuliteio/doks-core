@@ -38,7 +38,8 @@
 
 .navbar {
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    // background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--bs-body-bg);
     border-bottom: 1px solid $gray-200;
 
     /*
