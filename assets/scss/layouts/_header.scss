@@ -585,8 +585,21 @@ h5.offcanvas-title {
         margin: 0.5rem 0;
     }
 
-    #socialMenu {
-        margin: 0.5rem 0 0.5rem -0.25rem;
+    #socialMenu .nav-item:first-child {
+        margin-left: 0;
+
+        .social-link {
+            padding-left: 0;
+        }
+    }
+
+    #socialMenu .nav-item {
+        margin-left: 0;
+
+        .social-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
     }
 
     .navbar-nav {
