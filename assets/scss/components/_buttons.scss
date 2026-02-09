@@ -397,5 +397,9 @@ body .toggle-light {
         .dropdown-item:active {
             background-color: var(--sl-color-gray-6);
         }
+
+        hr.dropdown-divider {
+            border-color: hsl(224deg, 10%, 23%);
+        }
     }
 }
