@@ -606,7 +606,7 @@ h5.offcanvas-title {
         margin-top: 1rem;
     }
 
-    .dropdown-menu {
+    .dropdown:not(#ai-dropdown) .dropdown-menu {
         box-shadow: none !important;
         background: transparent !important;
         border-radius: 0 !important;

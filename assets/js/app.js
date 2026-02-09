@@ -16,6 +16,9 @@ import 'js/tabs.js';
 // Import toc.js
 import 'js/toc.js';
 
+// Import copy-markdown.js
+import 'js/copy-markdown.js';
+
 // Import custom.js
 import 'js/custom.js';
 

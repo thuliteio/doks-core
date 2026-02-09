@@ -32,8 +32,17 @@
 					</ol>
 				</nav>
 			{{ end }}
-			<h1>{{ .Title }}</h1>
-			<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
+			<div class="page-header d-flex flex-row justify-content-between align-items-start">
+				<div>
+					<h1>{{ .Title }}</h1>
+					<!-- <p class="lead">{{ .Params.lead | safeHTML }}</p> -->
+				</div>
+				{{ if site.Params.doks.aiButtons -}}
+				<div>
+					{{ partial "main/ai-buttons.html" . }}
+				</div>
+				{{ end -}}
+			</div>
 			{{ if site.Params.doks.headlineHash -}}
 				{{ partial "main/headline-hash" .Content }}
 			{{ else -}}

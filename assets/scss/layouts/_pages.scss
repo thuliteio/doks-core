@@ -246,3 +246,19 @@ ul.list-star li {
         margin-left: 3rem;
     }
 }
+
+// Update positioning for AI dropdown
+@include media-breakpoint-down(xl) {
+    .page-header {
+        h1 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.page-header {
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+}
