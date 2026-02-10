@@ -59,6 +59,9 @@
       </div>
       <div class="offcanvas-body">
         <aside class="doks-sidebar mt-n3">
+          {{ if site.Params.doks.sectionSwitcher -}}
+            {{ partial "sidebar/section-switcher.html" . }}
+          {{ end -}}
           <nav id="doks-docs-nav" aria-label="Tertiary navigation">
             {{ partial "sidebar/section-menu.html" . }}
           </nav>

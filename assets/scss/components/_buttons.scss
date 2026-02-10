@@ -402,4 +402,14 @@ body .toggle-light {
             border-color: hsl(224deg, 10%, 23%);
         }
     }
+
+    .section-switcher {
+        .dropdown-toggle {
+            border: 1px solid hsl(224deg, 10%, 23%);
+        }
+
+        .dropdown-menu {
+            border: 1px solid hsl(224deg, 10%, 23%);
+        }
+    }
 }
