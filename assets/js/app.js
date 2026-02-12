@@ -19,6 +19,9 @@ import 'js/toc.js';
 // Import copy-markdown.js
 import 'js/copy-markdown.js';
 
+// import basiclightbox.js
+import 'js/basiclightbox.js';
+
 // Import custom.js
 import 'js/custom.js';
 
