@@ -5,3 +5,11 @@
 {{- if and (site.Params.doks.alert) (site.Params.doks.alertDismissable) }}
   {{- partial "footer/esbuild" (dict "src" "js/dismissable-alert.js" "transpile" false) }}
 {{- end }}
+{{- if .Param "math" }}
+  {{- $mathEngine := .Param "mathEngine" | default "KaTeX" }}
+  {{- if eq $mathEngine "MathJax" }}
+    {{ partialCached "main/mathjax.html" . }}
+  {{- else }}
+    {{ partialCached "main/katex.html" . }}
+  {{- end }}
+{{- end }}
