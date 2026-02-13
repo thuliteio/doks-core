@@ -26,6 +26,10 @@
         } else {
             document.documentElement.setAttribute('data-bs-theme', theme);
         }
+        // Dispatch custom event for theme changes
+        document.dispatchEvent(new CustomEvent('themeChanged', {
+            detail: { theme: theme }
+        }));
     };
 
     setTheme(getPreferredTheme());
@@ -62,7 +66,7 @@
 
     // Update theme if browser/OS setting is changed
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        if (storedTheme !== 'light' || storedTheme !== 'dark') {
+        if (storedTheme !== 'light' && storedTheme !== 'dark') {
             setTheme(getPreferredTheme());
         }
     });
