@@ -1,5 +1,11 @@
 # @thulite/doks-core
 
+## 1.9.0
+
+### Minor Changes
+
+- [#137](https://github.com/thuliteio/doks-core/pull/137) [`58f195f`](https://github.com/thuliteio/doks-core/commit/58f195f8079f2d1eb2c70262eba848d66cdfd5c8) Thanks [@h-enk](https://github.com/h-enk)! - Update for UX 2026
+
 ## 1.8.4
 
 ### Patch Changes
