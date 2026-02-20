@@ -1,0 +1,16 @@
+{{/* Based on https://discourse.gohugo.io/t/simple-shortcode-for-folder-document-tree/46320 */}}
+{{/* Uses https://github.com/thuliteio/inline-svg */}}
+
+<div class="tree">
+  {{- $content := .Inner | markdownify -}}
+  {{- $pattern := `\{[^}]+\}` -}}
+  {{- $matches := findRE $pattern $content -}}
+  {{- range $matches -}}
+    {{- $match := . -}}
+    {{- $trimmedMatch := trim $match "{}" -}}
+    {{- $src := printf "%s/%s" $.Site.Params.inline_svg.iconSetVariant $trimmedMatch -}}
+    {{- $replacement := partial "inline-svg" (dict "src" $src) -}}
+    {{- $content = replace $content $match $replacement -}}
+  {{- end -}}
+  {{- $content | safeHTML -}}
+</div>

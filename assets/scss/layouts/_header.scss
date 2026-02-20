@@ -38,7 +38,8 @@
 
 .navbar {
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    // background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--bs-body-bg);
     border-bottom: 1px solid $gray-200;
 
     /*
@@ -584,15 +585,28 @@ h5.offcanvas-title {
         margin: 0.5rem 0;
     }
 
-    #socialMenu {
-        margin: 0.5rem 0 0.5rem -0.25rem;
+    #socialMenu .nav-item:first-child {
+        margin-left: 0;
+
+        .social-link {
+            padding-left: 0;
+        }
+    }
+
+    #socialMenu .nav-item {
+        margin-left: 0;
+
+        .social-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
     }
 
     .navbar-nav {
         margin-top: 1rem;
     }
 
-    .dropdown-menu {
+    .dropdown:not(#ai-dropdown) .dropdown-menu {
         box-shadow: none !important;
         background: transparent !important;
         border-radius: 0 !important;

@@ -403,7 +403,7 @@ li input[type="checkbox"]:checked {
     margin-bottom: 1.5rem;
 }
 
-.content .svg-inline:not(.svg-inline-custom) {
+.content .svg-inline:not(.svg-inline-custom):not([width]) {
     height: 1.875rem;
     width: 1.875rem;
     stroke-width: 1.5;

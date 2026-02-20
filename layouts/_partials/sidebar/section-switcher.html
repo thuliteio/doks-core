@@ -1,0 +1,87 @@
+{{/* Section Switcher Dropdown for Documentation */}}
+{{ $currentSection := .Section }}
+{{ $availableSections := site.Params.doks.sectionNav }}
+{{ if gt (len $availableSections) 1 }}
+<div class="section-switcher">
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center"
+            type="button"
+            id="sectionSwitcher"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-label="Switch documentation section">
+      <span class="d-flex align-items-center">
+        {{ $currentSectionIcon := "folder" }}
+        {{ $currentSectionTitle := ($currentSection | humanize) }}
+
+        {{/* Get current section page and retrieve its params */}}
+        {{ $currentSectionPage := site.GetPage (printf "/%s" $currentSection) }}
+        {{ if $currentSectionPage }}
+          {{ if $currentSectionPage.Params.section.title }}
+            {{ $currentSectionTitle = $currentSectionPage.Params.section.title }}
+          {{ end }}
+          {{ if $currentSectionPage.Params.section.iconName }}
+            {{ $currentSectionIcon = $currentSectionPage.Params.section.iconName }}
+          {{ end }}
+        {{ end }}
+
+        {{ $src := printf "%s/%s" .Site.Params.inline_svg.iconSetVariant $currentSectionIcon }}
+        {{ partial "inline-svg" (dict "src" $src "class" "icon me-2 mb-1 mb-lg-0" "width" "20" "height" "20") }}
+        <span class="fw-medium">{{ $currentSectionTitle }}</span>
+      </span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-selector mb-1 mb-lg-0" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 9l4 -4l4 4" />
+        <path d="M16 15l-4 4l-4 -4" />
+      </svg>
+    </button>
+
+    <ul class="dropdown-menu w-100" aria-labelledby="sectionSwitcher">
+      {{ range $availableSections }}
+        {{ $section := . }}
+        {{ $sectionPage := site.GetPage (printf "/%s" $section) }}
+        {{ $isActive := eq $section $currentSection }}
+
+        {{/* Only show section if it exists or has content */}}
+        {{ if or $sectionPage (eq $section $currentSection) }}
+
+        {{ $sectionIcon := "folder" }}
+        {{ $sectionTitle := ($section | humanize) }}
+        {{ $sectionUrl := (printf "/%s/" $section) }}
+
+        {{/* Get section info from page params */}}
+        {{ if $sectionPage }}
+          {{ if $sectionPage.Params.section.title }}
+            {{ $sectionTitle = $sectionPage.Params.section.title }}
+          {{ end }}
+          {{ if $sectionPage.Params.section.iconName }}
+            {{ $sectionIcon = $sectionPage.Params.section.iconName }}
+          {{ end }}
+          {{ if $sectionPage.Params.section.startUrl }}
+            {{ $sectionUrl = $sectionPage.Params.section.startUrl }}
+          {{ end }}
+        {{ end }}
+
+        <li>
+          <a class="dropdown-item d-flex align-items-center{{ if $isActive }} active{{ end }}"
+             href="{{ $sectionUrl }}"
+             {{ if $isActive }}aria-current="page"{{ end }}>
+            {{ $src := printf "%s/%s" $.Site.Params.inline_svg.iconSetVariant $sectionIcon }}
+            {{ partial "inline-svg" (dict "src" $src "class" "icon me-2 mb-1 mb-lg-0" "width" "18" "height" "18") }}
+            <span>{{ $sectionTitle }}</span>
+            {{ if $isActive }}
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check ms-auto" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M5 12l5 5l10 -10"/>
+              </svg>
+            {{ end }}
+          </a>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
+
+<hr class="section-divider">

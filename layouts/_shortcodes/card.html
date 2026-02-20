@@ -1,0 +1,41 @@
+{{- $opts := dict
+  "page" .
+  "title" (.Get "title")
+  "icon" (.Get "icon")
+  "color" (.Get "color")
+  "inner" .Inner
+}}
+
+{{- with .Parent }}
+  {{- partial "inline/card.html" $opts }}
+{{- else }}
+  <div class="card-nav d-flex flex-column flex-sm-row">
+    {{- partial "inline/card.html" $opts }}
+  </div>
+{{- end }}
+
+{{- define "_partials/inline/card.html" }}
+  <div class="card card-box w-100">
+    <div class="card-body">
+      <div class="d-flex align-items-center">
+        {{- $colors := slice "yellow" "purple" "green" "red" "blue" }}
+        {{- $color := .color }}
+        {{- if not (in $colors .color) }}
+          {{ $color = "yellow" }}
+        {{- end }}
+        {{ $class := printf "svg-inline-custom mt-0 me-3 card-icon icon-%s" $color }}
+        {{- with .icon }}
+          {{ partial "inline-svg" (dict "src" . "stroke-width" "1.5" "height" "1.875rem" "width" "1.875rem" "class" $class )}}
+        {{- end }}
+        {{- with .title }}
+          <span class="card-title h4 mt-0">{{ . }}</span>
+        {{- end }}
+      </div>
+      {{ with .inner }}
+      <div class="card-text">
+        {{ . | markdownify }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+{{- end -}}

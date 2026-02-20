@@ -2,7 +2,7 @@
 {{- with index site.Menus $sidebar }}
     {{ partial "sidebar/render-section-menu.html" (dict "currentPage" $ "nodes" .) }}
 {{- else }}
-  {{ with (.Site.GetPage "section" .Section).Sections }}
+  {{ with (.Site.GetPage "section" .Section).Pages }}
     {{ partial "sidebar/render-section-menu.html" (dict "currentPage" $ "nodes" .) }}
   {{ end }}
 {{- end }}
