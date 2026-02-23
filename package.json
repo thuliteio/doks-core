@@ -28,5 +28,14 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "files": [
+    "archetypes/**",
+    "assets/**",
+    "data/**",
+    "i18n/**",
+    "layouts/**",
+    "static/**"
+  ],
+  "sideEffects": true
 }
