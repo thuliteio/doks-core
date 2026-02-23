@@ -1,5 +1,11 @@
 # @thulite/doks-core
 
+## 1.9.2
+
+### Patch Changes
+
+- [#139](https://github.com/thuliteio/doks-core/pull/139) [`88aaaa8`](https://github.com/thuliteio/doks-core/commit/88aaaa81cc6f7db9f2d34dd0f0e724d4a78f9bc7) Thanks [@h-enk](https://github.com/h-enk)! - Replace files and sideEffects with bundledDependencies
+
 ## 1.9.1
 
 ### Patch Changes
