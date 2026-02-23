@@ -1,5 +1,11 @@
 # @thulite/doks-core
 
+## 1.9.1
+
+### Patch Changes
+
+- [#138](https://github.com/thuliteio/doks-core/pull/138) [`b6d2d8e`](https://github.com/thuliteio/doks-core/commit/b6d2d8e3e70be5c61b65ac0688bac645c2f6f390) Thanks [@h-enk](https://github.com/h-enk)! - Add files and sideEffects to package.json
+
 ## 1.9.0
 
 ### Minor Changes
