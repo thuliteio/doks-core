@@ -1,5 +1,11 @@
 # @thulite/doks-core
 
+## 1.9.3
+
+### Patch Changes
+
+- [#140](https://github.com/thuliteio/doks-core/pull/140) [`c4794fb`](https://github.com/thuliteio/doks-core/commit/c4794fb6cc2a9a938fac7ddb41bff5534a967178) Thanks [@h-enk](https://github.com/h-enk)! - Add purgecss ignore tags (start and end) to \_syntax.scss
+
 ## 1.9.2
 
 ### Patch Changes
