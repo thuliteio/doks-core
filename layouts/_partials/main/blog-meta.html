@@ -1,4 +1,4 @@
-{{ $last := sub (len .Params.contributors) 1 -}}
+{{ $last := sub (len (.Params.contributors | slice)) 1 -}}
 <p>
   <small>
     {{- time.Format (default ":date_long" .Site.Params.dateFormat) .PublishDate -}}
