@@ -1,0 +1,41 @@
+{{- $scriptHashes := slice }}
+{{- $footerScriptHash := partial "footer/esbuild-hash" (dict "src" "js/app.js" "targetPath" "main.js" "load" "async" "transpile" false) -}}
+{{- $bootstrapScriptHash := partial "footer/esbuild-hash" (dict "src" "js/bootstrap.js" "load" "async" "transpile" false) -}}
+{{- $flexTemplateScriptHash := "" }}
+{{- $flexScriptHash := "" }}
+{{- $colorMode := "" }}
+{{- $alertDismissable := "" -}}
+
+{{- partial "main/showFlexSearch" . -}}
+{{- $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
+{{- $searchLimit := site.Params.doks.searchLimit -}}
+{{- if $showFlexSearch -}}
+  {{- /* use lang-specific FlexSearch JS config file for multilingual site */ -}}
+  {{- $flexsearchLangConfigPath := "" -}}
+  {{- if site.LanguagePrefix -}}
+    {{- $flexsearchLangConfigPath = printf "js/flexsearch.%s.js" site.Language.Lang -}}
+    {{- /*  NOTE: we have to assign the pipe below to avoid outputting its return value ($flexsearchLangConfigPath) */ -}}
+    {{- $unusedVar := resources.Get "js/flexsearch.js" | resources.Copy $flexsearchLangConfigPath -}}
+  {{- else -}}
+    {{- $flexsearchLangConfigPath = "js/flexsearch.js" -}}
+  {{- end -}}
+  {{- $flexTemplateScriptHash = partial "footer/esbuild-hash-template" (dict "src" $flexsearchLangConfigPath "load" "async" "transpile" false "isMultilingual" hugo.IsMultilingual "searchLimit" $searchLimit) -}}
+  {{- $flexScriptHash = partial "footer/esbuild-hash" (dict "src" "js/search-modal.js" "load" "async" "transpile" false) -}}
+{{- end -}}
+
+{{- if eq site.Params.doks.colorMode "auto" }}
+  {{- $colorMode = partial "footer/esbuild-hash" (dict "src" "js/color-mode.js" "transpile" false) }}
+{{- end }}
+{{- if and (site.Params.doks.alert) (site.Params.doks.alertDismissable) }}
+  {{- $alertDismissable = partial "footer/esbuild-hash" (dict "src" "js/dismissable-alert.js" "transpile" false) }}
+{{- end -}}
+
+{{- $hashDicts := slice $footerScriptHash $bootstrapScriptHash $flexTemplateScriptHash $flexScriptHash $colorMode $alertDismissable -}}
+{{- range $hashDicts -}}
+  {{- with . }}
+    {{- with .hash }}
+      {{- $scriptHashes = $scriptHashes | append . }}
+    {{- end }}
+  {{- end -}}
+{{- end -}}
+{{- return $scriptHashes -}}
