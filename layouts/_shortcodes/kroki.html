@@ -59,7 +59,7 @@ References:
 {{- end }}
 
 {{- /* Initialize. */}}
-{{- $apiEndpoint := "https://kroki.io/" }}
+{{- $apiEndpoint := .Page.Site.Params.doks.krokiURL | default "https://kroki.io/" }}
 
 {{- /* Get parameters. */}}
 {{- $type := .Get "type" | lower }}
