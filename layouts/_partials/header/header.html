@@ -127,13 +127,13 @@
                 <ul class="dropdown-menu shadow rounded border-0">
                   {{ range .Children -}}
                   {{- $active = eq .Name $current.Title -}}
-                    <li><a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
+                    <li><a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if and .Params (eq .Params.rel "external") }} target="_blank" rel="noopener noreferrer"{{ end }}{{ if $active }} aria-current="true"{{ end }}>{{ if .Pre }}<span class="nav-link-name-pre">{{ .Pre }}</span>{{ end }}{{ .Name }}{{ if .Post }}<span class="nav-link-name-post">{{ .Post }}</span>{{ end }}</a></li>
                   {{ end -}}
                 </ul>
               </li>
             {{ else -}}
               <li class="nav-item">
-                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
+                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if and .Params (eq .Params.rel "external") }} target="_blank" rel="noopener noreferrer"{{ end }}{{ if $active }} aria-current="true"{{ end }}>{{ if .Pre }}<span class="nav-link-name-pre">{{ .Pre }}</span>{{ end }}{{ .Name }}{{ if .Post }}<span class="nav-link-name-post">{{ .Post }}</span>{{ end }}</a>
               </li>
             {{ end -}}
           {{ end -}}
@@ -275,5 +275,3 @@
 {{ if site.Params.doks.flexSearch -}}
 {{ partial "header/search-modal" . }}
 {{ end -}}
-
-
