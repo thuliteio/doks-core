@@ -84,15 +84,15 @@ References:
 {{- $attrs = merge $attrs (dict "class" $class "id" $id "alt" "diagram") }}
 
 {{- /* Get diagram. */}}
-{{- $body := dict "diagram_source" $inner "diagram_type" $diagramType "output_format" "SVG" | jsonify }}
+{{- $body := dict "diagram_source" $inner "diagram_type" $diagramType "output_format" "svg" | jsonify }}
 {{- $opts := dict "method" "post" "body" $body }}
 {{- with try (resources.GetRemote $apiEndpoint $opts) }}
   {{- with .Err }}
-    {{- errorf "The %q code block render hook was unable to get the remote diagram. See %s. %s" $renderHookName $position . }}
+    {{- warnf "The %q code block render hook was unable to get the remote diagram. See %s. %s" $renderHookName $position . }}
   {{- else with .Value }}
     {{- $attrs = merge $attrs (dict "src" .RelPermalink) }}
   {{- else }}
-    {{- errorf "The %q code block render hook was unable to get the remote diagram. See %s" $renderHookName $position }}
+    {{- warnf "The %q code block render hook was unable to get the remote diagram. See %s" $renderHookName $position }}
   {{- end }}
 {{- end }}
 
