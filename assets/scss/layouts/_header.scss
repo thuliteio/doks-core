@@ -687,6 +687,69 @@ h5.offcanvas-title {
     padding-right: 0.75rem;
 }
 
+.dropdown-menu {
+    border: 1px solid var(--sl-color-gray-6) !important;
+    box-shadow: none !important;
+    margin-left: 0.75rem;
+    padding: 0 0.25rem;
+
+    .dropdown-item {
+        margin: 0.25rem 0;
+        padding-left: 0.625rem;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--sl-color-gray-7);
+            border-radius: 0.25rem;
+            color: inherit;
+        }
+
+        &.active {
+            background-color: var(--sl-color-gray-7);
+        }
+    }
+}
+
+@include color-mode(dark) {
+  .dropdown-menu {
+      border: 1px solid var(--sl-color-gray-6) !important;
+      box-shadow: none !important;
+      margin-left: 0.75rem;
+      padding: 0 0.25rem;
+      background-color: var(--sl-color-black);
+
+      .dropdown-item {
+          margin: 0.25rem 0;
+          padding-left: 0.625rem;
+
+          &:hover,
+          &:focus,
+          &:active {
+              background-color: var(--sl-color-gray-6);
+              border-radius: 0.25rem;
+              color: inherit;
+          }
+
+          &.active {
+              background-color: var(--sl-color-gray-6);
+          }
+      }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .dropdown-menu {
+    margin-left: 0 !important;
+    padding: 0 0.25rem !important;
+
+  }
+
+  .dropdown:not(#ai-dropdown) .dropdown-menu {
+        border-radius: 0.25rem !important;
+  }
+}
+
 .nav-link-name-post {
   margin-left: 0.125rem;
 }
