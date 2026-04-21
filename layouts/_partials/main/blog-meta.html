@@ -1,4 +1,5 @@
-{{ $last := sub (len .Params.contributors) 1 -}}
+{{- $contributors := .Params.contributors | default (slice) -}}
+{{- $last := sub (len $contributors) 1 -}}
 <p>
   <small>
     {{- time.Format (default ":date_long" .Site.Params.dateFormat) .PublishDate -}}
@@ -9,7 +10,7 @@
         <a class="stretched-link position-relative link-muted" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
       {{- end }}
     {{- end }}
-    {{- with .Params.contributors -}}
+    {{- with $contributors -}}
       &nbsp;{{ i18n "by" }}&nbsp;
       {{- range $index, $contributor := . -}}
         {{- if gt $index 0 }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end -}}
