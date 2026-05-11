@@ -67,8 +67,8 @@ skipped. To override this behavior, set $skipHome to false below.
   {{- $currentPage := .currentPage }}
   {{- $node := .node }}
 
-  {{- $linkContent := $node.Page.LinkTitle }}
-  {{- with $node.Name }}
+  {{- $linkContent := $node.Name }}
+  {{- with $node.Page.LinkTitle }}
     {{- $linkContent = . }}
   {{- end }}
 
