@@ -2,7 +2,7 @@
   <div class="preview">
     <figcaption>Preview</figcaption>
     <div class="preview-content">
-      {{ .Inner }}
+      {{ .Page.RenderString (dict "display" "block") .Inner }}
     </div>
   </div>
 </figure>
