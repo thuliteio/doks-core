@@ -2,7 +2,7 @@
   <div class="preview">
     <figcaption>Preview</figcaption>
     <div class="preview-content">
-      {{ .Inner }}
+      {{ .Inner | markdownify }}
     </div>
   </div>
 </figure>
