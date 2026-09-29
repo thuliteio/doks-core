@@ -6,4 +6,4 @@ Official Doks core integration for the Doks theme.
 
 See the Doks documentation:
 
-- [Doks](https://getdoks.org/docs/start-here/getting-started/)
+- [Doks](https://getdoks.org/docs/)
