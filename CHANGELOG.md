@@ -1,5 +1,29 @@
 # @thulite/doks-core
 
+## 1.9.4
+
+### Patch Changes
+
+- [#148](https://github.com/thuliteio/doks-core/pull/148) [`2e49fd7`](https://github.com/thuliteio/doks-core/commit/2e49fd79ad3d965d1549f15394d08e7d0ecc2471) Thanks [@h-enk](https://github.com/h-enk)! - Add linkTitle support to section navigation
+
+- [#145](https://github.com/thuliteio/doks-core/pull/145) [`fae8ecb`](https://github.com/thuliteio/doks-core/commit/fae8ecb08bfc1a9dd666a00589eed02940bfdb32) Thanks [@h-enk](https://github.com/h-enk)! - feat(header): support menu pre/post labels and external link attributes
+
+- [#147](https://github.com/thuliteio/doks-core/pull/147) [`b84c4a1`](https://github.com/thuliteio/doks-core/commit/b84c4a1c6457771474c0425311983ed5902c44bc) Thanks [@h-enk](https://github.com/h-enk)! - Add icon support to link-card shortcode
+
+- [#144](https://github.com/thuliteio/doks-core/pull/144) [`0660c9f`](https://github.com/thuliteio/doks-core/commit/0660c9f79511c0f209623e524d011b4e472beb21) Thanks [@sonupreetam](https://github.com/sonupreetam)! - fix(kroki): lowercase output_format and demote network errors to warnings
+
+- [#143](https://github.com/thuliteio/doks-core/pull/143) [`486f838`](https://github.com/thuliteio/doks-core/commit/486f8381f100a2137b7bfab914336cbb15056f36) Thanks [@james-d-elliott](https://github.com/james-d-elliott)! - feat: custom kroki url
+
+- [#146](https://github.com/thuliteio/doks-core/pull/146) [`fa6266e`](https://github.com/thuliteio/doks-core/commit/fa6266e838f944501c9972269949b9bbc2849ea0) Thanks [@h-enk](https://github.com/h-enk)! - feat(header): refine dropdown menu styling across themes and mobile
+
+- [#142](https://github.com/thuliteio/doks-core/pull/142) [`b59823c`](https://github.com/thuliteio/doks-core/commit/b59823ce0734514ce0fa10285b8dae92e98e597d) Thanks [@green-br](https://github.com/green-br)! - Refactor domain extension assignment in email template
+
+- [#149](https://github.com/thuliteio/doks-core/pull/149) [`1086528`](https://github.com/thuliteio/doks-core/commit/108652876141bdd53c1a29fc01a6525cd0469e20) Thanks [@h-enk](https://github.com/h-enk)! - Render inner Markdown
+
+- [#151](https://github.com/thuliteio/doks-core/pull/151) [`b24e996`](https://github.com/thuliteio/doks-core/commit/b24e996c31d33f129ae335723490281acb490cab) Thanks [@h-enk](https://github.com/h-enk)! - chore: update dependencies to latest versions
+
+- [#141](https://github.com/thuliteio/doks-core/pull/141) [`b4d2ca9`](https://github.com/thuliteio/doks-core/commit/b4d2ca9cf082216599464e29c94c003d2dfb0a3e) Thanks [@green-br](https://github.com/green-br)! - Fix contributors slice length calculation
+
 ## 1.9.3
 
 ### Patch Changes
